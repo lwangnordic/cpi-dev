@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:27 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1617051811566
+OriginBundleSymbolicName=I-001_PRD_Inbound_Response_from_S4HANA_backup
+target=Magento
+OriginBundleName=I-001 PRD_Inbound_Response_from_S4HANA_backup
+OriginBundleVersion=3.5
+description=\ 

@@ -1,0 +1,17 @@
+#Thu Mar 04 17:02:55 UTC 2021
+email_bcc=
+ADDRESS=sapftp.nordicnaturals.com
+SFTP_PORT=3396
+FILE_NAME=940_
+email_credentials=NN_SMTP_Credentials
+FILE_NAME_945=945_
+DIRECTORY_855=/PRD_855_Records
+email_cc=
+SFTP_LOGIN=PRD_SFTP_3PL
+email_proxy_tyoe=sapcc
+FILE_NAME_855=855_
+email_from=sapalerts@nordicnaturals.com
+DIRECTORY=/PRD_940_Records
+DIRECTORY_945=/PRD_945_Records
+email_to=sapalerts@nordicnaturals.com;smishra@nordicnaturals.com
+email_host=email.nn.com\:587

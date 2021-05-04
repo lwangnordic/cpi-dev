@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PaymentCardsMigrationID" type="xs:string" />
+        <xs:element name="PaymentServiceProviderCode" type="xs:string" />
+        <xs:element maxOccurs="unbounded" name="PaymentCards">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MerchantByPaytServiceProvider" type="xs:string" />
+              <xs:element name="PaytCardByPaytServiceProvider" type="xs:string" />
+              <xs:element name="PaymentCardType" type="xs:string" />
+              <xs:element name="PaymentCardExpirationMonth" type="xs:unsignedByte" />
+              <xs:element name="PaymentCardExpirationYear" type="xs:unsignedShort" />
+              <xs:element name="PaymentCardMaskedNumber" type="xs:string" />
+              <xs:element name="PaymentCardHolderName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="token">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="PaymentCards">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MerchantByPaytServiceProvider" type="xs:string" />
+                    <xs:element name="PaytCardByPaytServiceProvider" type="xs:string" />
+                    <xs:element name="PaytCardByDigitalPaymentSrvc" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="DigitalPaytTransResult" type="xs:unsignedByte" />
+              <xs:element name="DigitalPaytTransRsltDesc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,18 @@
+#Wed Feb 24 00:18:45 UTC 2021
+email_proxy_type=sapcc
+email_bcc=
+SFTP_PORT=3396
+email_credentials=NN_SMTP_Credentials
+SAP_LOGIN=PRD_3PL_USER
+SFTP_PROCESSED_PATH=/Processed/
+email_cc=
+SAP_CLIENT=sap-client\=100
+SFTP_USER=cpiprd
+SAP_HOST=https\://vhnorprdlb.nor.hec.ondemand.com\:443/sap/bc/zinterface/zin_idoc_xml
+SFTP_PASSWORD_PART2=
+SFTP_ADDRESS=sapftp.nordicnaturals.com
+SFTP_PASSWORD_PART1=lushSpr\!ng75
+email_from=sapalerts@nordicnaturals.com
+email_to=sapalerts@nordicnaturals.com;smishra@nordicnaturals.com;erick.rodriguez@accely.com;shashi.tiwari@accely.com
+email_host=email.nn.com\:587
+SFTP_PATH=/PRD_945_Records

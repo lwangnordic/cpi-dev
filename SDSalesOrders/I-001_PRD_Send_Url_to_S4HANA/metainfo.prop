@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:26 UTC 2021
+source=Postman
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1615849834413
+OriginBundleSymbolicName=I-001_PRD_Send_Url_to_S4HANA
+target=S4HANA
+OriginBundleName=I-001 PRD_Send_Url_to_S4HANA
+OriginBundleVersion=3.1
+description=\ 

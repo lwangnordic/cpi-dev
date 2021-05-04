@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:17 UTC 2021
+source=CPI
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1610981835950
+OriginBundleSymbolicName=I-000_Alert_4Certificate_Reaching_Expiry
+target=NNEmail
+OriginBundleName=I-000 Alert_4Certificate_Reaching_Expiry
+OriginBundleVersion=2.1
+description=Alert for Certificate Reaching Expiry

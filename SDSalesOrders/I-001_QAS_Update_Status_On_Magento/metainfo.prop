@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:28 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1609786165100
+OriginBundleSymbolicName=I-001_QAS_Update_Status_On_Magento
+target=Magento
+OriginBundleName=I-001 QAS_Update_Status_On_Magento
+OriginBundleVersion=2.1
+description=\ 

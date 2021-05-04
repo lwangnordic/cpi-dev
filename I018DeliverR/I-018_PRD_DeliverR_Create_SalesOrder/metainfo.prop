@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:17 UTC 2021
+source=SAPCloudPlatform
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1616519117283
+OriginBundleSymbolicName=I-018_PRD_DeliverR_Create_SalesOrder
+target=SAPERP
+OriginBundleName=I-018 PRD_DeliverR_Create_SalesOrder
+OriginBundleVersion=2.14
+description=\ 

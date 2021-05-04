@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+  <xs:element name="Orders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Order">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Meta">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="IsDropShip" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Header">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="OrderHeader">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TradingPartnerId" type="xs:string" />
+                          <xs:element name="PurchaseOrderNumber" type="xs:string" />
+                          <xs:element name="TsetPurposeCode" type="xs:string" />
+                          <xs:element name="PurchaseOrderTypeCode" type="xs:string" />
+                          <xs:element name="PurchaseOrderDate" type="xs:string" />
+                          <xs:element name="Department" type="xs:string" />
+                          <xs:element name="Vendor" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Contact">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ContactTypeCode" type="xs:string" />
+                          <xs:element name="ContactName" type="xs:string" />
+                          <xs:element name="PrimaryPhone" type="xs:string" />
+                          <xs:element name="PrimaryEmail" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Address">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="AddressTypeCode" type="xs:string" />
+                          <xs:element name="LocationCodeQualifier" type="xs:string" />
+                          <xs:element name="AddressLocationNumber" type="xs:string" />
+                          <xs:element name="AddressName" type="xs:string" />
+                          <xs:element name="Address1" type="xs:string" />
+                          <xs:element name="City" type="xs:string" />
+                          <xs:element name="State" type="xs:string" />
+                          <xs:element name="PostalCode" type="xs:string" />
+                          <xs:element name="Country" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Notes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="NoteCode" type="xs:string" />
+                          <xs:element name="NoteInformationField" type="xs:string" /> 
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="LineItems">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="LineItem">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="OrderLine">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LineSequenceNumber" type="xs:string" />
+                                <xs:element name="VendorPartNumber" type="xs:string" />
+                                <xs:element name="ConsumerPackageCode" type="xs:string" />
+                                <xs:element name="GTIN" type="xs:string" />
+                                <xs:element name="OrderQty" type="xs:string" />
+                                <xs:element name="OrderQtyUOM" type="xs:string" />
+                                <xs:element name="PurchasePrice" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ProductOrItemDescription">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ItemDescriptionType" type="xs:string" />
+                                <xs:element name="ProductDescription" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PhysicalDetails">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PackQualifier" type="xs:string" />
+                                <xs:element name="PackValue" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Summary">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TotalLineItemNumber" type="xs:string" />
+                    <xs:element name="TotalQuantity" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element> 
+              <xs:element name="SOLD_TO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType> 
+  </xs:element>
+</xs:schema>
+
+
+

@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:17 UTC 2021
+source=
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1610569450596
+OriginBundleSymbolicName=I-004_Get_files_from_SPS_to_NN
+target=
+OriginBundleName=I-004 Get_files_from_SPS_to_NN
+OriginBundleVersion=2.6
+description=Get the files from SPS SFTP to NN's SFTP

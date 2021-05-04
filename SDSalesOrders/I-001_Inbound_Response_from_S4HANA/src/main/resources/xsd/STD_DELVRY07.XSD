@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DELVRY07">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TABNAM" />
+                    <xs:element name="MANDT" />
+                    <xs:element name="DOCNUM" />
+                    <xs:element name="DOCREL" />
+                    <xs:element name="STATUS" />
+                    <xs:element name="DIRECT" />
+                    <xs:element name="OUTMOD" />
+                    <xs:element name="IDOCTYP" />
+                    <xs:element name="MESTYP" />
+                    <xs:element name="SNDPOR" />
+                    <xs:element name="SNDPRT" />
+                    <xs:element name="SNDPRN" />
+                    <xs:element name="RCVPOR" />
+                    <xs:element name="RCVPRT" />
+                    <xs:element name="RCVPRN" />
+                    <xs:element name="CREDAT" />
+                    <xs:element name="CRETIM" />
+                    <xs:element name="SERIAL" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1EDL20"  minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VBELN" />
+                    <xs:element name="VSTEL" />
+                    <xs:element name="VKORG" />
+                    <xs:element name="LSTEL" />
+                    <xs:element name="VKBUR" />
+                    <xs:element name="LGNUM" />
+                    <xs:element name="ABLAD" />
+                    <xs:element name="INCO1" />
+                    <xs:element name="INCO2" />
+                    <xs:element name="ROUTE" />
+                    <xs:element name="VSBED" />
+                    <xs:element name="BTGEW" />
+                    <xs:element name="NTGEW" />
+                    <xs:element name="GEWEI" />
+                    <xs:element name="VOLUM" />
+                    <xs:element name="VOLEH" />
+                    <xs:element name="ANZPK" />
+                    <xs:element name="BOLNR" />
+                    <xs:element name="TRATY" />
+                    <xs:element name="TRAID" />
+                    <xs:element name="XABLN" />
+                    <xs:element name="LIFEX" />
+                    <xs:element name="PARID" />
+                    <xs:element name="PODAT" />
+                    <xs:element name="POTIM" />
+                    <xs:element name="LOC_SEQ" />
+                    <xs:element name="HOLD" />
+                    <xs:element name="MAX_ERR_TYPE" />
+                    <xs:element name="LE_SCENARIO" />
+                    <xs:element name="RECIPIENT_CREATE" />
+                    <xs:element name="INCOV" />
+                    <xs:element name="INCO2_L" />
+                    <xs:element name="INCO3_L" />
+                    <xs:element name="E1EDL20RET2"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TYPE" />
+                          <xs:element name="ID" />
+                          <xs:element name="NUMBER" />
+                          <xs:element name="MESSAGE" />
+                          <xs:element name="LOG_NO" />
+                          <xs:element name="LOG_MSG_NO" />
+                          <xs:element name="MESSAGE_V1" />
+                          <xs:element name="MESSAGE_V2" />
+                          <xs:element name="MESSAGE_V3" />
+                          <xs:element name="MESSAGE_V4" />
+                          <xs:element name="PARAMETER" />
+                          <xs:element name="ROW" />
+                          <xs:element name="FIELD" />
+                          <xs:element name="SYSTEM" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL22"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="VSTEL_BEZ" />
+                          <xs:element name="VKORG_BEZ" />
+                          <xs:element name="LSTEL_BEZ" />
+                          <xs:element name="VKBUR_BEZ" />
+                          <xs:element name="LGNUM_BEZ" />
+                          <xs:element name="INCO1_BEZ" />
+                          <xs:element name="ROUTE_BEZ" />
+                          <xs:element name="VSBED_BEZ" />
+                          <xs:element name="TRATY_BEZ" />
+                          <xs:element name="INCOV_BEZ" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL21"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="LFART" />
+                          <xs:element name="BZIRK" />
+                          <xs:element name="AUTLF" />
+                          <xs:element name="EXPKZ" />
+                          <xs:element name="LIFSK" />
+                          <xs:element name="LPRIO" />
+                          <xs:element name="KDGRP" />
+                          <xs:element name="BEROT" />
+                          <xs:element name="TRAGR" />
+                          <xs:element name="TRSPG" />
+                          <xs:element name="AULWE" />
+                          <xs:element name="E1EDL23"  minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LFART_BEZ" />
+                                <xs:element name="LPRIO_BEZ" />
+                                <xs:element name="BZIRK_BEZ" />
+                                <xs:element name="LIFSK_BEZ" />
+                                <xs:element name="KDGRP_BEZ" />
+                                <xs:element name="TRAGR_BEZ" />
+                                <xs:element name="TRSPG_BEZ" />
+                                <xs:element name="AULWE_BEZ" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL51"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" />
+                          <xs:element name="PRODN" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDD01"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="NCDG" />
+                          <xs:element name="INR1" />
+                          <xs:element name="ACTVTY_TOTAL_A2" />
+                          <xs:element name="EXPL_NET_SUM" />
+                          <xs:element name="EXPL_NET_SUM_U" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL18"  minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" />
+                          <xs:element name="PARAM" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL55" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" />
+                          <xs:element name="REFNR" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1ADRM1" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PARTNER_Q" />
+                          <xs:element name="ADDRESS_T" />
+                          <xs:element name="PARTNER_ID" />
+                          <xs:element name="JURISDIC" />
+                          <xs:element name="LANGUAGE" />
+                          <xs:element name="FORMOFADDR" />
+                          <xs:element name="NAME1" />
+                          <xs:element name="NAME2" />
+                          <xs:element name="NAME3" />
+                          <xs:element name="NAME4" />
+                          <xs:element name="NAME_TEXT" />
+                          <xs:element name="NAME_CO" />
+                          <xs:element name="LOCATION" />
+                          <xs:element name="BUILDING" />
+                          <xs:element name="FLOOR" />
+                          <xs:element name="ROOM" />
+                          <xs:element name="STREET1" />
+                          <xs:element name="STREET2" />
+                          <xs:element name="STREET3" />
+                          <xs:element name="HOUSE_SUPL" />
+                          <xs:element name="HOUSE_RANG" />
+                          <xs:element name="POSTL_COD1" />
+                          <xs:element name="POSTL_COD3" />
+                          <xs:element name="POSTL_AREA" />
+                          <xs:element name="CITY1" />
+                          <xs:element name="CITY2" />
+                          <xs:element name="POSTL_PBOX" />
+                          <xs:element name="POSTL_COD2" />
+                          <xs:element name="POSTL_CITY" />
+                          <xs:element name="TELEPHONE1" />
+                          <xs:element name="TELEPHONE2" />
+                          <xs:element name="TELEFAX" />
+                          <xs:element name="TELEX" />
+                          <xs:element name="E_MAIL" />
+                          <xs:element name="COUNTRY1" />
+                          <xs:element name="COUNTRY2" />
+                          <xs:element name="REGION" />
+                          <xs:element name="COUNTY_COD" />
+                          <xs:element name="COUNTY_TXT" />
+                          <xs:element name="TZCODE" />
+                          <xs:element name="TZDESC" />
+                          <xs:element name="E1ADRE1" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EXTEND_Q" />
+                                <xs:element name="EXTEND_D" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDT13" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" />
+                          <xs:element name="VSTZW" />
+                          <xs:element name="VSTZW_BEZ" />
+                          <xs:element name="NTANF" />
+                          <xs:element name="NTANZ" />
+                          <xs:element name="NTEND" />
+                          <xs:element name="NTENZ" />
+                          <xs:element name="TZONE_BEG" />
+                          <xs:element name="ISDD" />
+                          <xs:element name="ISDZ" />
+                          <xs:element name="IEDD" />
+                          <xs:element name="IEDZ" />
+                          <xs:element name="TZONE_END" />
+                          <xs:element name="VORNR" />
+                          <xs:element name="VSTGA" />
+                          <xs:element name="VSTGA_BEZ" />
+                          <xs:element name="EVENT" />
+                          <xs:element name="EVENT_ALI" />
+                          <xs:element name="E1EDL40" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="KNOTE" />
+                                <xs:element name="KNOTE_BEZ" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1ADRM2" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PARTNER_Q" />
+                                <xs:element name="ADDRESS_T" />
+                                <xs:element name="PARTNER_ID" />
+                                <xs:element name="JURISDIC" />
+                                <xs:element name="LANGUAGE" />
+                                <xs:element name="FORMOFADDR" />
+                                <xs:element name="NAME1" />
+                                <xs:element name="NAME2" />
+                                <xs:element name="NAME3" />
+                                <xs:element name="NAME4" />
+                                <xs:element name="NAME_TEXT" />
+                                <xs:element name="NAME_CO" />
+                                <xs:element name="LOCATION" />
+                                <xs:element name="BUILDING" />
+                                <xs:element name="FLOOR" />
+                                <xs:element name="ROOM" />
+                                <xs:element name="STREET1" />
+                                <xs:element name="STREET2" />
+                                <xs:element name="STREET3" />
+                                <xs:element name="HOUSE_SUPL" />
+                                <xs:element name="HOUSE_RANG" />
+                                <xs:element name="POSTL_COD1" />
+                                <xs:element name="POSTL_COD3" />
+                                <xs:element name="POSTL_AREA" />
+                                <xs:element name="CITY1" />
+                                <xs:element name="CITY2" />
+                                <xs:element name="POSTL_PBOX" />
+                                <xs:element name="POSTL_COD2" />
+                                <xs:element name="POSTL_CITY" />
+                                <xs:element name="TELEPHONE1" />
+                                <xs:element name="TELEPHONE2" />
+                                <xs:element name="TELEFAX" />
+                                <xs:element name="TELEX" />
+                                <xs:element name="E_MAIL" />
+                                <xs:element name="COUNTRY1" />
+                                <xs:element name="COUNTRY2" />
+                                <xs:element name="REGION" />
+                                <xs:element name="COUNTY_COD" />
+                                <xs:element name="COUNTY_TXT" />
+                                <xs:element name="TZCODE" />
+                                <xs:element name="TZDESC" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1TXTH0" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="FUNCTION" />
+                                <xs:element name="TDOBJECT" />
+                                <xs:element name="TDOBNAME" />
+                                <xs:element name="TDID" />
+                                <xs:element name="TDSPRAS" />
+                                <xs:element name="TDTEXTTYPE" />
+                                <xs:element name="LANGUA_ISO" />
+                                <xs:element name="E1TXTP0" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="TDFORMAT" />
+                                      <xs:element name="TDLINE" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1TXTH8" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FUNCTION" />
+                          <xs:element name="TDOBJECT" />
+                          <xs:element name="TDOBNAME" />
+                          <xs:element name="TDID" />
+                          <xs:element name="TDSPRAS" />
+                          <xs:element name="TDTEXTTYPE" />
+                          <xs:element name="LANGUA_ISO" />
+                          <xs:element name="E1TXTP8" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TDFORMAT" />
+                                <xs:element name="TDLINE" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDDH2" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FUNCTION" />
+                          <xs:element name="TDOBJECT" />
+                          <xs:element name="TDOBNAME" />
+                          <xs:element name="TDID" />
+                          <xs:element name="TDTEXTTYPE" />
+                          <xs:element name="LANGUA_ISO" />
+                          <xs:element name="PHRSEL" />
+                          <xs:element name="IDENTIFIER" />
+                          <xs:element name="LANGUA_PHR" />
+                          <xs:element name="E1EDDP2" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TDFORMAT" />
+                                <xs:element name="TDLINE" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL33" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ALAND" />
+                          <xs:element name="EXPVZ" />
+                          <xs:element name="ZOLLA" />
+                          <xs:element name="ZOLLB" />
+                          <xs:element name="ZOLL1" />
+                          <xs:element name="ZOLL2" />
+                          <xs:element name="ZOLL3" />
+                          <xs:element name="ZOLL4" />
+                          <xs:element name="ZOLL5" />
+                          <xs:element name="ZOLL6" />
+                          <xs:element name="KZGBE" />
+                          <xs:element name="STGBE" />
+                          <xs:element name="STABE" />
+                          <xs:element name="CONTA" />
+                          <xs:element name="GRWCU" />
+                          <xs:element name="IEVER" />
+                          <xs:element name="PREV_DOC_NO" />
+                          <xs:element name="PREV_DOC_TYPE" />
+                          <xs:element name="E1EDL34" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EXPVZ_BEZ" />
+                                <xs:element name="ZOLLA_BEZ" />
+                                <xs:element name="ZOLLB_BEZ" />
+                                <xs:element name="ZOLL1_BEZ" />
+                                <xs:element name="ZOLL2_BEZ" />
+                                <xs:element name="ZOLL3_BEZ" />
+                                <xs:element name="ZOLL4_BEZ" />
+                                <xs:element name="ZOLL5_BEZ" />
+                                <xs:element name="ZOLL6_BEZ" />
+                                <xs:element name="IEVER_BEZ" />
+                                <xs:element name="STGBE_BEZ" />
+                                <xs:element name="STABE_BEZ" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL28" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ROUTE" />
+                          <xs:element name="VSART" />
+                          <xs:element name="VSAVL" />
+                          <xs:element name="VSANL" />
+                          <xs:element name="ROUID" />
+                          <xs:element name="DISTZ" />
+                          <xs:element name="MEDST" />
+                          <xs:element name="E1EDL29" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ROUTE_BEZ" />
+                                <xs:element name="VSART_BEZ" />
+                                <xs:element name="VSAVL_BEZ" />
+                                <xs:element name="VSANL_BEZ" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL30" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ABNUM" />
+                                <xs:element name="ANFRF" />
+                                <xs:element name="VSART" />
+                                <xs:element name="DISTZ" />
+                                <xs:element name="MEDST" />
+                                <xs:element name="TSTYP" />
+                                <xs:element name="E1EDL31" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="VSART_BEZ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDL32" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="QUALI" />
+                                      <xs:element name="KNOTE" />
+                                      <xs:element name="ADRNR" />
+                                      <xs:element name="VSTEL" />
+                                      <xs:element name="LSTEL" />
+                                      <xs:element name="WERKS" />
+                                      <xs:element name="LGORT" />
+                                      <xs:element name="KUNNR" />
+                                      <xs:element name="LIFNR" />
+                                      <xs:element name="ABLAD" />
+                                      <xs:element name="LGNUM" />
+                                      <xs:element name="LGTOR" />
+                                      <xs:element name="E1EDL45" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="KNOTE_BEZ" />
+                                            <xs:element name="VSTEL_BEZ" />
+                                            <xs:element name="LSTEL_BEZ" />
+                                            <xs:element name="WERKS_BEZ" />
+                                            <xs:element name="LGORT_BEZ" />
+                                            <xs:element name="LGNUM_BEZ" />
+                                            <xs:element name="LGTOR_BEZ" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="E1ADRM3" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="PARTNER_Q" />
+                                            <xs:element name="ADDRESS_T" />
+                                            <xs:element name="PARTNER_ID" />
+                                            <xs:element name="JURISDIC" />
+                                            <xs:element name="LANGUAGE" />
+                                            <xs:element name="FORMOFADDR" />
+                                            <xs:element name="NAME1" />
+                                            <xs:element name="NAME2" />
+                                            <xs:element name="NAME3" />
+                                            <xs:element name="NAME4" />
+                                            <xs:element name="NAME_TEXT" />
+                                            <xs:element name="NAME_CO" />
+                                            <xs:element name="LOCATION" />
+                                            <xs:element name="BUILDING" />
+                                            <xs:element name="FLOOR" />
+                                            <xs:element name="ROOM" />
+                                            <xs:element name="STREET1" />
+                                            <xs:element name="STREET2" />
+                                            <xs:element name="STREET3" />
+                                            <xs:element name="HOUSE_SUPL" />
+                                            <xs:element name="HOUSE_RANG" />
+                                            <xs:element name="POSTL_COD1" />
+                                            <xs:element name="POSTL_COD3" />
+                                            <xs:element name="POSTL_AREA" />
+                                            <xs:element name="CITY1" />
+                                            <xs:element name="CITY2" />
+                                            <xs:element name="POSTL_PBOX" />
+                                            <xs:element name="POSTL_COD2" />
+                                            <xs:element name="POSTL_CITY" />
+                                            <xs:element name="TELEPHONE1" />
+                                            <xs:element name="TELEPHONE2" />
+                                            <xs:element name="TELEFAX" />
+                                            <xs:element name="TELEX" />
+                                            <xs:element name="E_MAIL" />
+                                            <xs:element name="COUNTRY1" />
+                                            <xs:element name="COUNTRY2" />
+                                            <xs:element name="REGION" />
+                                            <xs:element name="COUNTY_COD" />
+                                            <xs:element name="COUNTY_TXT" />
+                                            <xs:element name="TZCODE" />
+                                            <xs:element name="TZDESC" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL47" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="XSITD" />
+                          <xs:element name="SHIPACCT" />
+                          <xs:element name="TRACKN" />
+                          <xs:element name="ROUTECODE" />
+                          <xs:element name="XSISRVC" />
+                          <xs:element name="PRDCD" />
+                          <xs:element name="XSIURL_MULTI_TRACK" />
+                          <xs:element name="E1EDL48" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="XSIQUALF" />
+                                <xs:element name="XSITD" />
+                                <xs:element name="VLABDATA" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL24" minOccurs="0" maxOccurs="outbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="POSNR" />
+                          <xs:element name="MATNR" />
+                          <xs:element name="MATWA" />
+                          <xs:element name="ARKTX" />
+                          <xs:element name="ORKTX" />
+                          <xs:element name="SUGRD" />
+                          <xs:element name="SUDRU" />
+                          <xs:element name="MATKL" />
+                          <xs:element name="WERKS" />
+                          <xs:element name="LGORT" />
+                          <xs:element name="CHARG" />
+                          <xs:element name="KDMAT" />
+                          <xs:element name="LFIMG" />
+                          <xs:element name="VRKME" />
+                          <xs:element name="LGMNG" />
+                          <xs:element name="MEINS" />
+                          <xs:element name="NTGEW" />
+                          <xs:element name="BRGEW" />
+                          <xs:element name="GEWEI" />
+                          <xs:element name="VOLUM" />
+                          <xs:element name="VOLEH" />
+                          <xs:element name="LGPBE" />
+                          <xs:element name="HIPOS" />
+                          <xs:element name="HIEVW" />
+                          <xs:element name="LADGR" />
+                          <xs:element name="TRAGR" />
+                          <xs:element name="VKBUR" />
+                          <xs:element name="VKGRP" />
+                          <xs:element name="VTWEG" />
+                          <xs:element name="SPART" />
+                          <xs:element name="GRKOR" />
+                          <xs:element name="EAN11" />
+                          <xs:element name="SERNR" />
+                          <xs:element name="AESKD" />
+                          <xs:element name="EMPST" />
+                          <xs:element name="MFRGR" />
+                          <xs:element name="VBRST" />
+                          <xs:element name="LABNK" />
+                          <xs:element name="ABRDT" />
+                          <xs:element name="MFRPN" />
+                          <xs:element name="MFRNR" />
+                          <xs:element name="ABRVW" />
+                          <xs:element name="KDMAT35" />
+                          <xs:element name="KANNR" />
+                          <xs:element name="POSEX" />
+                          <xs:element name="LIEFFZ" />
+                          <xs:element name="USR01" />
+                          <xs:element name="USR02" />
+                          <xs:element name="USR03" />
+                          <xs:element name="USR04" />
+                          <xs:element name="USR05" />
+                          <xs:element name="MATNR_EXTERNAL" />
+                          <xs:element name="MATNR_VERSION" />
+                          <xs:element name="MATNR_GUID" />
+                          <xs:element name="MATWA_EXTERNAL" />
+                          <xs:element name="MATWA_VERSION" />
+                          <xs:element name="MATWA_GUID" />
+                          <xs:element name="ZUDAT" />
+                          <xs:element name="VFDAT" />
+                          <xs:element name="RMA_NUMBER" />
+                          <xs:element name="RMA_COMPLETE" />
+                          <xs:element name="EXPIRY_DATE_EXT" />
+                          <xs:element name="VGBEL" />
+                          <xs:element name="VGPOS" />
+                          <xs:element name="FOLLOW_UP_CODE" />
+                          <xs:element name="ORMNG" />
+                          <xs:element name="COMPL" />
+                          <xs:element name="HOLD" />
+                          <xs:element name="MAX_ERR_TYPE" />
+                          <xs:element name="LICHN" />
+                          <xs:element name="RECIPIENT_CREATE" />
+                          <xs:element name="EXPIRY_DATE_EXT_B" />
+                          <xs:element name="E1EDL56" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CARRIER_ID" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL24RET2" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TYPE" />
+                                <xs:element name="ID" />
+                                <xs:element name="NUMBER" />
+                                <xs:element name="MESSAGE" />
+                                <xs:element name="LOG_NO" />
+                                <xs:element name="LOG_MSG_NO" />
+                                <xs:element name="MESSAGE_V1" />
+                                <xs:element name="MESSAGE_V2" />
+                                <xs:element name="MESSAGE_V3" />
+                                <xs:element name="MESSAGE_V4" />
+                                <xs:element name="PARAMETER" />
+                                <xs:element name="ROW" />
+                                <xs:element name="FIELD" />
+                                <xs:element name="SYSTEM" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL25" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LGORT_BEZ" />
+                                <xs:element name="LADGR_BEZ" />
+                                <xs:element name="TRAGR_BEZ" />
+                                <xs:element name="VKBUR_BEZ" />
+                                <xs:element name="VKGRP_BEZ" />
+                                <xs:element name="VTWEG_BEZ" />
+                                <xs:element name="SPART_BEZ" />
+                                <xs:element name="MFRGR_BEZ" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL26" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PSTYV" />
+                                <xs:element name="MATKL" />
+                                <xs:element name="PRODH" />
+                                <xs:element name="UMVKZ" />
+                                <xs:element name="UMVKN" />
+                                <xs:element name="KZTLF" />
+                                <xs:element name="UEBTK" />
+                                <xs:element name="UEBTO" />
+                                <xs:element name="UNTTO" />
+                                <xs:element name="CHSPL" />
+                                <xs:element name="XCHBW" />
+                                <xs:element name="POSAR" />
+                                <xs:element name="SOBKZ" />
+                                <xs:element name="PCKPF" />
+                                <xs:element name="MAGRV" />
+                                <xs:element name="SHKZG" />
+                                <xs:element name="KOQUI" />
+                                <xs:element name="AKTNR" />
+                                <xs:element name="KZUMW" />
+                                <xs:element name="KVGR1" />
+                                <xs:element name="KVGR2" />
+                                <xs:element name="KVGR3" />
+                                <xs:element name="KVGR4" />
+                                <xs:element name="KVGR5" />
+                                <xs:element name="MVGR1" />
+                                <xs:element name="MVGR2" />
+                                <xs:element name="MVGR3" />
+                                <xs:element name="MVGR4" />
+                                <xs:element name="MVGR5" />
+                                <xs:element name="LIFEXPOS2" />
+                                <xs:element name="CQU_SA" />
+                                <xs:element name="CQU_SA_UNIT" />
+                                <xs:element name="CQU_ITQS" />
+                                <xs:element name="CQU_ITQS_UNIT" />
+                                <xs:element name="VBUMG_BME" />
+                                <xs:element name="SGT_RCAT" />
+                                <xs:element name="SGT_SCAT" />
+                                <xs:element name="MATNR_LONG" />
+                                <xs:element name="MATWA_LONG" />
+                                <xs:element name="REQ_SEG_LONG" />
+                                <xs:element name="STK_SEG_LONG" />
+                                <xs:element name="E1EDL27" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PSTYV_BEZ" />
+                                      <xs:element name="MATKL_BEZ" />
+                                      <xs:element name="PRODH_BEZ" />
+                                      <xs:element name="WERKS_BEZ" />
+                                      <xs:element name="KVGR1_BEZ" />
+                                      <xs:element name="KVGR2_BEZ" />
+                                      <xs:element name="KVGR3_BEZ" />
+                                      <xs:element name="KVGR4_BEZ" />
+                                      <xs:element name="KVGR5_BEZ" />
+                                      <xs:element name="MVGR1_BEZ" />
+                                      <xs:element name="MVGR2_BEZ" />
+                                      <xs:element name="MVGR3_BEZ" />
+                                      <xs:element name="MVGR4_BEZ" />
+                                      <xs:element name="MVGR5_BEZ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL52" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" />
+                                <xs:element name="PRODN" />
+                                <xs:element name="ITMNR" />
+                                <xs:element name="SQUNT" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL53" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="GRUND" />
+                                <xs:element name="PODMG" />
+                                <xs:element name="LFIMG_DIFF" />
+                                <xs:element name="VRKME" />
+                                <xs:element name="LGMNG_DIFF" />
+                                <xs:element name="MEINS" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDD10" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="MOT" />
+                                <xs:element name="VALDAT" />
+                                <xs:element name="DGCAO" />
+                                <xs:element name="DGNHM" />
+                                <xs:element name="TKUI" />
+                                <xs:element name="DGNU" />
+                                <xs:element name="COLNO" />
+                                <xs:element name="DGRES1" />
+                                <xs:element name="DGRES2" />
+                                <xs:element name="DGRES3" />
+                                <xs:element name="DGREMP" />
+                                <xs:element name="DGRERQ" />
+                                <xs:element name="DGCL" />
+                                <xs:element name="DGSC" />
+                                <xs:element name="SDBC" />
+                                <xs:element name="SLBE" />
+                                <xs:element name="LDBC" />
+                                <xs:element name="LWDG" />
+                                <xs:element name="EINU" />
+                                <xs:element name="EICN" />
+                                <xs:element name="EMSN1" />
+                                <xs:element name="EMSN2" />
+                                <xs:element name="MFAG1" />
+                                <xs:element name="MFAG2" />
+                                <xs:element name="HQTU" />
+                                <xs:element name="HQTUN" />
+                                <xs:element name="PIN" />
+                                <xs:element name="PINLQ" />
+                                <xs:element name="PGRO" />
+                                <xs:element name="HNU" />
+                                <xs:element name="HPN1" />
+                                <xs:element name="HPN2" />
+                                <xs:element name="HPN3" />
+                                <xs:element name="HPN4" />
+                                <xs:element name="HPN5" />
+                                <xs:element name="HPN6" />
+                                <xs:element name="HPN7" />
+                                <xs:element name="LAB1" />
+                                <xs:element name="LAB2" />
+                                <xs:element name="LAB3" />
+                                <xs:element name="LAB4" />
+                                <xs:element name="LAB5" />
+                                <xs:element name="LAB6" />
+                                <xs:element name="LAB7" />
+                                <xs:element name="LAB8" />
+                                <xs:element name="LAB9" />
+                                <xs:element name="LAB10" />
+                                <xs:element name="PBI" />
+                                <xs:element name="DGPTA" />
+                                <xs:element name="NHME" />
+                                <xs:element name="DGSHE" />
+                                <xs:element name="PIMDG" />
+                                <xs:element name="SPPRO" />
+                                <xs:element name="MAPOL" />
+                                <xs:element name="EXCEP" />
+                                <xs:element name="AGRNO" />
+                                <xs:element name="REGNO" />
+                                <xs:element name="SDGCL" />
+                                <xs:element name="TDGCL" />
+                                <xs:element name="LWDGN" />
+                                <xs:element name="RVLID" />
+                                <xs:element name="MOS1" />
+                                <xs:element name="MOS2" />
+                                <xs:element name="MOS3" />
+                                <xs:element name="MOS4" />
+                                <xs:element name="MOS5" />
+                                <xs:element name="MOS6" />
+                                <xs:element name="MOS7" />
+                                <xs:element name="MOS8" />
+                                <xs:element name="MOS9" />
+                                <xs:element name="MOSA" />
+                                <xs:element name="DGTNA" />
+                                <xs:element name="DGWOS" />
+                                <xs:element name="SCASE" />
+                                <xs:element name="EIMDG" />
+                                <xs:element name="MSEPR1" />
+                                <xs:element name="MSEPR2" />
+                                <xs:element name="MSEPR3" />
+                                <xs:element name="MSEPR4" />
+                                <xs:element name="MSEPR5" />
+                                <xs:element name="MSEPR6" />
+                                <xs:element name="MSEPR7" />
+                                <xs:element name="MSEPR8" />
+                                <xs:element name="MSEPR9" />
+                                <xs:element name="MSEPRA" />
+                                <xs:element name="MSEPRB" />
+                                <xs:element name="MSEPRC" />
+                                <xs:element name="MSEPRD" />
+                                <xs:element name="MSEPRE" />
+                                <xs:element name="MSEPRF" />
+                                <xs:element name="MSEPRG" />
+                                <xs:element name="MSEPRH" />
+                                <xs:element name="MLOAR1" />
+                                <xs:element name="MLOAR2" />
+                                <xs:element name="MLOAR3" />
+                                <xs:element name="MLOAR4" />
+                                <xs:element name="MLOAR5" />
+                                <xs:element name="MLOAR6" />
+                                <xs:element name="MLOAR7" />
+                                <xs:element name="MLOAR8" />
+                                <xs:element name="MLOAR9" />
+                                <xs:element name="MLOARA" />
+                                <xs:element name="RSMLG1" />
+                                <xs:element name="RSMLG2" />
+                                <xs:element name="RSMLG3" />
+                                <xs:element name="ESMLG1" />
+                                <xs:element name="ESMLG2" />
+                                <xs:element name="ESMLG3" />
+                                <xs:element name="PPDG1" />
+                                <xs:element name="PPDG2" />
+                                <xs:element name="PPDG3" />
+                                <xs:element name="PPDG4" />
+                                <xs:element name="PPDG5" />
+                                <xs:element name="PPDG6" />
+                                <xs:element name="PPDG7" />
+                                <xs:element name="PPDG8" />
+                                <xs:element name="PPDG9" />
+                                <xs:element name="PPDGA" />
+                                <xs:element name="PPDGB" />
+                                <xs:element name="PPDGC" />
+                                <xs:element name="PPDGE" />
+                                <xs:element name="PPDGF" />
+                                <xs:element name="PPDGG" />
+                                <xs:element name="LFDNR" />
+                                <xs:element name="SUBPOS_NR" />
+                                <xs:element name="DG_NET_WEIGHT" />
+                                <xs:element name="DG_GROSS_WEIGHT" />
+                                <xs:element name="DG_WEIGHT_U" />
+                                <xs:element name="LANGU" />
+                                <xs:element name="E1EDD11" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="VKTRT" />
+                                      <xs:element name="DGNA" />
+                                      <xs:element name="DGRESD2" />
+                                      <xs:element name="DGRESD" />
+                                      <xs:element name="DGRESD3" />
+                                      <xs:element name="DGREDMP" />
+                                      <xs:element name="DGREDRQ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD15" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="HPN1D" />
+                                      <xs:element name="HPN2D" />
+                                      <xs:element name="HPN3D" />
+                                      <xs:element name="HPN4D" />
+                                      <xs:element name="HPN5D" />
+                                      <xs:element name="HPN6D" />
+                                      <xs:element name="HPN7D" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD12" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="STOSU" />
+                                      <xs:element name="COTMP" />
+                                      <xs:element name="TPCUN" />
+                                      <xs:element name="EMTMP" />
+                                      <xs:element name="TPEUN" />
+                                      <xs:element name="FLTMP" />
+                                      <xs:element name="TPFUN" />
+                                      <xs:element name="TPSNL" />
+                                      <xs:element name="TPSLU" />
+                                      <xs:element name="TPSNH" />
+                                      <xs:element name="TPSHU" />
+                                      <xs:element name="COWE" />
+                                      <xs:element name="VBFC" />
+                                      <xs:element name="SDCL" />
+                                      <xs:element name="SOOWA" />
+                                      <xs:element name="USOOW" />
+                                      <xs:element name="DENFEE" />
+                                      <xs:element name="UDENFE" />
+                                      <xs:element name="DENTWE" />
+                                      <xs:element name="UDENTWE" />
+                                      <xs:element name="DENFIF" />
+                                      <xs:element name="UDENFI" />
+                                      <xs:element name="BUDEN" />
+                                      <xs:element name="UBUDE" />
+                                      <xs:element name="BOPOI" />
+                                      <xs:element name="UBOPO" />
+                                      <xs:element name="VISCO" />
+                                      <xs:element name="UVISC" />
+                                      <xs:element name="STPRES" />
+                                      <xs:element name="USTPRE" />
+                                      <xs:element name="HYGRO" />
+                                      <xs:element name="MEPOI" />
+                                      <xs:element name="UMEPO" />
+                                      <xs:element name="COOEX" />
+                                      <xs:element name="UCOOE" />
+                                      <xs:element name="MTMPF" />
+                                      <xs:element name="UMTMP" />
+                                      <xs:element name="PAI" />
+                                      <xs:element name="PAIU" />
+                                      <xs:element name="PAO" />
+                                      <xs:element name="PAOU" />
+                                      <xs:element name="RQA" />
+                                      <xs:element name="RQU" />
+                                      <xs:element name="MINQ" />
+                                      <xs:element name="MINU" />
+                                      <xs:element name="MAXQ" />
+                                      <xs:element name="MAXU" />
+                                      <xs:element name="RELQ" />
+                                      <xs:element name="RELU" />
+                                      <xs:element name="MULRQ" />
+                                      <xs:element name="RCHEM" />
+                                      <xs:element name="STOPA" />
+                                      <xs:element name="PASI" />
+                                      <xs:element name="UPASI" />
+                                      <xs:element name="PAGW" />
+                                      <xs:element name="UPAGW" />
+                                      <xs:element name="MIOWA" />
+                                      <xs:element name="UMIOW" />
+                                      <xs:element name="RQA2" />
+                                      <xs:element name="RQU2" />
+                                      <xs:element name="EXPL_NET" />
+                                      <xs:element name="EXPL_NET_U" />
+                                      <xs:element name="EXPL_REL_PERCENT" />
+                                      <xs:element name="ACTVTY_MAX" />
+                                      <xs:element name="ACTVTY_MAX_U" />
+                                      <xs:element name="ACTVTY_MAX_REL" />
+                                      <xs:element name="ACTVTY_MAX_REL_U" />
+                                      <xs:element name="TRANSP_INDEX" />
+                                      <xs:element name="CRIT_SAF_INDEX" />
+                                      <xs:element name="PACKAGE_CAT" />
+                                      <xs:element name="ACTVTY_SINGLE_A2" />
+                                      <xs:element name="LTSK" />
+                                      <xs:element name="EMV" />
+                                      <xs:element name="FSAK" />
+                                      <xs:element name="SFK" />
+                                      <xs:element name="MUNAKODE" />
+                                      <xs:element name="EXNUMBER" />
+                                      <xs:element name="PINEQ" />
+                                      <xs:element name="EXC_QUANT_IP" />
+                                      <xs:element name="EXC_QUANT_IP_U" />
+                                      <xs:element name="EXC_QUANT_OP" />
+                                      <xs:element name="EXC_QUANT_OP_U" />
+                                      <xs:element name="DANLAB01" />
+                                      <xs:element name="DANLAB02" />
+                                      <xs:element name="DANLAB03" />
+                                      <xs:element name="DANLAB04" />
+                                      <xs:element name="DANLAB05" />
+                                      <xs:element name="DANLAB06" />
+                                      <xs:element name="DANLAB07" />
+                                      <xs:element name="E1EDD16" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="AGGRT" />
+                                            <xs:element name="COWED" />
+                                            <xs:element name="FORM_PHYS_CHEM_D" />
+                                            <xs:element name="TUNNEL_RESTRICTION_CODE" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD13" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="EDIQ" />
+                                      <xs:element name="DAIN" />
+                                      <xs:element name="DAID" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDDH3" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="FUNCTION" />
+                                      <xs:element name="TDOBJECT" />
+                                      <xs:element name="TDOBNAME" />
+                                      <xs:element name="TDID" />
+                                      <xs:element name="TDTEXTTYPE" />
+                                      <xs:element name="LANGUA_ISO" />
+                                      <xs:element name="PHRSEL" />
+                                      <xs:element name="IDENTIFIER" />
+                                      <xs:element name="LANGUA_PHR" />
+                                      <xs:element name="E1EDDP3" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="TDFORMAT" />
+                                            <xs:element name="TDLINE" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD17" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PACKAGE_MATNR" />
+                                      <xs:element name="PRIO_ALTERN" />
+                                      <xs:element name="FLG_RELEASED" />
+                                      <xs:element name="FLG_TRANS_PERM" />
+                                      <xs:element name="FLG_NO_DG" />
+                                      <xs:element name="FLG_LQ" />
+                                      <xs:element name="FLG_RQ" />
+                                      <xs:element name="INSTR_ENCL" />
+                                      <xs:element name="FLG_SINGLE_PACK" />
+                                      <xs:element name="PACOD" />
+                                      <xs:element name="QUANT_OUT_PACK" />
+                                      <xs:element name="U_QUANT_OUT_PACK" />
+                                      <xs:element name="RECN_SUB" />
+                                      <xs:element name="RECN_CLASS" />
+                                      <xs:element name="FLG_CC" />
+                                      <xs:element name="FLG_PACKED" />
+                                      <xs:element name="TRANSPORT_TYPE" />
+                                      <xs:element name="APPROVAL_CODE" />
+                                      <xs:element name="FLG_EQ" />
+                                      <xs:element name="DGREL_TRANSIND01" />
+                                      <xs:element name="DGREL_TRANSIND02" />
+                                      <xs:element name="DGREL_TRANSIND03" />
+                                      <xs:element name="DGREL_TRANSIND04" />
+                                      <xs:element name="DGREL_TRANSIND05" />
+                                      <xs:element name="DGREL_TRANSIND06" />
+                                      <xs:element name="DGREL_TRANSIND07" />
+                                      <xs:element name="DGREL_TRANSIND08" />
+                                      <xs:element name="PACKAGE_MATNR_EXTERNAL" />
+                                      <xs:element name="PACKAGE_MATNR_VERSION" />
+                                      <xs:element name="PACKAGE_MATNR_GUID" />
+                                      <xs:element name="PACKAGE_MATNR_LONG" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD18" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="TRANSP_TYPE" />
+                                      <xs:element name="TRANSP_APPROVED" />
+                                      <xs:element name="LEG_SRC_RESTR" />
+                                      <xs:element name="MIN_QUANT" />
+                                      <xs:element name="U_MIN_QUANT" />
+                                      <xs:element name="FLG_MIN_QUANT" />
+                                      <xs:element name="MAX_QUANT" />
+                                      <xs:element name="U_MAX_QUANT" />
+                                      <xs:element name="FLG_MAX_QUANT" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD19" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ABS_ACT" />
+                                      <xs:element name="ABS_ACT_U" />
+                                      <xs:element name="REL_SPEC_ACT" />
+                                      <xs:element name="REL_SPEC_ACT_U" />
+                                      <xs:element name="CONTAMINATION" />
+                                      <xs:element name="CONTAMINATION_U" />
+                                      <xs:element name="DOSE_RATE" />
+                                      <xs:element name="DOSE_RATE_U" />
+                                      <xs:element name="MAX_ACT1" />
+                                      <xs:element name="MAX_ACT1_U" />
+                                      <xs:element name="ACT1_UNLIMIT" />
+                                      <xs:element name="MAX_ACT2" />
+                                      <xs:element name="MAX_ACT2_U" />
+                                      <xs:element name="ACT2_UNLIMIT" />
+                                      <xs:element name="ACT_SUB_PACK" />
+                                      <xs:element name="ACT_SUB_PACK_U" />
+                                      <xs:element name="MAX_ACT_CONSG" />
+                                      <xs:element name="MAX_ACT_CONSG_U" />
+                                      <xs:element name="MULT_ACT_SGL" />
+                                      <xs:element name="REF_ACT_SGL" />
+                                      <xs:element name="MULT_ACT_PACK" />
+                                      <xs:element name="REF_ACT_PACK" />
+                                      <xs:element name="MAX_CONT_A" />
+                                      <xs:element name="MAX_CONT_A_U" />
+                                      <xs:element name="MAX_CONT_B_G" />
+                                      <xs:element name="MAX_CONT_B_G_U" />
+                                      <xs:element name="MAX_DOSE_UNP" />
+                                      <xs:element name="MAX_DOSE_UNP_U" />
+                                      <xs:element name="DIST_DOSE_UNP" />
+                                      <xs:element name="DIST_DOSE_UNP_U" />
+                                      <xs:element name="NO_DIST_UNP" />
+                                      <xs:element name="MAX_DOSE_PACK" />
+                                      <xs:element name="MAX_DOSE_PACK_U" />
+                                      <xs:element name="DIST_DOSE_PACK" />
+                                      <xs:element name="DIST_DOSE_PACK_U" />
+                                      <xs:element name="NO_DIST_PACK" />
+                                      <xs:element name="MAX_ACT_SGL_DC" />
+                                      <xs:element name="MAX_ACT_SGL_U_DC" />
+                                      <xs:element name="ACT_SGL_UNLIM_DC" />
+                                      <xs:element name="MAX_ACT_PAC_DC" />
+                                      <xs:element name="MAX_ACT_PAC_U_DC" />
+                                      <xs:element name="ACT_PAC_UNLIM_DC" />
+                                      <xs:element name="EXCPT_PAC_OPT_DC" />
+                                      <xs:element name="MAX_GRS_WGHT_DC" />
+                                      <xs:element name="U_MAX_GRS_WGT_DC" />
+                                      <xs:element name="ACT_EMIS_TYPE" />
+                                      <xs:element name="MAX_NEM_DC" />
+                                      <xs:element name="MAX_NEM_U_DC" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD20" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="EXCEPTID" />
+                                      <xs:element name="VERSION" />
+                                      <xs:element name="BLOCKEDFLG" />
+                                      <xs:element name="FIELDNAME" />
+                                      <xs:element name="EXCEPT_VALFR" />
+                                      <xs:element name="EXCEPT_VALTO" />
+                                      <xs:element name="ENTPR_SPECFLG" />
+                                      <xs:element name="CNTRY_SPECFLG" />
+                                      <xs:element name="HEADER_TEXT" />
+                                      <xs:element name="POS_TEXT" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDDH4" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="FUNCTION" />
+                                      <xs:element name="TDOBJECT" />
+                                      <xs:element name="TDOBNAME" />
+                                      <xs:element name="TDID" />
+                                      <xs:element name="TDTEXTTYPE" />
+                                      <xs:element name="LANGUA_ISO" />
+                                      <xs:element name="PHRSEL" />
+                                      <xs:element name="TABNAME" />
+                                      <xs:element name="FIELDNAME" />
+                                      <xs:element name="LANGUA_PHR" />
+                                      <xs:element name="E1EDDP4" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="TDFORMAT" />
+                                            <xs:element name="TDLINE" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDD14" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="DGARAND" />
+                                <xs:element name="DGPULIM" />
+                                <xs:element name="DGPAS" />
+                                <xs:element name="DGREPQU" />
+                                <xs:element name="DGEXCQU" />
+                                <xs:element name="DGSUP_TRANSIND01" />
+                                <xs:element name="DGSUP_TRANSIND02" />
+                                <xs:element name="DGSUP_TRANSIND03" />
+                                <xs:element name="DGSUP_TRANSIND04" />
+                                <xs:element name="DGSUP_TRANSIND05" />
+                                <xs:element name="DGSUP_TRANSIND06" />
+                                <xs:element name="DGSUP_TRANSIND07" />
+                                <xs:element name="DGSUP_TRANSIND08" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL19" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" />
+                                <xs:element name="PARAM" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL11" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SERNR" />
+                                <xs:element name="UII" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EPC01" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EPC" />
+                                <xs:element name="URN" />
+                                <xs:element name="NAME" />
+                                <xs:element name="PARENT_NAME" />
+                                <xs:element name="E1IDC01" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="QUALF" />
+                                      <xs:element name="ELEMENT" />
+                                      <xs:element name="ELEMENT_VALUE" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL15" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ATINN" />
+                                <xs:element name="ATNAM" />
+                                <xs:element name="ATBEZ" />
+                                <xs:element name="ATWRT" />
+                                <xs:element name="ATWTB" />
+                                <xs:element name="EWAHR" />
+                                <xs:element name="ATWRT_LONG" />
+                                <xs:element name="ATWTB_LONG" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL35" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="STAWN" />
+                                <xs:element name="EXPRF" />
+                                <xs:element name="EXART" />
+                                <xs:element name="HERKL" />
+                                <xs:element name="HERKR" />
+                                <xs:element name="GRWRT" />
+                                <xs:element name="PREFE" />
+                                <xs:element name="E1EDL36" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="STXT1" />
+                                      <xs:element name="STXT2" />
+                                      <xs:element name="STXT3" />
+                                      <xs:element name="STXT4" />
+                                      <xs:element name="STXT5" />
+                                      <xs:element name="STXT6" />
+                                      <xs:element name="STXT7" />
+                                      <xs:element name="EXPRF_BEZ" />
+                                      <xs:element name="EXART_BEZ" />
+                                      <xs:element name="HERKL_BEZ" />
+                                      <xs:element name="HERKR_BEZ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL43" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" />
+                                <xs:element name="BELNR" />
+                                <xs:element name="POSNR" />
+                                <xs:element name="DATUM" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL41" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALI" />
+                                <xs:element name="BSTNR" />
+                                <xs:element name="BSTDT" />
+                                <xs:element name="BSARK" />
+                                <xs:element name="IHREZ" />
+                                <xs:element name="POSEX" />
+                                <xs:element name="E1EDL42" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="BSARK_BEZ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1TXTH9" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="FUNCTION" />
+                                <xs:element name="TDOBJECT" />
+                                <xs:element name="TDOBNAME" />
+                                <xs:element name="TDID" />
+                                <xs:element name="TDSPRAS" />
+                                <xs:element name="TDTEXTTYPE" />
+                                <xs:element name="LANGUA_ISO" />
+                                <xs:element name="E1TXTP9" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="TDFORMAT" />
+                                      <xs:element name="TDLINE" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL12" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ATINN" />
+                                <xs:element name="ATNAM" />
+                                <xs:element name="ATBEZ" />
+                                <xs:element name="ATWRT" />
+                                <xs:element name="ATWTB" />
+                                <xs:element name="EWAHR" />
+                                <xs:element name="ATWRT_LONG" />
+                                <xs:element name="ATWTB_LONG" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL58" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="KDMAT" />
+                                <xs:element name="CHARG_KU" />
+                                <xs:element name="ERFMG" />
+                                <xs:element name="ERFME" />
+                                <xs:element name="E1EDL59" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="SERNR" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL37" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EXIDV" />
+                                <xs:element name="TARAG" />
+                                <xs:element name="GWEIT" />
+                                <xs:element name="BRGEW" />
+                                <xs:element name="NTGEW" />
+                                <xs:element name="MAGEW" />
+                                <xs:element name="GWEIM" />
+                                <xs:element name="BTVOL" />
+                                <xs:element name="NTVOL" />
+                                <xs:element name="MAVOL" />
+                                <xs:element name="VOLEM" />
+                                <xs:element name="TAVOL" />
+                                <xs:element name="VOLET" />
+                                <xs:element name="VEGR2" />
+                                <xs:element name="VEGR1" />
+                                <xs:element name="VEGR3" />
+                                <xs:element name="VHILM" />
+                                <xs:element name="VEGR4" />
+                                <xs:element name="LAENG" />
+                                <xs:element name="VEGR5" />
+                                <xs:element name="BREIT" />
+                                <xs:element name="HOEHE" />
+                                <xs:element name="MEABM" />
+                                <xs:element name="INHALT" />
+                                <xs:element name="VHART" />
+                                <xs:element name="MAGRV" />
+                                <xs:element name="LADLG" />
+                                <xs:element name="LADEH" />
+                                <xs:element name="FARZT" />
+                                <xs:element name="FAREH" />
+                                <xs:element name="ENTFE" />
+                                <xs:element name="EHENT" />
+                                <xs:element name="VELTP" />
+                                <xs:element name="EXIDV2" />
+                                <xs:element name="LANDT" />
+                                <xs:element name="LANDF" />
+                                <xs:element name="NAMEF" />
+                                <xs:element name="NAMBE" />
+                                <xs:element name="VHILM_KU" />
+                                <xs:element name="VEBEZ" />
+                                <xs:element name="SMGKN" />
+                                <xs:element name="interna" />
+                                <xs:element name="SORTL" />
+                                <xs:element name="ERNAM" />
+                                <xs:element name="GEWFX" />
+                                <xs:element name="ERLKZ" />
+                                <xs:element name="EXIDA" />
+                                <xs:element name="MOVE_STATUS" />
+                                <xs:element name="PACKVORSCHR" />
+                                <xs:element name="PACKVORSCHR_ST" />
+                                <xs:element name="LABELTYP" />
+                                <xs:element name="ZUL_AUFL" />
+                                <xs:element name="VHILM_EXTERNAL" />
+                                <xs:element name="VHILM_VERSION" />
+                                <xs:element name="VHILM_GUID" />
+                                <xs:element name="KDMAT35_EXTERNAL" />
+                                <xs:element name="KDMAT35_VERSION" />
+                                <xs:element name="KDMAT35_GUID" />
+                                <xs:element name="VHILM_KU_EXTERNAL" />
+                                <xs:element name="VHILM_KU_VERSION" />
+                                <xs:element name="VHILM_KU_GUID" />
+                                <xs:element name="VHILM_LONG" />
+                                <xs:element name="E1EDL39" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="QUALF" />
+                                      <xs:element name="PARAM" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDL38" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="VEGR1_BEZ" />
+                                      <xs:element name="VEGR2_BEZ" />
+                                      <xs:element name="VEGR3_BEZ" />
+                                      <xs:element name="VEGR4_BEZ" />
+                                      <xs:element name="VEGR5_BEZ" />
+                                      <xs:element name="VHART_BEZ" />
+                                      <xs:element name="MAGRV_BEZ" />
+                                      <xs:element name="VEBEZ" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EPC02" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="EPC" />
+                                      <xs:element name="URN" />
+                                      <xs:element name="NAME" />
+                                      <xs:element name="PARENT_NAME" />
+                                      <xs:element name="E1IDC02" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="QUALF" />
+                                            <xs:element name="ELEMENT" />
+                                            <xs:element name="ELEMENT_VALUE" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EPC04" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="EPC" />
+                                      <xs:element name="URN" />
+                                      <xs:element name="NAME" />
+                                      <xs:element name="PARENT_NAME" />
+                                      <xs:element name="E1IDC04" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="QUALF" />
+                                            <xs:element name="ELEMENT" />
+                                            <xs:element name="ELEMENT_VALUE" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDL49" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="XSITD" />
+                                      <xs:element name="SHIPACCT" />
+                                      <xs:element name="TRACKN" />
+                                      <xs:element name="XSIURL_SINGLE_TRACK" />
+                                      <xs:element name="E1EDL50" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="XSIQUALF" />
+                                            <xs:element name="XSITD" />
+                                            <xs:element name="VLABDATA" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD50" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PACKAGE_CAT" />
+                                      <xs:element name="TRANSP_INDEX" />
+                                      <xs:element name="CRIT_SAF_INDEX" />
+                                      <xs:element name="FLG_DG_PACKAGE" />
+                                      <xs:element name="DG_PACKAGE_LEVEL" />
+                                      <xs:element name="PACKCODE" />
+                                      <xs:element name="INSTR_ENCL_CAT" />
+                                      <xs:element name="MAT_DAMAGED_CL7" />
+                                      <xs:element name="DOSE_RATE_BULK" />
+                                      <xs:element name="DOSE_RATE_BULK_U" />
+                                      <xs:element name="DOSE_RATE_PACK" />
+                                      <xs:element name="U_DOSE_RATE_PACK" />
+                                      <xs:element name="LEADING_LWDG" />
+                                      <xs:element name="MAX_GROSS_WEIGHT" />
+                                      <xs:element name="U_MAX_GROSS_WGHT" />
+                                      <xs:element name="E1EDD51" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="LANGUA_ISO" />
+                                            <xs:element name="DG_PACKAGE_LEVEL_D" />
+                                            <xs:element name="PACKCODE_D" />
+                                            <xs:element name="PACKTYPE_D" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDD52" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="LWDG" />
+                                      <xs:element name="EXCEPTID" />
+                                      <xs:element name="VERSION" />
+                                      <xs:element name="BLOCKEDFLG" />
+                                      <xs:element name="EXCEPT_VALFR" />
+                                      <xs:element name="EXCEPT_VALTO" />
+                                      <xs:element name="ENTPR_SPECFLG" />
+                                      <xs:element name="CNTRY_SPECFLG" />
+                                      <xs:element name="E1EDD53" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="LANGUA_ISO" />
+                                            <xs:element name="HEADER_TEXT" />
+                                            <xs:element name="POS_TEXT" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="E1EDL44" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="VELIN" />
+                                      <xs:element name="VBELN" />
+                                      <xs:element name="POSNR" />
+                                      <xs:element name="EXIDV" />
+                                      <xs:element name="VEMNG" />
+                                      <xs:element name="VEMEH" />
+                                      <xs:element name="MATNR" />
+                                      <xs:element name="KDMAT" />
+                                      <xs:element name="CHARG" />
+                                      <xs:element name="WERKS" />
+                                      <xs:element name="LGORT" />
+                                      <xs:element name="CUOBJ" />
+                                      <xs:element name="BESTQ" />
+                                      <xs:element name="SOBKZ" />
+                                      <xs:element name="SONUM" />
+                                      <xs:element name="ANZSN" />
+                                      <xs:element name="WDATU" />
+                                      <xs:element name="PARID" />
+                                      <xs:element name="MATNR_EXTERNAL" />
+                                      <xs:element name="MATNR_VERSION" />
+                                      <xs:element name="MATNR_GUID" />
+                                      <xs:element name="KDMAT_EXTERNAL" />
+                                      <xs:element name="KDMAT_VERSION" />
+                                      <xs:element name="E1EDL46" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="SERNR" />
+                                            <xs:element name="UII" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="E1EDL57" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="QUALF" />
+                                            <xs:element name="PRODN" />
+                                            <xs:element name="ITMNR" />
+                                            <xs:element name="SQUNT" />
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="E1EPC03" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="EPC" />
+                                            <xs:element name="URN" />
+                                            <xs:element name="NAME" />
+                                            <xs:element name="PARENT_NAME" />
+                                            <xs:element name="E1IDC03" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="QUALF" />
+                                                  <xs:element name="ELEMENT" />
+                                                  <xs:element name="ELEMENT_VALUE" />
+                                                </xs:sequence>
+                                                <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="E1EDD54" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="LWDG" />
+                                            <xs:element name="EXCEPTID" />
+                                            <xs:element name="VERSION" />
+                                            <xs:element name="BLOCKEDFLG" />
+                                            <xs:element name="EXCEPT_VALFR" />
+                                            <xs:element name="EXCEPT_VALTO" />
+                                            <xs:element name="ENTPR_SPECFLG" />
+                                            <xs:element name="CNTRY_SPECFLG" />
+                                            <xs:element name="E1EDD55" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="LANGUA_ISO" />
+                                                  <xs:element name="HEADER_TEXT" />
+                                                  <xs:element name="POS_TEXT" />
+                                                </xs:sequence>
+                                                <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL54" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SOURCEHU" />
+                                <xs:element name="DESTHU" />
+                                <xs:element name="PACKHU" />
+                                <xs:element name="PACK_QTY" />
+                                <xs:element name="BASE_UOM" />
+                                <xs:element name="MATERIAL" />
+                                <xs:element name="BATCH" />
+                                <xs:element name="PLANT" />
+                                <xs:element name="STGE_LOC" />
+                                <xs:element name="STOCK_CAT" />
+                                <xs:element name="SPEC_STOCK" />
+                                <xs:element name="SP_STCK_NO" />
+                                <xs:element name="DELIV_NUMB" />
+                                <xs:element name="DELIV_ITEM" />
+                                <xs:element name="MATERIAL_EXTERNAL" />
+                                <xs:element name="MATERIAL_VERSION" />
+                                <xs:element name="MATERIAL_GUID" />
+                                <xs:element name="MATERIAL_LONG" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1UPSLINK" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="UPSNAM" />
+                    <xs:element name="ORGNAM" />
+                    <xs:element name="MESTYP" />
+                    <xs:element name="OBJID" />
+                    <xs:element name="OBJVAL" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte"  />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1BP_XI_FORCE" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PLVAR" />
+                    <xs:element name="OTYPE" />
+                    <xs:element name="OBJ_ID" />
+                    <xs:element name="LOG_SYSTEM" />
+                    <xs:element name="PLANT" />
+                    <xs:element name="STGE_LOC" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte"   />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:unsignedByte" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

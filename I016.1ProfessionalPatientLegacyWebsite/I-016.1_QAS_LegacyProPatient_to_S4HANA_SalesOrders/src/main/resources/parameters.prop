@@ -1,0 +1,25 @@
+#Wed Feb 24 17:05:54 UTC 2021
+Post_processing=move
+SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Sorting=sort_by_timestamp
+SFTP_Address=23.253.235.30\:22
+email_cc=
+SFTP_Folder=/nordicnaturals.com/QAS/sap_orders
+email_host=email.nn.com\:587
+IDOC_inbound=/sap/bc/zinterface/zin_idoc_xml
+email_from=sapalerts@nordicnaturals.com
+SFTP_Disconnect_param=1
+SFTP_Proxy=none
+RFC_inbound=/sap/bc/soap/rfc
+SFTP_Credentials=Legacy_SFTP
+Sorting_order=sort_direction_asc
+MANDT=sap-client\=100
+email_bcc=
+Archive_directory=Sap_Orders_Processed
+email_to=sapalerts@nordicnaturals.com, smishra@nordicnaturals.com
+Login2SAP=QAS_LEGACY_USER
+Email_subject=Legacy QAS Pro/Patient CPI Job Failure Alert
+SFTP_Authentication=user_password
+email_credentials=NN_SMTP_Credentials
+Authentication=Basic
+email_proxy_type=sapcc

@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:17 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1617051767996
+OriginBundleSymbolicName=I-018_PRD_Move_DeliveryFile_2SFTP
+target=Magento
+OriginBundleName=I-018 PRD_Move_DeliveryFile_2SFTP
+OriginBundleVersion=2.6
+description=\ 

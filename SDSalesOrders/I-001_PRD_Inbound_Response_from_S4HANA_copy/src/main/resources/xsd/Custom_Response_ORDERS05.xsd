@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ORDERS05">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TABNAM" type="xs:string" />
+                    <xs:element name="MANDT" type="xs:string" />
+                    <xs:element name="DOCNUM" type="xs:unsignedShort" />
+                    <xs:element name="DOCREL" type="xs:unsignedShort" />
+                    <xs:element name="STATUS" type="xs:string" />
+                    <xs:element name="DIRECT" type="xs:string" />
+                    <xs:element name="OUTMOD" type="xs:string" />
+                    <xs:element name="IDOCTYP" type="xs:string" />
+                    <xs:element name="MESTYP" type="xs:string" />
+                    <xs:element name="STDMES" type="xs:string" />
+                    <xs:element name="SNDPOR" type="xs:string" />
+                    <xs:element name="SNDPRT" type="xs:string" />
+                    <xs:element name="SNDPRN" type="xs:string" />
+                    <xs:element name="RCVPOR" type="xs:string" />
+                    <xs:element name="RCVPRT" type="xs:string" />
+                    <xs:element name="RCVPRN" type="xs:string" />
+                    <xs:element name="CREDAT" type="xs:string" />
+                    <xs:element name="CRETIM" type="xs:string" />
+                    <xs:element name="SERIAL" type="xs:unsignedLong" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1EDK01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ACTION" type="xs:string" />
+                    <xs:element name="CURCY" type="xs:string" />
+                    <xs:element name="WKURS" type="xs:decimal" />
+                    <xs:element name="ZTERM" type="xs:string" />
+                    <xs:element name="BSART" type="xs:string" />
+                    <xs:element name="BELNR" type="xs:string" />
+                    <xs:element name="VSART" type="xs:string" />
+                    <xs:element name="VSART_BEZ" type="xs:string" />
+                    <xs:element name="RECIPNT_NO" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDK14">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QUALF" type="xs:string" />
+                    <xs:element name="ORGID" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDK03">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="IDDAT" type="xs:string" />
+                    <xs:element name="DATUM" type="xs:string" />
+                    <xs:element minOccurs="0" name="UZEIT" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDKA1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PARVW" type="xs:string" />
+                    <xs:element name="PARTN" type="xs:string" />
+                    <xs:element name="NAME1" type="xs:string" />
+                    <xs:element name="STRAS" type="xs:string" />
+                    <xs:element name="ORT01" type="xs:string" />
+                    <xs:element name="PSTLZ" type="xs:string" />
+                    <xs:element name="LAND1" type="xs:string" />
+                    <xs:element name="TELF1" type="xs:string" />
+                    <xs:element name="SPRAS" type="xs:string" />
+                    <xs:element name="ANRED" type="xs:string" />
+                    <xs:element name="HAUSN" type="xs:string" />
+                    <xs:element name="REGIO" type="xs:string" />
+                    <xs:element name="SPRAS_ISO" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDK02">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QUALF" type="xs:string" />
+                    <xs:element name="BELNR" type="xs:string" />
+                    <xs:element name="DATUM" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDK17">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QUALF" type="xs:string" />
+                    <xs:element minOccurs="0" name="LKOND" type="xs:string" />
+                    <xs:element name="LKTEXT" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1EDK18">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="QUALF" type="xs:string" />
+                    <xs:element name="TAGE" type="xs:string" />
+                    <xs:element name="PRZNT" type="xs:decimal" />
+                    <xs:element name="ZTERM_TXT" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDP01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="POSEX" type="xs:string" />
+                    <xs:element name="ACTION" type="xs:string" />
+                    <xs:element name="MENGE" type="xs:decimal" />
+                    <xs:element name="MENEE" type="xs:string" />
+                    <xs:element name="PMENE" type="xs:string" />
+                    <xs:element name="VPREI" type="xs:decimal" />
+                    <xs:element name="PEINH" type="xs:string" />
+                    <xs:element name="NETWR" type="xs:decimal" />
+                    <xs:element name="NTGEW" type="xs:decimal" />
+                    <xs:element name="GEWEI" type="xs:string" />
+                    <xs:element name="CURCY" type="xs:string" />
+                    <xs:element name="MATKL" type="xs:string" />
+                    <xs:element name="BRGEW" type="xs:decimal" />
+                    <xs:element name="PSTYV" type="xs:string" />
+                    <xs:element name="WERKS" type="xs:string" />
+                    <xs:element name="LPRIO" type="xs:string" />
+                    <xs:element name="LPRIO_BEZ" type="xs:string" />
+                    <xs:element name="VSTEL" type="xs:string" />
+                    <xs:element maxOccurs="unbounded" name="E1EDP02">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" type="xs:string" />
+                          <xs:element name="BELNR" type="xs:string" />
+                          <xs:element name="ZEILE" type="xs:string" />
+                          <xs:element minOccurs="0" name="DATUM" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element maxOccurs="unbounded" name="E1EDP03">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="IDDAT" type="xs:string" />
+                          <xs:element name="DATUM" type="xs:string" />
+                          <xs:element minOccurs="0" name="UZEIT" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="E1EDP05">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ALCKZ" type="xs:string" />
+                          <xs:element name="KOTXT" type="xs:string" />
+                          <xs:element name="BETRG" type="xs:decimal" />
+                          <xs:element name="KRATE" type="xs:string" />
+                          <xs:element name="UPRBS" type="xs:string" />
+                          <xs:element name="MEAUN" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDP19">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" type="xs:string" />
+                          <xs:element name="IDTNR" type="xs:string" />
+                          <xs:element name="KTEXT" type="xs:string" />
+                          <xs:element name="IDTNR_LONG" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="E1EDS01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SUMID" type="xs:string" />
+                    <xs:element name="SUMME" type="xs:decimal" />
+                    <xs:element minOccurs="0" name="SUNIT" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

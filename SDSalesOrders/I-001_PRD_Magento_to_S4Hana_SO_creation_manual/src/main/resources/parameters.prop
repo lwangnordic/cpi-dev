@@ -1,0 +1,12 @@
+#Mon Mar 15 23:16:32 UTC 2021
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+Magento_pathtoQuery=/consumers/rest/all/V1/orders
+IDOC_inbound=/sap/bc/zinterface/zin_idoc_xml
+RFC_inbound=/sap/bc/soap/rfc
+Authentication=Basic
+Login2SAP=PRD_MAG_USER
+Magento_Server=https\://sandbox-w6wvm5a-hraqe4drzlnyk.us.magentosite.cloud
+Search_Criteria=${property.Query}
+MANDT=sap-client\=100
+SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Magento_credentials=PRD_Magento_credentials

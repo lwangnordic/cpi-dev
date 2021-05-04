@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:28 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1615849882116
+OriginBundleSymbolicName=I-001_PRD_Update_Inventory_S4HANA_to_Magento
+target=Magento
+OriginBundleName=I-001 PRD_Update_Inventory_S4HANA_to_Magento
+OriginBundleVersion=3.1
+description=\ 

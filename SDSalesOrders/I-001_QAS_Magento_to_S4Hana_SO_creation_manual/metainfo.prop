@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:24 UTC 2021
+source=Magento
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1612561572430
+OriginBundleSymbolicName=I-001_QAS_Magento_to_S4Hana_SO_creation_manual
+target=S4HANA
+OriginBundleName=I-001 QAS_Magento_to S4Hana_SO_creation_manual
+OriginBundleVersion=2.4
+description=Create Sales Orders Inbound from Magento to S4HANA

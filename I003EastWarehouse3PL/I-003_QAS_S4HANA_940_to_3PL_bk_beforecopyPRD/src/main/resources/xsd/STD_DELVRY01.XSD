@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DELVRY01">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TABNAM" type="xs:string" />
+                    <xs:element name="MANDT" type="xs:string" />
+                    <xs:element name="DOCNUM" type="xs:string" />
+                    <xs:element name="DOCREL" type="xs:string" />
+                    <xs:element name="STATUS" type="xs:string" />
+                    <xs:element name="DIRECT" type="xs:string" />
+                    <xs:element name="OUTMOD" type="xs:string" />
+                    <xs:element name="IDOCTYP" type="xs:string" />
+                    <xs:element name="MESTYP" type="xs:string" />
+                    <xs:element name="SNDPOR" type="xs:string" />
+                    <xs:element name="SNDPRT" type="xs:string" />
+                    <xs:element name="SNDPRN" type="xs:string" />
+                    <xs:element name="RCVPOR" type="xs:string" />
+                    <xs:element name="RCVPRT" type="xs:string" />
+                    <xs:element name="RCVPRN" type="xs:string" />
+                    <xs:element name="CREDAT" type="xs:string" />
+                    <xs:element name="CRETIM" type="xs:string" />
+                    <xs:element name="SERIAL" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="E1EDL20">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VBELN" type="xs:string" />
+                    <xs:element name="VSTEL" type="xs:string" />
+                    <xs:element name="VKORG" type="xs:string" />
+                    <xs:element name="LSTEL" type="xs:string" />
+                    <xs:element name="VKBUR" type="xs:string" />
+                    <xs:element name="LGNUM" type="xs:string" />
+                    <xs:element name="ABLAD" type="xs:string" />
+                    <xs:element name="INCO1" type="xs:string" />
+                    <xs:element name="INCO2" type="xs:string" />
+                    <xs:element name="ROUTE" type="xs:string" />
+                    <xs:element name="VSBED" type="xs:string" />
+                    <xs:element name="BTGEW" type="xs:string" />
+                    <xs:element name="NTGEW" type="xs:string" />
+                    <xs:element name="GEWEI" type="xs:string" />
+                    <xs:element name="VOLUM" type="xs:string" />
+                    <xs:element name="VOLEH" type="xs:string" />
+                    <xs:element name="ANZPK" type="xs:string" />
+                    <xs:element name="BOLNR" type="xs:string" />
+                    <xs:element name="TRATY" type="xs:string" />
+                    <xs:element name="TRAID" type="xs:string" />
+                    <xs:element name="XABLN" type="xs:string" />
+                    <xs:element name="LIFEX" type="xs:string" />
+                    <xs:element name="PARID" type="xs:string" />
+                    <xs:element name="PODAT" type="xs:string" />
+                    <xs:element name="POTIM" type="xs:string" />
+                    <xs:element name="LOC_SEQ" type="xs:string" />
+                    <xs:element name="HOLD" type="xs:string" />
+                    <xs:element name="MAX_ERR_TYPE" type="xs:string" />
+                    <xs:element name="LE_SCENARIO" type="xs:string" />
+                    <xs:element name="RECIPIENT_CREATE" type="xs:string" />
+                    <xs:element name="INCOV" type="xs:string" />
+                    <xs:element name="INCO2_L" type="xs:string" />
+                    <xs:element name="INCO3_L" type="xs:string" />
+                    <xs:element name="E1EDL22">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="VSTEL_BEZ" type="xs:string" />
+                          <xs:element name="VKORG_BEZ" type="xs:string" />
+                          <xs:element name="LSTEL_BEZ" type="xs:string" />
+                          <xs:element name="VKBUR_BEZ" type="xs:string" />
+                          <xs:element name="LGNUM_BEZ" type="xs:string" />
+                          <xs:element name="INCO1_BEZ" type="xs:string" />
+                          <xs:element name="ROUTE_BEZ" type="xs:string" />
+                          <xs:element name="VSBED_BEZ" type="xs:string" />
+                          <xs:element name="TRATY_BEZ" type="xs:string" />
+                          <xs:element name="INCOV_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL21">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="LFART" type="xs:string" />
+                          <xs:element name="BZIRK" type="xs:string" />
+                          <xs:element name="AUTLF" type="xs:string" />
+                          <xs:element name="EXPKZ" type="xs:string" />
+                          <xs:element name="LIFSK" type="xs:string" />
+                          <xs:element name="LPRIO" type="xs:string" />
+                          <xs:element name="KDGRP" type="xs:string" />
+                          <xs:element name="BEROT" type="xs:string" />
+                          <xs:element name="TRAGR" type="xs:string" />
+                          <xs:element name="TRSPG" type="xs:string" />
+                          <xs:element name="AULWE" type="xs:string" />
+                          <xs:element name="E1EDL23">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LFART_BEZ" type="xs:string" />
+                                <xs:element name="LPRIO_BEZ" type="xs:string" />
+                                <xs:element name="BZIRK_BEZ" type="xs:string" />
+                                <xs:element name="LIFSK_BEZ" type="xs:string" />
+                                <xs:element name="KDGRP_BEZ" type="xs:string" />
+                                <xs:element name="TRAGR_BEZ" type="xs:string" />
+                                <xs:element name="TRSPG_BEZ" type="xs:string" />
+                                <xs:element name="AULWE_BEZ" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL18">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" type="xs:string" />
+                          <xs:element name="PARAM" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1ADRM1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PARTNER_Q" type="xs:string" />
+                          <xs:element name="ADDRESS_T" type="xs:string" />
+                          <xs:element name="PARTNER_ID" type="xs:string" />
+                          <xs:element name="JURISDIC" type="xs:string" />
+                          <xs:element name="LANGUAGE" type="xs:string" />
+                          <xs:element name="FORMOFADDR" type="xs:string" />
+                          <xs:element name="NAME1" type="xs:string" />
+                          <xs:element name="NAME2" type="xs:string" />
+                          <xs:element name="NAME3" type="xs:string" />
+                          <xs:element name="NAME4" type="xs:string" />
+                          <xs:element name="NAME_TEXT" type="xs:string" />
+                          <xs:element name="NAME_CO" type="xs:string" />
+                          <xs:element name="LOCATION" type="xs:string" />
+                          <xs:element name="BUILDING" type="xs:string" />
+                          <xs:element name="FLOOR" type="xs:string" />
+                          <xs:element name="ROOM" type="xs:string" />
+                          <xs:element name="STREET1" type="xs:string" />
+                          <xs:element name="STREET2" type="xs:string" />
+                          <xs:element name="STREET3" type="xs:string" />
+                          <xs:element name="HOUSE_SUPL" type="xs:string" />
+                          <xs:element name="HOUSE_RANG" type="xs:string" />
+                          <xs:element name="POSTL_COD1" type="xs:string" />
+                          <xs:element name="POSTL_COD3" type="xs:string" />
+                          <xs:element name="POSTL_AREA" type="xs:string" />
+                          <xs:element name="CITY1" type="xs:string" />
+                          <xs:element name="CITY2" type="xs:string" />
+                          <xs:element name="POSTL_PBOX" type="xs:string" />
+                          <xs:element name="POSTL_COD2" type="xs:string" />
+                          <xs:element name="POSTL_CITY" type="xs:string" />
+                          <xs:element name="TELEPHONE1" type="xs:string" />
+                          <xs:element name="TELEPHONE2" type="xs:string" />
+                          <xs:element name="TELEFAX" type="xs:string" />
+                          <xs:element name="TELEX" type="xs:string" />
+                          <xs:element name="E_MAIL" type="xs:string" />
+                          <xs:element name="COUNTRY1" type="xs:string" />
+                          <xs:element name="COUNTRY2" type="xs:string" />
+                          <xs:element name="REGION" type="xs:string" />
+                          <xs:element name="COUNTY_COD" type="xs:string" />
+                          <xs:element name="COUNTY_TXT" type="xs:string" />
+                          <xs:element name="TZCODE" type="xs:string" />
+                          <xs:element name="TZDESC" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1ADRE1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="EXTEND_Q" type="xs:string" />
+                          <xs:element name="EXTEND_D" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDT13">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALF" type="xs:string" />
+                          <xs:element name="VSTZW" type="xs:string" />
+                          <xs:element name="VSTZW_BEZ" type="xs:string" />
+                          <xs:element name="NTANF" type="xs:string" />
+                          <xs:element name="NTANZ" type="xs:string" />
+                          <xs:element name="NTEND" type="xs:string" />
+                          <xs:element name="NTENZ" type="xs:string" />
+                          <xs:element name="TZONE_BEG" type="xs:string" />
+                          <xs:element name="ISDD" type="xs:string" />
+                          <xs:element name="ISDZ" type="xs:string" />
+                          <xs:element name="IEDD" type="xs:string" />
+                          <xs:element name="IEDZ" type="xs:string" />
+                          <xs:element name="TZONE_END" type="xs:string" />
+                          <xs:element name="VORNR" type="xs:string" />
+                          <xs:element name="VSTGA" type="xs:string" />
+                          <xs:element name="VSTGA_BEZ" type="xs:string" />
+                          <xs:element name="EVENT" type="xs:string" />
+                          <xs:element name="EVENT_ALI" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL40">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="KNOTE" type="xs:string" />
+                          <xs:element name="KNOTE_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1ADRM2">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PARTNER_Q" type="xs:string" />
+                          <xs:element name="ADDRESS_T" type="xs:string" />
+                          <xs:element name="PARTNER_ID" type="xs:string" />
+                          <xs:element name="JURISDIC" type="xs:string" />
+                          <xs:element name="LANGUAGE" type="xs:string" />
+                          <xs:element name="FORMOFADDR" type="xs:string" />
+                          <xs:element name="NAME1" type="xs:string" />
+                          <xs:element name="NAME2" type="xs:string" />
+                          <xs:element name="NAME3" type="xs:string" />
+                          <xs:element name="NAME4" type="xs:string" />
+                          <xs:element name="NAME_TEXT" type="xs:string" />
+                          <xs:element name="NAME_CO" type="xs:string" />
+                          <xs:element name="LOCATION" type="xs:string" />
+                          <xs:element name="BUILDING" type="xs:string" />
+                          <xs:element name="FLOOR" type="xs:string" />
+                          <xs:element name="ROOM" type="xs:string" />
+                          <xs:element name="STREET1" type="xs:string" />
+                          <xs:element name="STREET2" type="xs:string" />
+                          <xs:element name="STREET3" type="xs:string" />
+                          <xs:element name="HOUSE_SUPL" type="xs:string" />
+                          <xs:element name="HOUSE_RANG" type="xs:string" />
+                          <xs:element name="POSTL_COD1" type="xs:string" />
+                          <xs:element name="POSTL_COD3" type="xs:string" />
+                          <xs:element name="POSTL_AREA" type="xs:string" />
+                          <xs:element name="CITY1" type="xs:string" />
+                          <xs:element name="CITY2" type="xs:string" />
+                          <xs:element name="POSTL_PBOX" type="xs:string" />
+                          <xs:element name="POSTL_COD2" type="xs:string" />
+                          <xs:element name="POSTL_CITY" type="xs:string" />
+                          <xs:element name="TELEPHONE1" type="xs:string" />
+                          <xs:element name="TELEPHONE2" type="xs:string" />
+                          <xs:element name="TELEFAX" type="xs:string" />
+                          <xs:element name="TELEX" type="xs:string" />
+                          <xs:element name="E_MAIL" type="xs:string" />
+                          <xs:element name="COUNTRY1" type="xs:string" />
+                          <xs:element name="COUNTRY2" type="xs:string" />
+                          <xs:element name="REGION" type="xs:string" />
+                          <xs:element name="COUNTY_COD" type="xs:string" />
+                          <xs:element name="COUNTY_TXT" type="xs:string" />
+                          <xs:element name="TZCODE" type="xs:string" />
+                          <xs:element name="TZDESC" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1TXTH0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FUNCTION" type="xs:string" />
+                          <xs:element name="TDOBJECT" type="xs:string" />
+                          <xs:element name="TDOBNAME" type="xs:string" />
+                          <xs:element name="TDID" type="xs:string" />
+                          <xs:element name="TDSPRAS" type="xs:string" />
+                          <xs:element name="TDTEXTTYPE" type="xs:string" />
+                          <xs:element name="LANGUA_ISO" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1TXTP0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TDFORMAT" type="xs:string" />
+                          <xs:element name="TDLINE" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1TXTH8">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="FUNCTION" type="xs:string" />
+                          <xs:element name="TDOBJECT" type="xs:string" />
+                          <xs:element name="TDOBNAME" type="xs:string" />
+                          <xs:element name="TDID" type="xs:string" />
+                          <xs:element name="TDSPRAS" type="xs:string" />
+                          <xs:element name="TDTEXTTYPE" type="xs:string" />
+                          <xs:element name="LANGUA_ISO" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1TXTP8">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TDFORMAT" type="xs:string" />
+                          <xs:element name="TDLINE" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL33">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ALAND" type="xs:string" />
+                          <xs:element name="EXPVZ" type="xs:string" />
+                          <xs:element name="ZOLLA" type="xs:string" />
+                          <xs:element name="ZOLLB" type="xs:string" />
+                          <xs:element name="ZOLL1" type="xs:string" />
+                          <xs:element name="ZOLL2" type="xs:string" />
+                          <xs:element name="ZOLL3" type="xs:string" />
+                          <xs:element name="ZOLL4" type="xs:string" />
+                          <xs:element name="ZOLL5" type="xs:string" />
+                          <xs:element name="ZOLL6" type="xs:string" />
+                          <xs:element name="KZGBE" type="xs:string" />
+                          <xs:element name="STGBE" type="xs:string" />
+                          <xs:element name="STABE" type="xs:string" />
+                          <xs:element name="CONTA" type="xs:string" />
+                          <xs:element name="GRWCU" type="xs:string" />
+                          <xs:element name="IEVER" type="xs:string" />
+                          <xs:element name="PREV_DOC_NO" type="xs:string" />
+                          <xs:element name="PREV_DOC_TYPE" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL34">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="EXPVZ_BEZ" type="xs:string" />
+                          <xs:element name="ZOLLA_BEZ" type="xs:string" />
+                          <xs:element name="ZOLLB_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL1_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL2_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL3_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL4_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL5_BEZ" type="xs:string" />
+                          <xs:element name="ZOLL6_BEZ" type="xs:string" />
+                          <xs:element name="IEVER_BEZ" type="xs:string" />
+                          <xs:element name="STGBE_BEZ" type="xs:string" />
+                          <xs:element name="STABE_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL28">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ROUTE" type="xs:string" />
+                          <xs:element name="VSART" type="xs:string" />
+                          <xs:element name="VSAVL" type="xs:string" />
+                          <xs:element name="VSANL" type="xs:string" />
+                          <xs:element name="ROUID" type="xs:string" />
+                          <xs:element name="DISTZ" type="xs:string" />
+                          <xs:element name="MEDST" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL29">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ROUTE_BEZ" type="xs:string" />
+                          <xs:element name="VSART_BEZ" type="xs:string" />
+                          <xs:element name="VSAVL_BEZ" type="xs:string" />
+                          <xs:element name="VSANL_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL30">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ABNUM" type="xs:string" />
+                          <xs:element name="ANFRF" type="xs:string" />
+                          <xs:element name="VSART" type="xs:string" />
+                          <xs:element name="DISTZ" type="xs:string" />
+                          <xs:element name="MEDST" type="xs:string" />
+                          <xs:element name="TSTYP" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL31">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="VSART_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL32">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="QUALI" type="xs:string" />
+                          <xs:element name="KNOTE" type="xs:string" />
+                          <xs:element name="ADRNR" type="xs:string" />
+                          <xs:element name="VSTEL" type="xs:string" />
+                          <xs:element name="LSTEL" type="xs:string" />
+                          <xs:element name="WERKS" type="xs:string" />
+                          <xs:element name="LGORT" type="xs:string" />
+                          <xs:element name="KUNNR" type="xs:string" />
+                          <xs:element name="LIFNR" type="xs:string" />
+                          <xs:element name="ABLAD" type="xs:string" />
+                          <xs:element name="LGNUM" type="xs:string" />
+                          <xs:element name="LGTO" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL45">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="KNOTE_BEZ" type="xs:string" />
+                          <xs:element name="VSTEL_BEZ" type="xs:string" />
+                          <xs:element name="LSTEL_BEZ" type="xs:string" />
+                          <xs:element name="WERKS_BEZ" type="xs:string" />
+                          <xs:element name="LGORT_BEZ" type="xs:string" />
+                          <xs:element name="LGNUM_BEZ" type="xs:string" />
+                          <xs:element name="LGTOR_BEZ" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1ADRM3">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PARTNER_Q" type="xs:string" />
+                          <xs:element name="ADDRESS_T" type="xs:string" />
+                          <xs:element name="PARTNER_ID" type="xs:string" />
+                          <xs:element name="JURISDIC" type="xs:string" />
+                          <xs:element name="LANGUAGE" type="xs:string" />
+                          <xs:element name="FORMOFADDR" type="xs:string" />
+                          <xs:element name="NAME1" type="xs:string" />
+                          <xs:element name="NAME2" type="xs:string" />
+                          <xs:element name="NAME3" type="xs:string" />
+                          <xs:element name="NAME4" type="xs:string" />
+                          <xs:element name="NAME_TEXT" type="xs:string" />
+                          <xs:element name="NAME_CO" type="xs:string" />
+                          <xs:element name="LOCATION" type="xs:string" />
+                          <xs:element name="BUILDING" type="xs:string" />
+                          <xs:element name="FLOOR" type="xs:string" />
+                          <xs:element name="ROOM" type="xs:string" />
+                          <xs:element name="STREET1" type="xs:string" />
+                          <xs:element name="STREET2" type="xs:string" />
+                          <xs:element name="STREET3" type="xs:string" />
+                          <xs:element name="HOUSE_SUPL" type="xs:string" />
+                          <xs:element name="HOUSE_RANG" type="xs:string" />
+                          <xs:element name="POSTL_COD1" type="xs:string" />
+                          <xs:element name="POSTL_COD3" type="xs:string" />
+                          <xs:element name="POSTL_AREA" type="xs:string" />
+                          <xs:element name="CITY1" type="xs:string" />
+                          <xs:element name="CITY2" type="xs:string" />
+                          <xs:element name="POSTL_PBOX" type="xs:string" />
+                          <xs:element name="POSTL_COD2" type="xs:string" />
+                          <xs:element name="POSTL_CITY" type="xs:string" />
+                          <xs:element name="TELEPHONE1" type="xs:string" />
+                          <xs:element name="TELEPHONE2" type="xs:string" />
+                          <xs:element name="TELEFAX" type="xs:string" />
+                          <xs:element name="TELEX" type="xs:string" />
+                          <xs:element name="E_MAIL" type="xs:string" />
+                          <xs:element name="COUNTRY1" type="xs:string" />
+                          <xs:element name="COUNTRY2" type="xs:string" />
+                          <xs:element name="REGION" type="xs:string" />
+                          <xs:element name="COUNTY_COD" type="xs:string" />
+                          <xs:element name="COUNTY_TXT" type="xs:string" />
+                          <xs:element name="TZCODE" type="xs:string" />
+                          <xs:element name="TZDESC" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="E1EDL24">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="POSNR" type="xs:string" />
+                          <xs:element name="MATNR" type="xs:string" />
+                          <xs:element name="MATWA" type="xs:string" />
+                          <xs:element name="ARKTX" type="xs:string" />
+                          <xs:element name="ORKTX" type="xs:string" />
+                          <xs:element name="SUGRD" type="xs:string" />
+                          <xs:element name="SUDRU" type="xs:string" />
+                          <xs:element name="MATKL" type="xs:string" />
+                          <xs:element name="WERKS" type="xs:string" />
+                          <xs:element name="LGORT" type="xs:string" />
+                          <xs:element name="CHARG" type="xs:string" />
+                          <xs:element name="KDMAT" type="xs:string" />
+                          <xs:element name="LFIMG" type="xs:string" />
+                          <xs:element name="VRKME" type="xs:string" />
+                          <xs:element name="LGMNG" type="xs:string" />
+                          <xs:element name="MEINS" type="xs:string" />
+                          <xs:element name="NTGEW" type="xs:string" />
+                          <xs:element name="BRGEW" type="xs:string" />
+                          <xs:element name="GEWEI" type="xs:string" />
+                          <xs:element name="VOLUM" type="xs:string" />
+                          <xs:element name="VOLEH" type="xs:string" />
+                          <xs:element name="LGPBE" type="xs:string" />
+                          <xs:element name="HIPOS" type="xs:string" />
+                          <xs:element name="HIEVW" type="xs:string" />
+                          <xs:element name="LADGR" type="xs:string" />
+                          <xs:element name="TRAGR" type="xs:string" />
+                          <xs:element name="VKBUR" type="xs:string" />
+                          <xs:element name="VKGRP" type="xs:string" />
+                          <xs:element name="VTWEG" type="xs:string" />
+                          <xs:element name="SPART" type="xs:string" />
+                          <xs:element name="GRKOR" type="xs:string" />
+                          <xs:element name="EAN11" type="xs:string" />
+                          <xs:element name="SERNR" type="xs:string" />
+                          <xs:element name="AESKD" type="xs:string" />
+                          <xs:element name="EMPST" type="xs:string" />
+                          <xs:element name="MFRGR" type="xs:string" />
+                          <xs:element name="VBRST" type="xs:string" />
+                          <xs:element name="LABNK" type="xs:string" />
+                          <xs:element name="ABRDT" type="xs:string" />
+                          <xs:element name="MFRPN" type="xs:string" />
+                          <xs:element name="MFRNR" type="xs:string" />
+                          <xs:element name="ABRVW" type="xs:string" />
+                          <xs:element name="KDMAT35" type="xs:string" />
+                          <xs:element name="KANNR" type="xs:string" />
+                          <xs:element name="POSEX" type="xs:string" />
+                          <xs:element name="LIEFFZ" type="xs:string" />
+                          <xs:element name="USR01" type="xs:string" />
+                          <xs:element name="USR02" type="xs:string" />
+                          <xs:element name="USR03" type="xs:string" />
+                          <xs:element name="USR04" type="xs:string" />
+                          <xs:element name="USR05" type="xs:string" />
+                          <xs:element name="MATNR_EXTERNAL" type="xs:string" />
+                          <xs:element name="MATNR_VERSION" type="xs:string" />
+                          <xs:element name="MATNR_GUID" type="xs:string" />
+                          <xs:element name="MATWA_EXTERNAL" type="xs:string" />
+                          <xs:element name="MATWA_VERSION" type="xs:string" />
+                          <xs:element name="MATWA_GUID" type="xs:string" />
+                          <xs:element name="ZUDAT" type="xs:string" />
+                          <xs:element name="VFDAT" type="xs:string" />
+                          <xs:element name="RMA_NUMBER" type="xs:string" />
+                          <xs:element name="RMA_COMPLETE" type="xs:string" />
+                          <xs:element name="EXPIRY_DATE_EXT" type="xs:string" />
+                          <xs:element name="VGBEL" type="xs:string" />
+                          <xs:element name="VGPOS" type="xs:string" />
+                          <xs:element name="FOLLOW_UP_CODE" type="xs:string" />
+                          <xs:element name="ORMNG" type="xs:string" />
+                          <xs:element name="COMPL" type="xs:string" />
+                          <xs:element name="HOLD" type="xs:string" />
+                          <xs:element name="MAX_ERR_TYPE" type="xs:string" />
+                          <xs:element name="LICHN" type="xs:string" />
+                          <xs:element name="RECIPIENT_CREATE" type="xs:string" />
+                          <xs:element name="EXPIRY_DATE_EXT_B" type="xs:string" />
+                          <xs:element name="E1EDL25">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="LGORT_BEZ" type="xs:string" />
+                                <xs:element name="LADGR_BEZ" type="xs:string" />
+                                <xs:element name="TRAGR_BEZ" type="xs:string" />
+                                <xs:element name="VKBUR_BEZ" type="xs:string" />
+                                <xs:element name="VKGRP_BEZ" type="xs:string" />
+                                <xs:element name="VTWEG_BEZ" type="xs:string" />
+                                <xs:element name="SPART_BEZ" type="xs:string" />
+                                <xs:element name="MFRGR_BEZ" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL26">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PSTYV" type="xs:string" />
+                                <xs:element name="MATKL" type="xs:string" />
+                                <xs:element name="UMVKZ" type="xs:string" />
+                                <xs:element name="UMVKN" type="xs:string" />
+                                <xs:element name="UEBTO" type="xs:string" />
+                                <xs:element name="UNTTO" type="xs:string" />
+                                <xs:element name="XCHBW" type="xs:string" />
+                                <xs:element name="MATNR_LONG" type="xs:string" />
+                                <xs:element name="MATWA_LONG" type="xs:string" />
+                                <xs:element name="E1EDL27">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PSTYV_BEZ" type="xs:string" />
+                                      <xs:element name="MATKL_BEZ" type="xs:string" />
+                                      <xs:element name="PRODH_BEZ" type="xs:string" />
+                                      <xs:element name="WERKS_BEZ" type="xs:string" />
+                                      <xs:element name="KVGR1_BEZ" type="xs:string" />
+                                      <xs:element name="KVGR2_BEZ" type="xs:string" />
+                                      <xs:element name="KVGR3_BEZ" type="xs:string" />
+                                      <xs:element name="KVGR4_BEZ" type="xs:string" />
+                                      <xs:element name="KVGR5_BEZ" type="xs:string" />
+                                      <xs:element name="MVGR1_BEZ" type="xs:string" />
+                                      <xs:element name="MVGR2_BEZ" type="xs:string" />
+                                      <xs:element name="MVGR3_BEZ" type="xs:string" />
+                                      <xs:element name="MVGR4_BEZ" type="xs:string" />
+                                      <xs:element name="MVGR5_BEZ" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL19">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" type="xs:string" />
+                                <xs:element name="PARAM" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL11">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SERNR" type="xs:string" />
+                                <xs:element name="UII" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL15">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ATINN" type="xs:string" />
+                                <xs:element name="ATNAM" type="xs:string" />
+                                <xs:element name="ATBEZ" type="xs:string" />
+                                <xs:element name="ATWRT" type="xs:string" />
+                                <xs:element name="ATWTB" type="xs:string" />
+                                <xs:element name="EWAHR" type="xs:string" />
+                                <xs:element name="ATWRT_LONG" type="xs:string" />
+                                <xs:element name="ATWTB_LONG" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL35">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="STAWN" type="xs:string" />
+                                <xs:element name="EXPRF" type="xs:string" />
+                                <xs:element name="EXART" type="xs:string" />
+                                <xs:element name="HERKL" type="xs:string" />
+                                <xs:element name="HERKR" type="xs:string" />
+                                <xs:element name="GRWRT" type="xs:string" />
+                                <xs:element name="PREFE" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL36">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="STXT1" type="xs:string" />
+                                <xs:element name="STXT2" type="xs:string" />
+                                <xs:element name="STXT3" type="xs:string" />
+                                <xs:element name="STXT4" type="xs:string" />
+                                <xs:element name="STXT5" type="xs:string" />
+                                <xs:element name="STXT6" type="xs:string" />
+                                <xs:element name="STXT7" type="xs:string" />
+                                <xs:element name="EXPRF_BEZ" type="xs:string" />
+                                <xs:element name="EXART_BEZ" type="xs:string" />
+                                <xs:element name="HERKL_BEZ" type="xs:string" />
+                                <xs:element name="HERKR_BEZ" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL43">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" type="xs:string" />
+                                <xs:element name="BELNR" type="xs:string" />
+                                <xs:element name="POSNR" type="xs:string" />
+                                <xs:element name="DATUM" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL41">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALI" type="xs:string" />
+                                <xs:element name="BSTNR" type="xs:string" />
+                                <xs:element name="BSTDT" type="xs:string" />
+                                <xs:element name="BSARK" type="xs:string" />
+                                <xs:element name="IHREZ" type="xs:string" />
+                                <xs:element name="POSEX" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL42">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="BSARK_BEZ" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1TXTH9">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="FUNCTION" type="xs:string" />
+                                <xs:element name="TDOBJECT" type="xs:string" />
+                                <xs:element name="TDOBNAME" type="xs:string" />
+                                <xs:element name="TDID" type="xs:string" />
+                                <xs:element name="TDSPRAS" type="xs:string" />
+                                <xs:element name="TDTEXTTYPE" type="xs:string" />
+                                <xs:element name="LANGUA_ISO" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1TXTP9">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TDFORMAT" type="xs:string" />
+                                <xs:element name="TDLINE" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL12">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ATINN" type="xs:string" />
+                                <xs:element name="ATNAM" type="xs:string" />
+                                <xs:element name="ATBEZ" type="xs:string" />
+                                <xs:element name="ATWRT" type="xs:string" />
+                                <xs:element name="ATWTB" type="xs:string" />
+                                <xs:element name="EWAHR" type="xs:string" />
+                                <xs:element name="ATWRT_LONG" type="xs:string" />
+                                <xs:element name="ATWTB_LONG" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL37">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EXIDV" type="xs:string" />
+                                <xs:element name="TARAG" type="xs:string" />
+                                <xs:element name="GWEIT" type="xs:string" />
+                                <xs:element name="BRGEW" type="xs:string" />
+                                <xs:element name="NTGEW" type="xs:string" />
+                                <xs:element name="MAGEW" type="xs:string" />
+                                <xs:element name="GWEIM" type="xs:string" />
+                                <xs:element name="BTVOL" type="xs:string" />
+                                <xs:element name="NTVOL" type="xs:string" />
+                                <xs:element name="MAVOL" type="xs:string" />
+                                <xs:element name="VOLEM" type="xs:string" />
+                                <xs:element name="TAVOL" type="xs:string" />
+                                <xs:element name="VOLET" type="xs:string" />
+                                <xs:element name="VEGR2" type="xs:string" />
+                                <xs:element name="VEGR1" type="xs:string" />
+                                <xs:element name="VEGR3" type="xs:string" />
+                                <xs:element name="VHILM" type="xs:string" />
+                                <xs:element name="VEGR4" type="xs:string" />
+                                <xs:element name="LAENG" type="xs:string" />
+                                <xs:element name="VEGR5" type="xs:string" />
+                                <xs:element name="BREIT" type="xs:string" />
+                                <xs:element name="HOEHE" type="xs:string" />
+                                <xs:element name="MEABM" type="xs:string" />
+                                <xs:element name="INHALT" type="xs:string" />
+                                <xs:element name="VHART" type="xs:string" />
+                                <xs:element name="MAGRV" type="xs:string" />
+                                <xs:element name="LADLG" type="xs:string" />
+                                <xs:element name="LADEH" type="xs:string" />
+                                <xs:element name="FARZT" type="xs:string" />
+                                <xs:element name="FAREH" type="xs:string" />
+                                <xs:element name="ENTFE" type="xs:string" />
+                                <xs:element name="EHENT" type="xs:string" />
+                                <xs:element name="VELTP" type="xs:string" />
+                                <xs:element name="EXIDV2" type="xs:string" />
+                                <xs:element name="LANDT" type="xs:string" />
+                                <xs:element name="LANDF" type="xs:string" />
+                                <xs:element name="NAMEF" type="xs:string" />
+                                <xs:element name="NAMBE" type="xs:string" />
+                                <xs:element name="VHILM_KU" type="xs:string" />
+                                <xs:element name="VEBEZ" type="xs:string" />
+                                <xs:element name="SMGKN" type="xs:string" />
+                                <xs:element name="interna" type="xs:string" />
+                                <xs:element name="SORTL" type="xs:string" />
+                                <xs:element name="ERNAM" type="xs:string" />
+                                <xs:element name="GEWFX" type="xs:string" />
+                                <xs:element name="ERLKZ" type="xs:string" />
+                                <xs:element name="EXIDA" type="xs:string" />
+                                <xs:element name="MOVE_STATUS" type="xs:string" />
+                                <xs:element name="PACKVORSCHR" type="xs:string" />
+                                <xs:element name="PACKVORSCHR_ST" type="xs:string" />
+                                <xs:element name="LABELTYP" type="xs:string" />
+                                <xs:element name="ZUL_AUFL" type="xs:string" />
+                                <xs:element name="VHILM_EXTERNAL" type="xs:string" />
+                                <xs:element name="VHILM_VERSION" type="xs:string" />
+                                <xs:element name="VHILM_GUID" type="xs:string" />
+                                <xs:element name="KDMAT35_EXTERNAL" type="xs:string" />
+                                <xs:element name="KDMAT35_VERSION" type="xs:string" />
+                                <xs:element name="KDMAT35_GUID" type="xs:string" />
+                                <xs:element name="VHILM_KU_EXTERNAL" type="xs:string" />
+                                <xs:element name="VHILM_KU_VERSION" type="xs:string" />
+                                <xs:element name="VHILM_KU_GUID" type="xs:string" />
+                                <xs:element name="VHILM_LONG" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL39">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="QUALF" type="xs:string" />
+                                <xs:element name="PARAM" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL38">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="VEGR1_BEZ" type="xs:string" />
+                                <xs:element name="VEGR2_BEZ" type="xs:string" />
+                                <xs:element name="VEGR3_BEZ" type="xs:string" />
+                                <xs:element name="VEGR4_BEZ" type="xs:string" />
+                                <xs:element name="VEGR5_BEZ" type="xs:string" />
+                                <xs:element name="VHART_BEZ" type="xs:string" />
+                                <xs:element name="MAGRV_BEZ" type="xs:string" />
+                                <xs:element name="VEBEZ" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="E1EDL44">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="VELIN" type="xs:string" />
+                                <xs:element name="VBELN" type="xs:string" />
+                                <xs:element name="POSNR" type="xs:string" />
+                                <xs:element name="EXIDV" type="xs:string" />
+                                <xs:element name="VEMNG" type="xs:string" />
+                                <xs:element name="VEMEH" type="xs:string" />
+                                <xs:element name="MATNR" type="xs:string" />
+                                <xs:element name="KDMAT" type="xs:string" />
+                                <xs:element name="CHARG" type="xs:string" />
+                                <xs:element name="WERKS" type="xs:string" />
+                                <xs:element name="LGORT" type="xs:string" />
+                                <xs:element name="CUOBJ" type="xs:string" />
+                                <xs:element name="BESTQ" type="xs:string" />
+                                <xs:element name="SOBKZ" type="xs:string" />
+                                <xs:element name="SONUM" type="xs:string" />
+                                <xs:element name="ANZSN" type="xs:string" />
+                                <xs:element name="WDATU" type="xs:string" />
+                                <xs:element name="PARID" type="xs:string" />
+                                <xs:element name="MATNR_EXTERNAL" type="xs:string" />
+                                <xs:element name="MATNR_VERSION" type="xs:string" />
+                                <xs:element name="MATNR_GUID" type="xs:string" />
+                                <xs:element name="KDMAT_EXTERNAL" type="xs:string" />
+                                <xs:element name="KDMAT_VERSION" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:unsignedByte" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

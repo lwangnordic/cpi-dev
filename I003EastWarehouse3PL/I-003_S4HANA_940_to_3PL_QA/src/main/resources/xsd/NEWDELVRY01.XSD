@@ -1,0 +1,3848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="DELVRY01.dtd" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified" targetNamespace="DELVRY01.dtd">
+  <xs:element name="DELVRY01">
+    <xs:annotation>
+      <xs:documentation> DELVRY01 Delivery interface </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IDOC" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IDOC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EDI_DC40"/>
+        <xs:element ref="E1EDL20" maxOccurs="unbounded"/>
+        <xs:element ref="E1IDOCENHANCEMENT" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="BEGIN" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EDI_DC40">
+    <xs:annotation>
+      <xs:documentation> IDoc control record for the interface to the external system </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TABNAM"/>
+        <xs:element ref="MANDT" minOccurs="0"/>
+        <xs:element ref="DOCNUM" minOccurs="0"/>
+        <xs:element ref="DOCREL" minOccurs="0"/>
+        <xs:element ref="STATUS" minOccurs="0"/>
+        <xs:element ref="DIRECT"/>
+        <xs:element ref="OUTMOD" minOccurs="0"/>
+        <xs:element ref="EXPRSS" minOccurs="0"/>
+        <xs:element ref="TEST" minOccurs="0"/>
+        <xs:element ref="IDOCTYP"/>
+        <xs:element ref="CIMTYP" minOccurs="0"/>
+        <xs:element ref="MESTYP"/>
+        <xs:element ref="MESCOD" minOccurs="0"/>
+        <xs:element ref="MESFCT" minOccurs="0"/>
+        <xs:element ref="STD" minOccurs="0"/>
+        <xs:element ref="STDVRS" minOccurs="0"/>
+        <xs:element ref="STDMES" minOccurs="0"/>
+        <xs:element ref="SNDPOR"/>
+        <xs:element ref="SNDPRT"/>
+        <xs:element ref="SNDPFC" minOccurs="0"/>
+        <xs:element ref="SNDPRN"/>
+        <xs:element ref="SNDSAD" minOccurs="0"/>
+        <xs:element ref="SNDLAD" minOccurs="0"/>
+        <xs:element ref="RCVPOR"/>
+        <xs:element ref="RCVPRT"/>
+        <xs:element ref="RCVPFC" minOccurs="0"/>
+        <xs:element ref="RCVPRN"/>
+        <xs:element ref="RCVSAD" minOccurs="0"/>
+        <xs:element ref="RCVLAD" minOccurs="0"/>
+        <xs:element ref="CREDAT" minOccurs="0"/>
+        <xs:element ref="CRETIM" minOccurs="0"/>
+        <xs:element ref="REFINT" minOccurs="0"/>
+        <xs:element ref="REFGRP" minOccurs="0"/>
+        <xs:element ref="REFMES" minOccurs="0"/>
+        <xs:element ref="ARCKEY" minOccurs="0"/>
+        <xs:element ref="SERIAL" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL20">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL20 : Delivery header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VBELN" minOccurs="0"/>
+        <xs:element ref="VSTEL" minOccurs="0"/>
+        <xs:element ref="VKORG" minOccurs="0"/>
+        <xs:element ref="LSTEL" minOccurs="0"/>
+        <xs:element ref="VKBUR" minOccurs="0"/>
+        <xs:element ref="LGNUM" minOccurs="0"/>
+        <xs:element ref="ABLAD" minOccurs="0"/>
+        <xs:element ref="INCO1" minOccurs="0"/>
+        <xs:element ref="INCO2" minOccurs="0"/>
+        <xs:element ref="ROUTE" minOccurs="0"/>
+        <xs:element ref="VSBED" minOccurs="0"/>
+        <xs:element ref="BTGEW" minOccurs="0"/>
+        <xs:element ref="NTGEW" minOccurs="0"/>
+        <xs:element ref="GEWEI" minOccurs="0"/>
+        <xs:element ref="VOLUM" minOccurs="0"/>
+        <xs:element ref="VOLEH" minOccurs="0"/>
+        <xs:element ref="ANZPK" minOccurs="0"/>
+        <xs:element ref="BOLNR" minOccurs="0"/>
+        <xs:element ref="TRATY" minOccurs="0"/>
+        <xs:element ref="TRAID" minOccurs="0"/>
+        <xs:element ref="XABLN" minOccurs="0"/>
+        <xs:element ref="LIFEX" minOccurs="0"/>
+        <xs:element ref="PARID" minOccurs="0"/>
+        <xs:element ref="PODAT" minOccurs="0"/>
+        <xs:element ref="POTIM" minOccurs="0"/>
+        <xs:element ref="LOC_SEQ" minOccurs="0"/>
+        <xs:element ref="HOLD" minOccurs="0"/>
+        <xs:element ref="MAX_ERR_TYPE" minOccurs="0"/>
+        <xs:element ref="LE_SCENARIO" minOccurs="0"/>
+        <xs:element ref="RECIPIENT_CREATE" minOccurs="0"/>
+        <xs:element ref="INCOV" minOccurs="0"/>
+        <xs:element ref="INCO2_L" minOccurs="0"/>
+        <xs:element ref="INCO3_L" minOccurs="0"/>
+        <xs:element ref="E1EDL22" minOccurs="0"/>
+        <xs:element ref="E1EDL21" minOccurs="0"/>
+        <xs:element ref="E1EDL18" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1ADRM1" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDT13" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1TXTH8" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL33" minOccurs="0"/>
+        <xs:element ref="E1EDL28" minOccurs="0"/>
+        <xs:element ref="E1EDL24" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL37" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL22">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL22 : Delivery Header Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VSTEL_BEZ" minOccurs="0"/>
+        <xs:element ref="VKORG_BEZ" minOccurs="0"/>
+        <xs:element ref="LSTEL_BEZ" minOccurs="0"/>
+        <xs:element ref="VKBUR_BEZ" minOccurs="0"/>
+        <xs:element ref="LGNUM_BEZ" minOccurs="0"/>
+        <xs:element ref="INCO1_BEZ" minOccurs="0"/>
+        <xs:element ref="ROUTE_BEZ" minOccurs="0"/>
+        <xs:element ref="VSBED_BEZ" minOccurs="0"/>
+        <xs:element ref="TRATY_BEZ" minOccurs="0"/>
+        <xs:element ref="INCOV_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL21">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL21 : Delivery Header Additional Data </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LFART" minOccurs="0"/>
+        <xs:element ref="BZIRK" minOccurs="0"/>
+        <xs:element ref="AUTLF" minOccurs="0"/>
+        <xs:element ref="EXPKZ" minOccurs="0"/>
+        <xs:element ref="LIFSK" minOccurs="0"/>
+        <xs:element ref="LPRIO" minOccurs="0"/>
+        <xs:element ref="KDGRP" minOccurs="0"/>
+        <xs:element ref="BEROT" minOccurs="0"/>
+        <xs:element ref="TRAGR" minOccurs="0"/>
+        <xs:element ref="TRSPG" minOccurs="0"/>
+        <xs:element ref="AULWE" minOccurs="0"/>
+        <xs:element ref="E1EDL23" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL23">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL23 : Deliv.Header Addit.Data Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LFART_BEZ" minOccurs="0"/>
+        <xs:element ref="LPRIO_BEZ" minOccurs="0"/>
+        <xs:element ref="BZIRK_BEZ" minOccurs="0"/>
+        <xs:element ref="LIFSK_BEZ" minOccurs="0"/>
+        <xs:element ref="KDGRP_BEZ" minOccurs="0"/>
+        <xs:element ref="TRAGR_BEZ" minOccurs="0"/>
+        <xs:element ref="TRSPG_BEZ" minOccurs="0"/>
+        <xs:element ref="AULWE_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL18">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL18 : IDOC: Controlling (Delivery) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALF" minOccurs="0"/>
+        <xs:element ref="PARAM" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1ADRM1">
+    <xs:annotation>
+      <xs:documentation> Segment E1ADRM1 : Central Address Segment Group, Main Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PARTNER_Q" minOccurs="0"/>
+        <xs:element ref="ADDRESS_T" minOccurs="0"/>
+        <xs:element ref="PARTNER_ID" minOccurs="0"/>
+        <xs:element ref="JURISDIC" minOccurs="0"/>
+        <xs:element ref="LANGUAGE" minOccurs="0"/>
+        <xs:element ref="FORMOFADDR" minOccurs="0"/>
+        <xs:element ref="NAME1" minOccurs="0"/>
+        <xs:element ref="NAME2" minOccurs="0"/>
+        <xs:element ref="NAME3" minOccurs="0"/>
+        <xs:element ref="NAME4" minOccurs="0"/>
+        <xs:element ref="NAME_TEXT" minOccurs="0"/>
+        <xs:element ref="NAME_CO" minOccurs="0"/>
+        <xs:element ref="LOCATION" minOccurs="0"/>
+        <xs:element ref="BUILDING" minOccurs="0"/>
+        <xs:element ref="FLOOR" minOccurs="0"/>
+        <xs:element ref="ROOM" minOccurs="0"/>
+        <xs:element ref="STREET1" minOccurs="0"/>
+        <xs:element ref="STREET2" minOccurs="0"/>
+        <xs:element ref="STREET3" minOccurs="0"/>
+        <xs:element ref="HOUSE_SUPL" minOccurs="0"/>
+        <xs:element ref="HOUSE_RANG" minOccurs="0"/>
+        <xs:element ref="POSTL_COD1" minOccurs="0"/>
+        <xs:element ref="POSTL_COD3" minOccurs="0"/>
+        <xs:element ref="POSTL_AREA" minOccurs="0"/>
+        <xs:element ref="CITY1" minOccurs="0"/>
+        <xs:element ref="CITY2" minOccurs="0"/>
+        <xs:element ref="POSTL_PBOX" minOccurs="0"/>
+        <xs:element ref="POSTL_COD2" minOccurs="0"/>
+        <xs:element ref="POSTL_CITY" minOccurs="0"/>
+        <xs:element ref="TELEPHONE1" minOccurs="0"/>
+        <xs:element ref="TELEPHONE2" minOccurs="0"/>
+        <xs:element ref="TELEFAX" minOccurs="0"/>
+        <xs:element ref="TELEX" minOccurs="0"/>
+        <xs:element ref="E_MAIL" minOccurs="0"/>
+        <xs:element ref="COUNTRY1" minOccurs="0"/>
+        <xs:element ref="COUNTRY2" minOccurs="0"/>
+        <xs:element ref="REGION" minOccurs="0"/>
+        <xs:element ref="COUNTY_COD" minOccurs="0"/>
+        <xs:element ref="COUNTY_TXT" minOccurs="0"/>
+        <xs:element ref="TZCODE" minOccurs="0"/>
+        <xs:element ref="TZDESC" minOccurs="0"/>
+        <xs:element ref="E1ADRE1" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1ADRE1">
+    <xs:annotation>
+      <xs:documentation> Segment E1ADRE1 : Central Address Segment Group, Additional Data Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EXTEND_Q" minOccurs="0"/>
+        <xs:element ref="EXTEND_D" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDT13">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDT13 : IDoc: Deadline (delivery) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALF" minOccurs="0"/>
+        <xs:element ref="VSTZW" minOccurs="0"/>
+        <xs:element ref="VSTZW_BEZ" minOccurs="0"/>
+        <xs:element ref="NTANF" minOccurs="0"/>
+        <xs:element ref="NTANZ" minOccurs="0"/>
+        <xs:element ref="NTEND" minOccurs="0"/>
+        <xs:element ref="NTENZ" minOccurs="0"/>
+        <xs:element ref="TZONE_BEG" minOccurs="0"/>
+        <xs:element ref="ISDD" minOccurs="0"/>
+        <xs:element ref="ISDZ" minOccurs="0"/>
+        <xs:element ref="IEDD" minOccurs="0"/>
+        <xs:element ref="IEDZ" minOccurs="0"/>
+        <xs:element ref="TZONE_END" minOccurs="0"/>
+        <xs:element ref="VORNR" minOccurs="0"/>
+        <xs:element ref="VSTGA" minOccurs="0"/>
+        <xs:element ref="VSTGA_BEZ" minOccurs="0"/>
+        <xs:element ref="EVENT" minOccurs="0"/>
+        <xs:element ref="EVENT_ALI" minOccurs="0"/>
+        <xs:element ref="E1EDL40" minOccurs="0"/>
+        <xs:element ref="E1TXTH0" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL40">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL40 : Points (delivery deadlines) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="KNOTE" minOccurs="0"/>
+        <xs:element ref="KNOTE_BEZ" minOccurs="0"/>
+        <xs:element ref="E1ADRM2" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1ADRM2">
+    <xs:annotation>
+      <xs:documentation> Segment E1ADRM2 : Central Address Segment Group, Main Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PARTNER_Q" minOccurs="0"/>
+        <xs:element ref="ADDRESS_T" minOccurs="0"/>
+        <xs:element ref="PARTNER_ID" minOccurs="0"/>
+        <xs:element ref="JURISDIC" minOccurs="0"/>
+        <xs:element ref="LANGUAGE" minOccurs="0"/>
+        <xs:element ref="FORMOFADDR" minOccurs="0"/>
+        <xs:element ref="NAME1" minOccurs="0"/>
+        <xs:element ref="NAME2" minOccurs="0"/>
+        <xs:element ref="NAME3" minOccurs="0"/>
+        <xs:element ref="NAME4" minOccurs="0"/>
+        <xs:element ref="NAME_TEXT" minOccurs="0"/>
+        <xs:element ref="NAME_CO" minOccurs="0"/>
+        <xs:element ref="LOCATION" minOccurs="0"/>
+        <xs:element ref="BUILDING" minOccurs="0"/>
+        <xs:element ref="FLOOR" minOccurs="0"/>
+        <xs:element ref="ROOM" minOccurs="0"/>
+        <xs:element ref="STREET1" minOccurs="0"/>
+        <xs:element ref="STREET2" minOccurs="0"/>
+        <xs:element ref="STREET3" minOccurs="0"/>
+        <xs:element ref="HOUSE_SUPL" minOccurs="0"/>
+        <xs:element ref="HOUSE_RANG" minOccurs="0"/>
+        <xs:element ref="POSTL_COD1" minOccurs="0"/>
+        <xs:element ref="POSTL_COD3" minOccurs="0"/>
+        <xs:element ref="POSTL_AREA" minOccurs="0"/>
+        <xs:element ref="CITY1" minOccurs="0"/>
+        <xs:element ref="CITY2" minOccurs="0"/>
+        <xs:element ref="POSTL_PBOX" minOccurs="0"/>
+        <xs:element ref="POSTL_COD2" minOccurs="0"/>
+        <xs:element ref="POSTL_CITY" minOccurs="0"/>
+        <xs:element ref="TELEPHONE1" minOccurs="0"/>
+        <xs:element ref="TELEPHONE2" minOccurs="0"/>
+        <xs:element ref="TELFAX" minOccurs="0"/>
+        <xs:element ref="TELEX" minOccurs="0"/>
+        <xs:element ref="E_MAIL" minOccurs="0"/>
+        <xs:element ref="COUNTRY1" minOccurs="0"/>
+        <xs:element ref="COUNTRY2" minOccurs="0"/>
+        <xs:element ref="REGION" minOccurs="0"/>
+        <xs:element ref="COUNTY_COD" minOccurs="0"/>
+        <xs:element ref="COUNTY_TXT" minOccurs="0"/>
+        <xs:element ref="TZCODE" minOccurs="0"/>
+        <xs:element ref="TZDESC" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTH0">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTH0 : General Text Header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FUNCTION" minOccurs="0"/>
+        <xs:element ref="TDOBJECT" minOccurs="0"/>
+        <xs:element ref="TDOBNAME" minOccurs="0"/>
+        <xs:element ref="TDID" minOccurs="0"/>
+        <xs:element ref="TDSPRAS" minOccurs="0"/>
+        <xs:element ref="TDTEXTTYPE" minOccurs="0"/>
+        <xs:element ref="LANGUA_ISO" minOccurs="0"/>
+        <xs:element ref="E1TXTP0" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTP0">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTP0 : General Text Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TDFORMAT" minOccurs="0"/>
+        <xs:element ref="TDLINE" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTH8">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTH8 : General Text Header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FUNCTION" minOccurs="0"/>
+        <xs:element ref="TDOBJECT" minOccurs="0"/>
+        <xs:element ref="TDOBNAME" minOccurs="0"/>
+        <xs:element ref="TDID" minOccurs="0"/>
+        <xs:element ref="TDSPRAS" minOccurs="0"/>
+        <xs:element ref="TDTEXTTYPE" minOccurs="0"/>
+        <xs:element ref="LANGUA_ISO" minOccurs="0"/>
+        <xs:element ref="E1TXTP8" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTP8">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTP8 : General Text Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TDFORMAT" minOccurs="0"/>
+        <xs:element ref="TDLINE" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL33">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL33 : Export Data Delivery Header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ALAND" minOccurs="0"/>
+        <xs:element ref="EXPVZ" minOccurs="0"/>
+        <xs:element ref="ZOLLA" minOccurs="0"/>
+        <xs:element ref="ZOLLB" minOccurs="0"/>
+        <xs:element ref="ZOLL1" minOccurs="0"/>
+        <xs:element ref="ZOLL2" minOccurs="0"/>
+        <xs:element ref="ZOLL3" minOccurs="0"/>
+        <xs:element ref="ZOLL4" minOccurs="0"/>
+        <xs:element ref="ZOLL5" minOccurs="0"/>
+        <xs:element ref="ZOLL6" minOccurs="0"/>
+        <xs:element ref="KZGBE" minOccurs="0"/>
+        <xs:element ref="KZABE" minOccurs="0"/>
+        <xs:element ref="STGBE" minOccurs="0"/>
+        <xs:element ref="STABE" minOccurs="0"/>
+        <xs:element ref="CONTA" minOccurs="0"/>
+        <xs:element ref="GRWCU" minOccurs="0"/>
+        <xs:element ref="IEVER" minOccurs="0"/>
+        <xs:element ref="PREV_DOC_NO" minOccurs="0"/>
+        <xs:element ref="PREV_DOC_TYPE" minOccurs="0"/>
+        <xs:element ref="E1EDL34" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL34">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL34 : Export Data Delivery Header Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EXPVZ_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLLA_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLLB_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL1_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL2_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL3_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL4_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL5_BEZ" minOccurs="0"/>
+        <xs:element ref="ZOLL6_BEZ" minOccurs="0"/>
+        <xs:element ref="IEVER_BEZ" minOccurs="0"/>
+        <xs:element ref="STGBE_BEZ" minOccurs="0"/>
+        <xs:element ref="STABE_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL28">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL28 : Routes </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ROUTE" minOccurs="0"/>
+        <xs:element ref="VSART" minOccurs="0"/>
+        <xs:element ref="VSAVL" minOccurs="0"/>
+        <xs:element ref="VSANL" minOccurs="0"/>
+        <xs:element ref="ROUID" minOccurs="0"/>
+        <xs:element ref="DISTZ" minOccurs="0"/>
+        <xs:element ref="MEDST" minOccurs="0"/>
+        <xs:element ref="E1EDL29" minOccurs="0"/>
+        <xs:element ref="E1EDL30" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL29">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL29 : Routes Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ROUTE_BEZ" minOccurs="0"/>
+        <xs:element ref="VSART_BEZ" minOccurs="0"/>
+        <xs:element ref="VSAVL_BEZ" minOccurs="0"/>
+        <xs:element ref="VSANL_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL30">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL30 : Route Stages </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ABNUM" minOccurs="0"/>
+        <xs:element ref="ANFRF" minOccurs="0"/>
+        <xs:element ref="VSART" minOccurs="0"/>
+        <xs:element ref="DISTZ" minOccurs="0"/>
+        <xs:element ref="MEDST" minOccurs="0"/>
+        <xs:element ref="TSTYP" minOccurs="0"/>
+        <xs:element ref="E1EDL31" minOccurs="0"/>
+        <xs:element ref="E1EDL32" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL31">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL31 : Route Stage Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VSART_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL32">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL32 : Route Stage Point </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALI" minOccurs="0"/>
+        <xs:element ref="KNOTE" minOccurs="0"/>
+        <xs:element ref="ADRNR" minOccurs="0"/>
+        <xs:element ref="VSTEL" minOccurs="0"/>
+        <xs:element ref="LSTEL" minOccurs="0"/>
+        <xs:element ref="WERKS" minOccurs="0"/>
+        <xs:element ref="LGORT" minOccurs="0"/>
+        <xs:element ref="KUNNR" minOccurs="0"/>
+        <xs:element ref="LIFNR" minOccurs="0"/>
+        <xs:element ref="ABLAD" minOccurs="0"/>
+        <xs:element ref="LGNUM" minOccurs="0"/>
+        <xs:element ref="LGTOR" minOccurs="0"/>
+        <xs:element ref="E1EDL45" minOccurs="0"/>
+        <xs:element ref="E1ADRM3" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL45">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL45 : Points descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="KNOTE_BEZ" minOccurs="0"/>
+        <xs:element ref="VSTEL_BEZ" minOccurs="0"/>
+        <xs:element ref="LSTEL_BEZ" minOccurs="0"/>
+        <xs:element ref="WERKS_BEZ" minOccurs="0"/>
+        <xs:element ref="LGORT_BEZ" minOccurs="0"/>
+        <xs:element ref="LGNUM_BEZ" minOccurs="0"/>
+        <xs:element ref="LGTOR_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1ADRM3">
+    <xs:annotation>
+      <xs:documentation> Segment E1ADRM3 : Central Address Segment Group, Main Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PARTNER_Q" minOccurs="0"/>
+        <xs:element ref="ADDRES_T" minOccurs="0"/>
+        <xs:element ref="PARTNER_ID" minOccurs="0"/>
+        <xs:element ref="JURISDIC" minOccurs="0"/>
+        <xs:element ref="LANGUAGE" minOccurs="0"/>
+        <xs:element ref="FORMOFADDR" minOccurs="0"/>
+        <xs:element ref="NAME1" minOccurs="0"/>
+        <xs:element ref="NAME2" minOccurs="0"/>
+        <xs:element ref="NAME3" minOccurs="0"/>
+        <xs:element ref="NAME4" minOccurs="0"/>
+        <xs:element ref="NAME_TEXT" minOccurs="0"/>
+        <xs:element ref="NAME_CO" minOccurs="0"/>
+        <xs:element ref="LOCATION" minOccurs="0"/>
+        <xs:element ref="BUILDING" minOccurs="0"/>
+        <xs:element ref="FLOOR" minOccurs="0"/>
+        <xs:element ref="ROOM" minOccurs="0"/>
+        <xs:element ref="STREET1" minOccurs="0"/>
+        <xs:element ref="STREET2" minOccurs="0"/>
+        <xs:element ref="STREET3" minOccurs="0"/>
+        <xs:element ref="HOUSE_SUPL" minOccurs="0"/>
+        <xs:element ref="HOUSE_RANG" minOccurs="0"/>
+        <xs:element ref="POSTL_COD1" minOccurs="0"/>
+        <xs:element ref="POSTL_COD3" minOccurs="0"/>
+        <xs:element ref="POSTL_AREA" minOccurs="0"/>
+        <xs:element ref="CITY1" minOccurs="0"/>
+        <xs:element ref="CITY2" minOccurs="0"/>
+        <xs:element ref="POSTL_PBOX" minOccurs="0"/>
+        <xs:element ref="POSTL_COD2" minOccurs="0"/>
+        <xs:element ref="POSTL_CITY" minOccurs="0"/>
+        <xs:element ref="TELEPHONE1" minOccurs="0"/>
+        <xs:element ref="TELEPHONE2" minOccurs="0"/>
+        <xs:element ref="TELEFAX" minOccurs="0"/>
+        <xs:element ref="TELEX" minOccurs="0"/>
+        <xs:element ref="E_MAIL" minOccurs="0"/>
+        <xs:element ref="COUNTRY1" minOccurs="0"/>
+        <xs:element ref="COUNTRY2" minOccurs="0"/>
+        <xs:element ref="REGION" minOccurs="0"/>
+        <xs:element ref="COUNTY_COD" minOccurs="0"/>
+        <xs:element ref="COUNTY_TXT" minOccurs="0"/>
+        <xs:element ref="TZCODE" minOccurs="0"/>
+        <xs:element ref="TZDESC" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL24">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL24 : Delivery Item </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="POSNR" minOccurs="0"/>
+        <xs:element ref="MATNR" minOccurs="0"/>
+        <xs:element ref="MATWA" minOccurs="0"/>
+        <xs:element ref="ARKTX" minOccurs="0"/>
+        <xs:element ref="ORKTX" minOccurs="0"/>
+        <xs:element ref="SUGRD" minOccurs="0"/>
+        <xs:element ref="SUDRU" minOccurs="0"/>
+        <xs:element ref="MATKL" minOccurs="0"/>
+        <xs:element ref="WERKS" minOccurs="0"/>
+        <xs:element ref="LGORT" minOccurs="0"/>
+        <xs:element ref="CHARG" minOccurs="0"/>
+        <xs:element ref="KDMAT" minOccurs="0"/>
+        <xs:element ref="LFIMG" minOccurs="0"/>
+        <xs:element ref="VRKME" minOccurs="0"/>
+        <xs:element ref="LGMNG" minOccurs="0"/>
+        <xs:element ref="MEINS" minOccurs="0"/>
+        <xs:element ref="NTGEW" minOccurs="0"/>
+        <xs:element ref="BRGEW" minOccurs="0"/>
+        <xs:element ref="GEWEI" minOccurs="0"/>
+        <xs:element ref="VOLUM" minOccurs="0"/>
+        <xs:element ref="VOLEH" minOccurs="0"/>
+        <xs:element ref="LGPBE" minOccurs="0"/>
+        <xs:element ref="HIPOS" minOccurs="0"/>
+        <xs:element ref="HIEVW" minOccurs="0"/>
+        <xs:element ref="LADGR" minOccurs="0"/>
+        <xs:element ref="TRAGR" minOccurs="0"/>
+        <xs:element ref="VKBUR" minOccurs="0"/>
+        <xs:element ref="VKGRP" minOccurs="0"/>
+        <xs:element ref="VTWEG" minOccurs="0"/>
+        <xs:element ref="SPART" minOccurs="0"/>
+        <xs:element ref="GRKOR" minOccurs="0"/>
+        <xs:element ref="EAN11" minOccurs="0"/>
+        <xs:element ref="SERNR" minOccurs="0"/>
+        <xs:element ref="AESKD" minOccurs="0"/>
+        <xs:element ref="EMPST" minOccurs="0"/>
+        <xs:element ref="MFRGR" minOccurs="0"/>
+        <xs:element ref="VBRST" minOccurs="0"/>
+        <xs:element ref="LABNK" minOccurs="0"/>
+        <xs:element ref="ABRDT" minOccurs="0"/>
+        <xs:element ref="MFRPN" minOccurs="0"/>
+        <xs:element ref="MFRNR" minOccurs="0"/>
+        <xs:element ref="ABRVW" minOccurs="0"/>
+        <xs:element ref="KDMAT35" minOccurs="0"/>
+        <xs:element ref="KANNR" minOccurs="0"/>
+        <xs:element ref="POSEX" minOccurs="0"/>
+        <xs:element ref="LIEFFZ" minOccurs="0"/>
+        <xs:element ref="USR01" minOccurs="0"/>
+        <xs:element ref="USR02" minOccurs="0"/>
+        <xs:element ref="USR03" minOccurs="0"/>
+        <xs:element ref="USR04" minOccurs="0"/>
+        <xs:element ref="USR05" minOccurs="0"/>
+        <xs:element ref="MATNR_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="MATNR_VERSION" minOccurs="0"/>
+        <xs:element ref="MATNR_GUID" minOccurs="0"/>
+        <xs:element ref="MATWA_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="MATWA_VERSION" minOccurs="0"/>
+        <xs:element ref="MATWA_GUID" minOccurs="0"/>
+        <xs:element ref="ZUDAT" minOccurs="0"/>
+        <xs:element ref="VFDAT" minOccurs="0"/>
+        <xs:element ref="RMA_NUMBER" minOccurs="0"/>
+        <xs:element ref="RMA_COMPLETE" minOccurs="0"/>
+        <xs:element ref="EXPIRY_DATE_EXT" minOccurs="0"/>
+        <xs:element ref="VGBEL" minOccurs="0"/>
+        <xs:element ref="VGPOS" minOccurs="0"/>
+        <xs:element ref="FOLLOW_UP_CODE" minOccurs="0"/>
+        <xs:element ref="ORMNG" minOccurs="0"/>
+        <xs:element ref="COMPL" minOccurs="0"/>
+        <xs:element ref="HOLD" minOccurs="0"/>
+        <xs:element ref="MAX_ERR_TYPE" minOccurs="0"/>
+        <xs:element ref="LICHN" minOccurs="0"/>
+        <xs:element ref="RECIPIENT_CREATE" minOccurs="0"/>
+        <xs:element ref="EXPIRY_DATE_EXT_B" minOccurs="0"/>
+        <xs:element ref="E1EDL25" minOccurs="0"/>
+        <xs:element ref="E1EDL26" minOccurs="0"/>
+        <xs:element ref="E1EDL19" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL11" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL15" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL35" minOccurs="0"/>
+        <xs:element ref="E1EDL43" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL41" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1TXTH9" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL12" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL25">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL25 : Delivery Item Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LGORT_BEZ" minOccurs="0"/>
+        <xs:element ref="LADGR_BEZ" minOccurs="0"/>
+        <xs:element ref="TRAGR_BEZ" minOccurs="0"/>
+        <xs:element ref="VKBUR_BEZ" minOccurs="0"/>
+        <xs:element ref="VKGRP_BEZ" minOccurs="0"/>
+        <xs:element ref="VTWEG_BEZ" minOccurs="0"/>
+        <xs:element ref="SPART_BEZ" minOccurs="0"/>
+        <xs:element ref="MFRGR_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL26">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL26 : Delivery Item Additional Data </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PSTYV" minOccurs="0"/>
+        <xs:element ref="MATKL" minOccurs="0"/>
+        <xs:element ref="PRODH" minOccurs="0"/>
+        <xs:element ref="UMVKZ" minOccurs="0"/>
+        <xs:element ref="UMVKN" minOccurs="0"/>
+        <xs:element ref="KZTLF" minOccurs="0"/>
+        <xs:element ref="UEBTK" minOccurs="0"/>
+        <xs:element ref="UEBTO" minOccurs="0"/>
+        <xs:element ref="UNTTO" minOccurs="0"/>
+        <xs:element ref="CHSPL" minOccurs="0"/>
+        <xs:element ref="XCHBW" minOccurs="0"/>
+        <xs:element ref="POSAR" minOccurs="0"/>
+        <xs:element ref="SOBKZ" minOccurs="0"/>
+        <xs:element ref="PCKPF" minOccurs="0"/>
+        <xs:element ref="MAGRV" minOccurs="0"/>
+        <xs:element ref="SHKZG" minOccurs="0"/>
+        <xs:element ref="KOQUI" minOccurs="0"/>
+        <xs:element ref="AKTNR" minOccurs="0"/>
+        <xs:element ref="KZUMW" minOccurs="0"/>
+        <xs:element ref="KVGR1" minOccurs="0"/>
+        <xs:element ref="KVGR2" minOccurs="0"/>
+        <xs:element ref="KVGR3" minOccurs="0"/>
+        <xs:element ref="KVGR4" minOccurs="0"/>
+        <xs:element ref="KVGR5" minOccurs="0"/>
+        <xs:element ref="MVGR1" minOccurs="0"/>
+        <xs:element ref="MVGR2" minOccurs="0"/>
+        <xs:element ref="MVGR3" minOccurs="0"/>
+        <xs:element ref="MVGR4" minOccurs="0"/>
+        <xs:element ref="MVGR5" minOccurs="0"/>
+        <xs:element ref="LIFEXPOS2" minOccurs="0"/>
+        <xs:element ref="CQU_SA" minOccurs="0"/>
+        <xs:element ref="CQU_SA_UNIT" minOccurs="0"/>
+        <xs:element ref="CQU_ITQS" minOccurs="0"/>
+        <xs:element ref="CQU_ITQS_UNIT" minOccurs="0"/>
+        <xs:element ref="VBUMG_BME" minOccurs="0"/>
+        <xs:element ref="SGT_RCAT" minOccurs="0"/>
+        <xs:element ref="SGT_SCAT" minOccurs="0"/>
+        <xs:element ref="MATNR_LONG" minOccurs="0"/>
+        <xs:element ref="MATWA_LONG" minOccurs="0"/>
+        <xs:element ref="REQ_SEG_LONG" minOccurs="0"/>
+        <xs:element ref="STK_SEG_LONG" minOccurs="0"/>
+        <xs:element ref="E1EDL27" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL27">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL27 : Delivery Item Additional Data Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PSTYV_BEZ" minOccurs="0"/>
+        <xs:element ref="MATKL_BEZ" minOccurs="0"/>
+        <xs:element ref="PRODH_BEZ" minOccurs="0"/>
+        <xs:element ref="WERKS_BEZ" minOccurs="0"/>
+        <xs:element ref="KVGR1_BEZ" minOccurs="0"/>
+        <xs:element ref="KVGR2_BEZ" minOccurs="0"/>
+        <xs:element ref="KVGR3_BEZ" minOccurs="0"/>
+        <xs:element ref="KVGR4_BEZ" minOccurs="0"/>
+        <xs:element ref="KVGR5_BEZ" minOccurs="0"/>
+        <xs:element ref="MVGR1_BEZ" minOccurs="0"/>
+        <xs:element ref="MVGR2_BEZ" minOccurs="0"/>
+        <xs:element ref="MVGR3_BEZ" minOccurs="0"/>
+        <xs:element ref="MVGR4_BEZ" minOccurs="0"/>
+        <xs:element ref="MVGR5_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL19">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL19 : IDOC: Controlling (Delivery Item) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALF" minOccurs="0"/>
+        <xs:element ref="PARAM" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL11">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL11 : IDOC: Serial Number </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="SERNR" minOccurs="0"/>
+        <xs:element ref="UII" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL15">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL15 : IDOC: Batch Characteristic </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ATINN" minOccurs="0"/>
+        <xs:element ref="ATNAM" minOccurs="0"/>
+        <xs:element ref="ATBEZ" minOccurs="0"/>
+        <xs:element ref="ATWRT" minOccurs="0"/>
+        <xs:element ref="ATWTB" minOccurs="0"/>
+        <xs:element ref="EWAHR" minOccurs="0"/>
+        <xs:element ref="ATWRT_LONG" minOccurs="0"/>
+        <xs:element ref="ATWTB_LONG" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL35">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL35 : Export Data Delivery Item </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="STAWN" minOccurs="0"/>
+        <xs:element ref="EXPRF" minOccurs="0"/>
+        <xs:element ref="EXART" minOccurs="0"/>
+        <xs:element ref="HERKL" minOccurs="0"/>
+        <xs:element ref="HERKR" minOccurs="0"/>
+        <xs:element ref="GRWRT" minOccurs="0"/>
+        <xs:element ref="PREFE" minOccurs="0"/>
+        <xs:element ref="E1EDL36" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL36">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL36 : Export Data Delivery Item Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="STXT1" minOccurs="0"/>
+        <xs:element ref="STXT2" minOccurs="0"/>
+        <xs:element ref="STXT3" minOccurs="0"/>
+        <xs:element ref="STXT4" minOccurs="0"/>
+        <xs:element ref="STXT5" minOccurs="0"/>
+        <xs:element ref="STXT6" minOccurs="0"/>
+        <xs:element ref="STXT7" minOccurs="0"/>
+        <xs:element ref="EXPRF_BEZ" minOccurs="0"/>
+        <xs:element ref="EXART_BEZ" minOccurs="0"/>
+        <xs:element ref="HERKL_BEZ" minOccurs="0"/>
+        <xs:element ref="HERKR_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL43">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL43 : IDoc: Reference </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALF" minOccurs="0"/>
+        <xs:element ref="BELNR" minOccurs="0"/>
+        <xs:element ref="POSNR" minOccurs="0"/>
+        <xs:element ref="DATUM" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL41">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL41 : Reference data ordering party </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALI" minOccurs="0"/>
+        <xs:element ref="BSTNR" minOccurs="0"/>
+        <xs:element ref="BSTDT" minOccurs="0"/>
+        <xs:element ref="BSARK" minOccurs="0"/>
+        <xs:element ref="IHREZ" minOccurs="0"/>
+        <xs:element ref="POSEX" minOccurs="0"/>
+        <xs:element ref="E1EDL42" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL42">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL42 : Reference data ordering party texts </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="BSARK_BEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTH9">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTH9 : General Text Header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FUNCTION" minOccurs="0"/>
+        <xs:element ref="TDOBJECT" minOccurs="0"/>
+        <xs:element ref="TDOBNAME" minOccurs="0"/>
+        <xs:element ref="TDID" minOccurs="0"/>
+        <xs:element ref="TDSPRAS" minOccurs="0"/>
+        <xs:element ref="TDTEXTTYPE" minOccurs="0"/>
+        <xs:element ref="LANGUA_ISO" minOccurs="0"/>
+        <xs:element ref="E1TXTP9" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1TXTP9">
+    <xs:annotation>
+      <xs:documentation> Segment E1TXTP9 : General Text Segment </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="TDFORMAT" minOccurs="0"/>
+        <xs:element ref="TDLINE" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL12">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL12 : IDOC: Configuration </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ATINN" minOccurs="0"/>
+        <xs:element ref="ATNAM" minOccurs="0"/>
+        <xs:element ref="ATBEZ" minOccurs="0"/>
+        <xs:element ref="ATWRT" minOccurs="0"/>
+        <xs:element ref="ATWTB" minOccurs="0"/>
+        <xs:element ref="EWAHR" minOccurs="0"/>
+        <xs:element ref="ATWRT_LONG" minOccurs="0"/>
+        <xs:element ref="ATWTB_LONG" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL37">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL37 : Handling unit header </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EXIDV" minOccurs="0"/>
+        <xs:element ref="TARAG" minOccurs="0"/>
+        <xs:element ref="GWEIT" minOccurs="0"/>
+        <xs:element ref="BRGEW" minOccurs="0"/>
+        <xs:element ref="NTGEW" minOccurs="0"/>
+        <xs:element ref="MAGEW" minOccurs="0"/>
+        <xs:element ref="GWEIM" minOccurs="0"/>
+        <xs:element ref="BTVOL" minOccurs="0"/>
+        <xs:element ref="NTVOL" minOccurs="0"/>
+        <xs:element ref="MAVOL" minOccurs="0"/>
+        <xs:element ref="VOLEM" minOccurs="0"/>
+        <xs:element ref="TAVOL" minOccurs="0"/>
+        <xs:element ref="VOLET" minOccurs="0"/>
+        <xs:element ref="VEGR2" minOccurs="0"/>
+        <xs:element ref="VEGR1" minOccurs="0"/>
+        <xs:element ref="VEGR3" minOccurs="0"/>
+        <xs:element ref="VHILM" minOccurs="0"/>
+        <xs:element ref="VEGR4" minOccurs="0"/>
+        <xs:element ref="LAENG" minOccurs="0"/>
+        <xs:element ref="VEGR5" minOccurs="0"/>
+        <xs:element ref="BREIT" minOccurs="0"/>
+        <xs:element ref="HOEHE" minOccurs="0"/>
+        <xs:element ref="MEABM" minOccurs="0"/>
+        <xs:element ref="INHALT" minOccurs="0"/>
+        <xs:element ref="VHART" minOccurs="0"/>
+        <xs:element ref="MAGRV" minOccurs="0"/>
+        <xs:element ref="LADLG" minOccurs="0"/>
+        <xs:element ref="LADEH" minOccurs="0"/>
+        <xs:element ref="FARZT" minOccurs="0"/>
+        <xs:element ref="FAREH" minOccurs="0"/>
+        <xs:element ref="ENTFE" minOccurs="0"/>
+        <xs:element ref="EHENT" minOccurs="0"/>
+        <xs:element ref="VELTP" minOccurs="0"/>
+        <xs:element ref="EXIDV2" minOccurs="0"/>
+        <xs:element ref="LANDT" minOccurs="0"/>
+        <xs:element ref="LANDF" minOccurs="0"/>
+        <xs:element ref="NAMEF" minOccurs="0"/>
+        <xs:element ref="NAMBE" minOccurs="0"/>
+        <xs:element ref="VHILM_KU" minOccurs="0"/>
+        <xs:element ref="VEBEZ" minOccurs="0"/>
+        <xs:element ref="SMGKN" minOccurs="0"/>
+        <xs:element ref="KDMAT35" minOccurs="0"/>
+        <xs:element ref="SORTL" minOccurs="0"/>
+        <xs:element ref="ERNAM" minOccurs="0"/>
+        <xs:element ref="GEWFX" minOccurs="0"/>
+        <xs:element ref="ERLKZ" minOccurs="0"/>
+        <xs:element ref="EXIDA" minOccurs="0"/>
+        <xs:element ref="MOVE_STATUS" minOccurs="0"/>
+        <xs:element ref="PACKVORSCHR" minOccurs="0"/>
+        <xs:element ref="PACKVORSCHR_ST" minOccurs="0"/>
+        <xs:element ref="LABELTYP" minOccurs="0"/>
+        <xs:element ref="ZUL_AUFL" minOccurs="0"/>
+        <xs:element ref="VHILM_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="VHILM_VERSION" minOccurs="0"/>
+        <xs:element ref="VHILM_GUID" minOccurs="0"/>
+        <xs:element ref="KDMAT35_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="KDMAT35_VERSION" minOccurs="0"/>
+        <xs:element ref="KDMAT35_GUID" minOccurs="0"/>
+        <xs:element ref="VHILM_KU_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="VHILM_KU_VERSION" minOccurs="0"/>
+        <xs:element ref="VHILM_KU_GUID" minOccurs="0"/>
+        <xs:element ref="VHILM_LONG" minOccurs="0"/>
+        <xs:element ref="E1EDL39" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="E1EDL38" minOccurs="0"/>
+        <xs:element ref="E1EDL44" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL39">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL39 : Control Segment for Handling Units </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QUALF" minOccurs="0"/>
+        <xs:element ref="PARAM" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL38">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL38 : Handling Unit Header Descriptions </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VEGR1_BEZ" minOccurs="0"/>
+        <xs:element ref="VEGR2_BEZ" minOccurs="0"/>
+        <xs:element ref="VEGR3_BEZ" minOccurs="0"/>
+        <xs:element ref="VEGR4_BEZ" minOccurs="0"/>
+        <xs:element ref="VEGR5_BEZ" minOccurs="0"/>
+        <xs:element ref="VHART_BEZ" minOccurs="0"/>
+        <xs:element ref="MAGRV_BEZ" minOccurs="0"/>
+        <xs:element ref="VEBEZ" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1EDL44">
+    <xs:annotation>
+      <xs:documentation> Segment E1EDL44 : IDoc: Handling Unit Item (Delivery) </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="VELIN" minOccurs="0"/>
+        <xs:element ref="VBELN" minOccurs="0"/>
+        <xs:element ref="POSNR" minOccurs="0"/>
+        <xs:element ref="EXIDV" minOccurs="0"/>
+        <xs:element ref="VEMNG" minOccurs="0"/>
+        <xs:element ref="VEMEH" minOccurs="0"/>
+        <xs:element ref="MATNR" minOccurs="0"/>
+        <xs:element ref="KDMAT" minOccurs="0"/>
+        <xs:element ref="CHARG" minOccurs="0"/>
+        <xs:element ref="WERKS" minOccurs="0"/>
+        <xs:element ref="LGORT" minOccurs="0"/>
+        <xs:element ref="CUOBJ" minOccurs="0"/>
+        <xs:element ref="BESTQ" minOccurs="0"/>
+        <xs:element ref="SOBKZ" minOccurs="0"/>
+        <xs:element ref="SONUM" minOccurs="0"/>
+        <xs:element ref="ANZSN" minOccurs="0"/>
+        <xs:element ref="WDATU" minOccurs="0"/>
+        <xs:element ref="PARID" minOccurs="0"/>
+        <xs:element ref="MATNR_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="MATNR_VERSION" minOccurs="0"/>
+        <xs:element ref="MATNR_GUID" minOccurs="0"/>
+        <xs:element ref="KDMAT_EXTERNAL" minOccurs="0"/>
+        <xs:element ref="KDMAT_VERSION" minOccurs="0"/>
+        <xs:element ref="KDMAT_GUID" minOccurs="0"/>
+        <xs:element ref="MATNR_LONG" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="E1IDOCENHANCEMENT">
+    <xs:annotation>
+      <xs:documentation> Segment E1IDOCENHANCEMENT : Segment for Dynamic Enhancement of IDoc Types </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IDENTIFIER" minOccurs="0"/>
+        <xs:element ref="DATA" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="SEGMENT" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ABLAD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ABLAD in E1EDL32: Unloading Point </xs:documentation>
+      <xs:documentation> Field ABLAD in E1EDL20: Unloading Point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ABNUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ABNUM in E1EDL30: Stage Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ABRDT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ABRDT in E1EDL24: Delivery Schedule Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ABRVW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ABRVW in E1EDL24: Usage Indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ADDRESS_T" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ADDRESS_T in E1ADRM1: Addr. type </xs:documentation>
+      <xs:documentation> Field ADDRESS_T in E1ADRM2: Addr. type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ADDRES_T" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ADDRES_T in E1ADRM3: Addr. type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ADRNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ADRNR in E1EDL32: Address </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AESKD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field AESKD in E1EDL24: Customer Engineering Change Status </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AKTNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field AKTNR in E1EDL26: Promotion </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ALAND" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ALAND in E1EDL33: Destination Country </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ANFRF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ANFRF in E1EDL30: Itinerary for regular route </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ANZPK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ANZPK in E1EDL20: Total Number of Packages in Delivery </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ANZSN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ANZSN in E1EDL44: Number of serial numbers </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ARCKEY" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ARCKEY in EDI_DC40: Key for external message archive </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ARKTX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ARKTX in E1EDL24: Short text for sales order item </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATBEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATBEZ in E1EDL15: Characteristic description </xs:documentation>
+      <xs:documentation> Field ATBEZ in E1EDL12: Characteristic description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATINN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATINN in E1EDL12: Internal characteristic </xs:documentation>
+      <xs:documentation> Field ATINN in E1EDL15: Internal characteristic </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATNAM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATNAM in E1EDL12: Characteristic Name </xs:documentation>
+      <xs:documentation> Field ATNAM in E1EDL15: Characteristic Name </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATWRT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATWRT in E1EDL15: Characteristic Value </xs:documentation>
+      <xs:documentation> Field ATWRT in E1EDL12: Characteristic Value </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATWRT_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATWRT_LONG in E1EDL15: Characteristic Value </xs:documentation>
+      <xs:documentation> Field ATWRT_LONG in E1EDL12: Characteristic Value </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATWTB" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATWTB in E1EDL15: Characteristic value description </xs:documentation>
+      <xs:documentation> Field ATWTB in E1EDL12: Characteristic value description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ATWTB_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ATWTB_LONG in E1EDL15: Characteristic value description </xs:documentation>
+      <xs:documentation> Field ATWTB_LONG in E1EDL12: Characteristic value description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AULWE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field AULWE in E1EDL21: Route Schedule </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AULWE_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field AULWE_BEZ in E1EDL23: Description of route schedule </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="AUTLF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field AUTLF in E1EDL21: Complete Delivery Defined for Each Sales Order? </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BELNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BELNR in E1EDL43: IDOC document number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BEROT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BEROT in E1EDL21: Picked Items Location </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BESTQ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BESTQ in E1EDL44: Stock Category in the Warehouse Management System </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BOLNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BOLNR in E1EDL20: Bill of Lading </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BREIT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BREIT in E1EDL37: Width </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BRGEW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BRGEW in E1EDL37: Total Weight of Handling Unit </xs:documentation>
+      <xs:documentation> Field BRGEW in E1EDL24: Gross weight </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BSARK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BSARK in E1EDL41: Customer Purchase Order Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BSARK_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BSARK_BEZ in E1EDL42: Description of purchase order type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BSTDT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BSTDT in E1EDL41: Customer Reference Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BSTNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BSTNR in E1EDL41: Customer Reference </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BTGEW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BTGEW in E1EDL20: Total Weight </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BTVOL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BTVOL in E1EDL37: Total Volume of Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BUILDING" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BUILDING in E1ADRM3: Location description: Building </xs:documentation>
+      <xs:documentation> Field BUILDING in E1ADRM1: Location description: Building </xs:documentation>
+      <xs:documentation> Field BUILDING in E1ADRM2: Location description: Building </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BZIRK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BZIRK in E1EDL21: Sales District </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="BZIRK_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field BZIRK_BEZ in E1EDL23: Name of the district </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CHARG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CHARG in E1EDL44: Batch Number </xs:documentation>
+      <xs:documentation> Field CHARG in E1EDL24: Batch Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CHSPL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CHSPL in E1EDL26: Batch split allowed </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CIMTYP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CIMTYP in EDI_DC40: Extension (defined by customer) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CITY1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CITY1 in E1ADRM2: Town or city </xs:documentation>
+      <xs:documentation> Field CITY1 in E1ADRM1: Town or city </xs:documentation>
+      <xs:documentation> Field CITY1 in E1ADRM3: Town or city </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CITY2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CITY2 in E1ADRM1: Town or city </xs:documentation>
+      <xs:documentation> Field CITY2 in E1ADRM2: Town or city </xs:documentation>
+      <xs:documentation> Field CITY2 in E1ADRM3: Town or city </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="COMPL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field COMPL in E1EDL24: Closing Indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CONTA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CONTA in E1EDL33: ID: Goods cross border in a container </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="COUNTRY1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field COUNTRY1 in E1ADRM2: Country indicator (ISO alphanumeric) </xs:documentation>
+      <xs:documentation> Field COUNTRY1 in E1ADRM3: Country indicator (ISO alphanumeric) </xs:documentation>
+      <xs:documentation> Field COUNTRY1 in E1ADRM1: Country indicator (ISO alphanumeric) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="COUNTRY2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field COUNTRY2 in E1ADRM1: Country indicator (ISO numeric) </xs:documentation>
+      <xs:documentation> Field COUNTRY2 in E1ADRM2: Country indicator (ISO numeric) </xs:documentation>
+      <xs:documentation> Field COUNTRY2 in E1ADRM3: Country indicator (ISO numeric) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="COUNTY_COD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field COUNTY_COD in E1ADRM3: County Code (e.g. in USA) </xs:documentation>
+      <xs:documentation> Field COUNTY_COD in E1ADRM2: County Code (e.g. in USA) </xs:documentation>
+      <xs:documentation> Field COUNTY_COD in E1ADRM1: County Code (e.g. in USA) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="COUNTY_TXT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field COUNTY_TXT in E1ADRM3: County name (for example, in USA) </xs:documentation>
+      <xs:documentation> Field COUNTY_TXT in E1ADRM2: County name (for example, in USA) </xs:documentation>
+      <xs:documentation> Field COUNTY_TXT in E1ADRM1: County name (for example, in USA) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CQU_ITQS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CQU_ITQS in E1EDL26: Cumulative Qty In Transit for SchedAgreement </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CQU_ITQS_UNIT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CQU_ITQS_UNIT in E1EDL26: Unit of Measure of Cumulative Quantity Received by Customer </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CQU_SA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CQU_SA in E1EDL26: Cumulative Qty Received for SchedAgr </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CQU_SA_UNIT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CQU_SA_UNIT in E1EDL26: Unit of Measure of Cumulative Quantity Received by Customer </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CREDAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CREDAT in EDI_DC40: Created On </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CRETIM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CRETIM in EDI_DC40: Created at </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="CUOBJ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field CUOBJ in E1EDL44: Configuration (internal object number) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DATA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DATA in E1IDOCENHANCEMENT: Data Container for IDoc Enhancement </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DATUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DATUM in E1EDL43: IDOC: Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DIRECT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DIRECT in EDI_DC40: Direction </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DISTZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DISTZ in E1EDL28: Distance </xs:documentation>
+      <xs:documentation> Field DISTZ in E1EDL30: Distance </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DOCNUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DOCNUM in EDI_DC40: IDoc number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DOCREL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field DOCREL in EDI_DC40: SAP Release for IDoc </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EAN11" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EAN11 in E1EDL24: International Article Number (EAN/UPC) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EHENT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EHENT in E1EDL37: Unit of distance </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EMPST" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EMPST in E1EDL24: Receiving Point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ENTFE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ENTFE in E1EDL37: Distance Travelled </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ERLKZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ERLKZ in E1EDL37: Status (at this time without functionality) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ERNAM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ERNAM in E1EDL37: Name of Person who Created the Object </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EVENT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EVENT in E1EDT13: Event type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EVENT_ALI" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EVENT_ALI in E1EDT13: Alias for the transaction (language-independent) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EWAHR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EWAHR in E1EDL12: Tolerance from </xs:documentation>
+      <xs:documentation> Field EWAHR in E1EDL15: Tolerance from </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXART" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXART in E1EDL35: Business Transaction Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXART_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXART_BEZ in E1EDL36: Description of business transaction type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXIDA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXIDA in E1EDL37: Type of External Handling Unit Identifier </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXIDV" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXIDV in E1EDL37: External Handling Unit Identification </xs:documentation>
+      <xs:documentation> Field EXIDV in E1EDL44: External Handling Unit Identification </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXIDV2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXIDV2 in E1EDL37: Handling Unit's 2nd External Identification </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPIRY_DATE_EXT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPIRY_DATE_EXT in E1EDL24: End date of validity period of returns delivery </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPIRY_DATE_EXT_B" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPIRY_DATE_EXT_B in E1EDL24: Begin date of validity period of returns delivery </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPKZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPKZ in E1EDL21: Export indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPRF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPRF in E1EDL35: Export/Import procedure for foreign trade (5 digits) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPRF_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPRF_BEZ in E1EDL36: Export/import procedure description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPRSS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPRSS in EDI_DC40: Overriding in inbound processing </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPVZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPVZ in E1EDL33: Mode of Transport at the Border (Intrastat) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXPVZ_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXPVZ_BEZ in E1EDL34: Description of mode of transport </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXTEND_D" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXTEND_D in E1ADRE1: Additional data, e.g. ILN or D&amp;B no. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EXTEND_Q" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field EXTEND_Q in E1ADRE1: Qualifier for additional data, e.g. ILN or D&amp;B number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="E_MAIL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field E_MAIL in E1ADRM3: E-Mail Address </xs:documentation>
+      <xs:documentation> Field E_MAIL in E1ADRM2: E-Mail Address </xs:documentation>
+      <xs:documentation> Field E_MAIL in E1ADRM1: E-Mail Address </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FAREH" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FAREH in E1EDL37: Unit of travel time </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FARZT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FARZT in E1EDL37: Travel Time </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FLOOR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FLOOR in E1ADRM1: Location description: Floor </xs:documentation>
+      <xs:documentation> Field FLOOR in E1ADRM2: Location description: Floor </xs:documentation>
+      <xs:documentation> Field FLOOR in E1ADRM3: Location description: Floor </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FOLLOW_UP_CODE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FOLLOW_UP_CODE in E1EDL24: Default Follow-Up Activity Code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FORMOFADDR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FORMOFADDR in E1ADRM3: Form of address </xs:documentation>
+      <xs:documentation> Field FORMOFADDR in E1ADRM1: Form of address </xs:documentation>
+      <xs:documentation> Field FORMOFADDR in E1ADRM2: Form of address </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FUNCTION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field FUNCTION in E1TXTH0: Function (for transferred text) </xs:documentation>
+      <xs:documentation> Field FUNCTION in E1TXTH8: Function (for transferred text) </xs:documentation>
+      <xs:documentation> Field FUNCTION in E1TXTH9: Function (for transferred text) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GEWEI" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GEWEI in E1EDL20: Weight Unit </xs:documentation>
+      <xs:documentation> Field GEWEI in E1EDL24: Weight Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GEWFX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GEWFX in E1EDL37: Weight and Volume Fixed </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GRKOR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GRKOR in E1EDL24: Delivery Group (Items are delivered together) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GRWCU" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GRWCU in E1EDL33: Currency of statistical values for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GRWRT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GRWRT in E1EDL35: Statistical value for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GWEIM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GWEIM in E1EDL37: Weight Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GWEIT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field GWEIT in E1EDL37: Weight Unit Tare </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HERKL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HERKL in E1EDL35: Country of Origin of Material (Non-Preferential Origin) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HERKL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HERKL_BEZ in E1EDL36: Description of country of origin </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HERKR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HERKR in E1EDL35: Region of Origin of Material (Non-Preferential Origin) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HERKR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HERKR_BEZ in E1EDL36: Description of region of origin </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HIEVW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HIEVW in E1EDL24: Use of Hierarchy Item </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HIPOS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HIPOS in E1EDL24: Superior item in an item hierarchy </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HOEHE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HOEHE in E1EDL37: Height </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HOLD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HOLD in E1EDL24: Inbound Delivery Item Not Yet Complete (on Hold) </xs:documentation>
+      <xs:documentation> Field HOLD in E1EDL20: Inbound delivery header not yet complete (on Hold) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HOUSE_RANG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HOUSE_RANG in E1ADRM2: House no. (interval) </xs:documentation>
+      <xs:documentation> Field HOUSE_RANG in E1ADRM3: House no. (interval) </xs:documentation>
+      <xs:documentation> Field HOUSE_RANG in E1ADRM1: House no. (interval) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="HOUSE_SUPL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field HOUSE_SUPL in E1ADRM2: House number </xs:documentation>
+      <xs:documentation> Field HOUSE_SUPL in E1ADRM3: House number </xs:documentation>
+      <xs:documentation> Field HOUSE_SUPL in E1ADRM1: House number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IDENTIFIER" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IDENTIFIER in E1IDOCENHANCEMENT: Data Containers for Enhancement of IDoc Types </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IDOCTYP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IDOCTYP in EDI_DC40: Name of basic type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IEDD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IEDD in E1EDT13: Actual Execution End Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IEDZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IEDZ in E1EDT13: Actual Execution End Time </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IEVER" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IEVER in E1EDL33: Domestic Mode of Transport for Foreign Trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IEVER_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IEVER_BEZ in E1EDL34: Description of inland mode of transport </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="IHREZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field IHREZ in E1EDL41: Your Reference </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCO1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCO1 in E1EDL20: Incoterms (Part 1) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCO1_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCO1_BEZ in E1EDL22: Incoterm description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCO2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCO2 in E1EDL20: Incoterms (Part 2) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCO2_L" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCO2_L in E1EDL20: Incoterms Location 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCO3_L" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCO3_L in E1EDL20: Incoterms Location 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCOV" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCOV in E1EDL20: Incoterms Version </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INCOV_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INCOV_BEZ in E1EDL22: Name of the controlling area </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="INHALT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field INHALT in E1EDL37: Description of Handling Unit Content </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ISDD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ISDD in E1EDT13: Actual Execution Start Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ISDZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ISDZ in E1EDT13: Actual Execution Start Time </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="JURISDIC" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field JURISDIC in E1ADRM2: Location for tax calculation - Tax Jurisdiction Code </xs:documentation>
+      <xs:documentation> Field JURISDIC in E1ADRM3: Location for tax calculation - Tax Jurisdiction Code </xs:documentation>
+      <xs:documentation> Field JURISDIC in E1ADRM1: Location for tax calculation - Tax Jurisdiction Code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KANNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KANNR in E1EDL24: KANBAN/Sequence Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDGRP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDGRP in E1EDL21: Customer Group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDGRP_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDGRP_BEZ in E1EDL23: Description of customer group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT in E1EDL44: Material belonging to the customer </xs:documentation>
+      <xs:documentation> Field KDMAT in E1EDL24: Material belonging to the customer </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT35" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT35 in E1EDL24: Material belonging to the customer </xs:documentation>
+      <xs:documentation> Field KDMAT35 in E1EDL37: Partner's (Customer's or Vendor's) Packaging Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT35_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT35_EXTERNAL in E1EDL37: Long Material Number (Future Development) for KDMAT Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT35_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT35_GUID in E1EDL37: External GUID (Future Development) for KDMAT35 Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT35_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT35_VERSION in E1EDL37: Version Number (Future Development) for KDMAT35 Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT_EXTERNAL in E1EDL44: Customer Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT_GUID in E1EDL44: Customer Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KDMAT_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KDMAT_VERSION in E1EDL44: Customer Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KNOTE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KNOTE in E1EDL32: Transportation Connection Points </xs:documentation>
+      <xs:documentation> Field KNOTE in E1EDL40: Transportation Connection Points </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KNOTE_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KNOTE_BEZ in E1EDL40: Node name </xs:documentation>
+      <xs:documentation> Field KNOTE_BEZ in E1EDL45: Node name </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KOQUI" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KOQUI in E1EDL26: Picking is subject to confirmation </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KUNNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KUNNR in E1EDL32: Customer Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR1 in E1EDL26: Customer group 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR1_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR1_BEZ in E1EDL27: Description cust. group 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR2 in E1EDL26: Customer group 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR2_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR2_BEZ in E1EDL27: Description cust. group 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR3 in E1EDL26: Customer group 3 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR3_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR3_BEZ in E1EDL27: Description cust. group 3 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR4 in E1EDL26: Customer group 4 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR4_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR4_BEZ in E1EDL27: Description cust. group 4 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR5" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR5 in E1EDL26: Customer group 5 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KVGR5_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KVGR5_BEZ in E1EDL27: Description cust. group 5 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KZABE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KZABE in E1EDL33: Identification for the Means of Transport Inland </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KZGBE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KZGBE in E1EDL33: Identifier for Means of Transport crossing the Border </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KZTLF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KZTLF in E1EDL26: Partial delivery at item level </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="KZUMW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field KZUMW in E1EDL26: Environmentally Relevant </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LABELTYP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LABELTYP in E1EDL37: Checkbox: Do Not Print External Shipping Label </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LABNK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LABNK in E1EDL24: Customer number for forecast / JIT dlv. sched. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LADEH" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LADEH in E1EDL37: Unit of measure to measure the length of loading platform </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LADGR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LADGR in E1EDL24: Loading Group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LADGR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LADGR_BEZ in E1EDL25: Loading group description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LADLG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LADLG in E1EDL37: Lgth of loading platform in lgth of LdPlat measurement units </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LAENG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LAENG in E1EDL37: Length </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LANDF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LANDF in E1EDL37: Driver's Nationality </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LANDT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LANDT in E1EDL37: Country providing means of transport </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LANGUAGE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LANGUAGE in E1ADRM3: Language key </xs:documentation>
+      <xs:documentation> Field LANGUAGE in E1ADRM1: Language key </xs:documentation>
+      <xs:documentation> Field LANGUAGE in E1ADRM2: Language key </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LANGUA_ISO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LANGUA_ISO in E1TXTH9: Language key </xs:documentation>
+      <xs:documentation> Field LANGUA_ISO in E1TXTH8: Language key </xs:documentation>
+      <xs:documentation> Field LANGUA_ISO in E1TXTH0: Language key </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LE_SCENARIO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LE_SCENARIO in E1EDL20: Scenario Logistic Execution </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LFART" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LFART in E1EDL21: Delivery Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LFART_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LFART_BEZ in E1EDL23: Delivery type description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LFIMG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LFIMG in E1EDL24: Actual quantity delivered (in sales units) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGMNG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGMNG in E1EDL24: Actual quantity delivered in stockkeeping units </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGNUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGNUM in E1EDL32: Warehouse Number / Warehouse Complex </xs:documentation>
+      <xs:documentation> Field LGNUM in E1EDL20: Warehouse Number / Warehouse Complex </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGNUM_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGNUM_BEZ in E1EDL45: Warehouse number description </xs:documentation>
+      <xs:documentation> Field LGNUM_BEZ in E1EDL22: Warehouse Number Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGORT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGORT in E1EDL24: Storage location </xs:documentation>
+      <xs:documentation> Field LGORT in E1EDL44: Storage location </xs:documentation>
+      <xs:documentation> Field LGORT in E1EDL32: Storage location </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGORT_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGORT_BEZ in E1EDL25: Description of Storage Location </xs:documentation>
+      <xs:documentation> Field LGORT_BEZ in E1EDL45: Description of storage location </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGPBE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGPBE in E1EDL24: Storage Bin </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGTOR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGTOR in E1EDL32: Door for Warehouse Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LGTOR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LGTOR_BEZ in E1EDL45: Door description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LICHN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LICHN in E1EDL24: Supplier Batch Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIEFFZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIEFFZ in E1EDL24: Cumulative qty for delivery/MAIS in base unit of measure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIFEX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIFEX in E1EDL20: External Identification of Delivery Note </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIFEXPOS2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIFEXPOS2 in E1EDL26: External item identifier </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIFNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIFNR in E1EDL32: Vendor number of destination point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIFSK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIFSK in E1EDL21: Delivery Block (Document Header) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LIFSK_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LIFSK_BEZ in E1EDL23: Description of reason for delivery block </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LOCATION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LOCATION in E1ADRM2: Location description of location </xs:documentation>
+      <xs:documentation> Field LOCATION in E1ADRM1: Location description of location </xs:documentation>
+      <xs:documentation> Field LOCATION in E1ADRM3: Location description of location </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LOC_SEQ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LOC_SEQ in E1EDL20: Sequence of Intermediate Locations in Returns Process </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LPRIO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LPRIO in E1EDL21: Delivery Priority </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LPRIO_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LPRIO_BEZ in E1EDL23: Description of delivery priorities </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LSTEL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LSTEL in E1EDL20: Loading Point </xs:documentation>
+      <xs:documentation> Field LSTEL in E1EDL32: Loading Point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="LSTEL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field LSTEL_BEZ in E1EDL45: Loading point description </xs:documentation>
+      <xs:documentation> Field LSTEL_BEZ in E1EDL22: Loading point description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MAGEW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MAGEW in E1EDL37: Allowed Loading Weight of a Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MAGRV" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MAGRV in E1EDL26: Material Group: Packaging Materials </xs:documentation>
+      <xs:documentation> Field MAGRV in E1EDL37: Material Group: Packaging Materials </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MAGRV_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MAGRV_BEZ in E1EDL38: Description of material grouping shipping material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MANDT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MANDT in EDI_DC40: Client </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATKL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATKL in E1EDL24: Material Group </xs:documentation>
+      <xs:documentation> Field MATKL in E1EDL26: Material Group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATKL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATKL_BEZ in E1EDL27: Material Group Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATNR in E1EDL44: Material Number (18 Characters) </xs:documentation>
+      <xs:documentation> Field MATNR in E1EDL24: Material Number (18 Characters) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATNR_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATNR_EXTERNAL in E1EDL44: Material Number </xs:documentation>
+      <xs:documentation> Field MATNR_EXTERNAL in E1EDL24: Material Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATNR_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATNR_GUID in E1EDL44: External GUID for MATNR Field </xs:documentation>
+      <xs:documentation> Field MATNR_GUID in E1EDL24: External GUID for MATNR Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATNR_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATNR_LONG in E1EDL44: Material No. </xs:documentation>
+      <xs:documentation> Field MATNR_LONG in E1EDL26: Material No. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATNR_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATNR_VERSION in E1EDL44: Version Number for MATNR Field </xs:documentation>
+      <xs:documentation> Field MATNR_VERSION in E1EDL24: Version Number for MATNR Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATWA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATWA in E1EDL24: Material entered </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATWA_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATWA_EXTERNAL in E1EDL24: Material Entered </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATWA_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATWA_GUID in E1EDL24: External GUID for Field MATWA </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATWA_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATWA_LONG in E1EDL26: Material entered </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MATWA_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MATWA_VERSION in E1EDL24: Version Number for Field MATWA </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MAVOL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MAVOL in E1EDL37: Allowed Loading Volume for Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MAX_ERR_TYPE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MAX_ERR_TYPE in E1EDL24: Maximum Error Type Occurred </xs:documentation>
+      <xs:documentation> Field MAX_ERR_TYPE in E1EDL20: Maximum Error Type Occurred </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MEABM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MEABM in E1EDL37: Unit of Dimension for Length/Width/Height </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MEDST" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MEDST in E1EDL30: Distance Unit of Measure </xs:documentation>
+      <xs:documentation> Field MEDST in E1EDL28: Distance Unit of Measure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MEINS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MEINS in E1EDL24: Base Unit of Measure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MESCOD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MESCOD in EDI_DC40: Message code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MESFCT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MESFCT in EDI_DC40: Message Function </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MESTYP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MESTYP in EDI_DC40: Message type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MFRGR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MFRGR in E1EDL24: Material freight group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MFRGR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MFRGR_BEZ in E1EDL25: Description of material freight group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MFRNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MFRNR in E1EDL24: Manufacturer number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MFRPN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MFRPN in E1EDL24: Manufacturer Part Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MOVE_STATUS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MOVE_STATUS in E1EDL37: Handling unit status </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR1 in E1EDL26: Material group 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR1_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR1_BEZ in E1EDL27: Description material group 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR2 in E1EDL26: Material group 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR2_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR2_BEZ in E1EDL27: Description material group 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR3 in E1EDL26: Material group 3 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR3_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR3_BEZ in E1EDL27: Description material group 3 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR4 in E1EDL26: Material group 4 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR4_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR4_BEZ in E1EDL27: Description material group 4 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR5" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR5 in E1EDL26: Material group 5 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="MVGR5_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field MVGR5_BEZ in E1EDL27: Description material group 5 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAMBE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAMBE in E1EDL37: Alternate Driver's Name </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME1 in E1ADRM2: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME1 in E1ADRM1: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME1 in E1ADRM3: Name or address line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME2 in E1ADRM2: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME2 in E1ADRM3: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME2 in E1ADRM1: Name or address line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME3 in E1ADRM2: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME3 in E1ADRM3: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME3 in E1ADRM1: Name or address line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME4 in E1ADRM3: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME4 in E1ADRM1: Name or address line </xs:documentation>
+      <xs:documentation> Field NAME4 in E1ADRM2: Name or address line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAMEF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAMEF in E1EDL37: Driver name </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME_CO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME_CO in E1ADRM2: Subsequent line for name or address (c/o) </xs:documentation>
+      <xs:documentation> Field NAME_CO in E1ADRM3: Subsequent line for name or address (c/o) </xs:documentation>
+      <xs:documentation> Field NAME_CO in E1ADRM1: Subsequent line for name or address (c/o) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NAME_TEXT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NAME_TEXT in E1ADRM2: Name or address line (formatted) </xs:documentation>
+      <xs:documentation> Field NAME_TEXT in E1ADRM3: Name or address line (formatted) </xs:documentation>
+      <xs:documentation> Field NAME_TEXT in E1ADRM1: Name or address line (formatted) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTANF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTANF in E1EDT13: Constraint for activity start (Basic) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTANZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTANZ in E1EDT13: Constraint for activity start time (Basic) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTEND" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTEND in E1EDT13: Constraint for finish of activity (Basic) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTENZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTENZ in E1EDT13: Basic finish time of the activity </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTGEW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTGEW in E1EDL37: Loading Weight of Handling Unit </xs:documentation>
+      <xs:documentation> Field NTGEW in E1EDL24: Net weight </xs:documentation>
+      <xs:documentation> Field NTGEW in E1EDL20: Net weight </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="NTVOL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field NTVOL in E1EDL37: Loading Volume of Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ORKTX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ORKTX in E1EDL24: Description of Material Entered </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ORMNG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ORMNG in E1EDL24: Original Quantity of Delivery Item </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="OUTMOD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field OUTMOD in EDI_DC40: Output mode </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PACKVORSCHR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PACKVORSCHR in E1EDL37: Text string 22 characters </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PACKVORSCHR_ST" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PACKVORSCHR_ST in E1EDL37: Single-Character Flag </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PARAM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PARAM in E1EDL39: IDOC: Control Parameters </xs:documentation>
+      <xs:documentation> Field PARAM in E1EDL19: IDOC: Control Parameters </xs:documentation>
+      <xs:documentation> Field PARAM in E1EDL18: IDOC: Control Parameters </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PARID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PARID in E1EDL20: External partner number </xs:documentation>
+      <xs:documentation> Field PARID in E1EDL44: External partner number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PARTNER_ID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PARTNER_ID in E1ADRM2: Partner no. (SAP) </xs:documentation>
+      <xs:documentation> Field PARTNER_ID in E1ADRM3: Partner no. (SAP) </xs:documentation>
+      <xs:documentation> Field PARTNER_ID in E1ADRM1: Partner no. (SAP) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PARTNER_Q" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PARTNER_Q in E1ADRM2: Qualifier for partner function </xs:documentation>
+      <xs:documentation> Field PARTNER_Q in E1ADRM3: Qualifier for partner function </xs:documentation>
+      <xs:documentation> Field PARTNER_Q in E1ADRM1: Qualifier for partner function </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PCKPF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PCKPF in E1EDL26: Packing control </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PODAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PODAT in E1EDL20: Date (Proof of Delivery) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSAR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSAR in E1EDL26: Item Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSEX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSEX in E1EDL41: Item Number of the Underlying Purchase Order </xs:documentation>
+      <xs:documentation> Field POSEX in E1EDL24: External item number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSNR in E1EDL44: Item number of the SD document </xs:documentation>
+      <xs:documentation> Field POSNR in E1EDL43: Item number </xs:documentation>
+      <xs:documentation> Field POSNR in E1EDL24: Item number of the SD document </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_AREA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_AREA in E1ADRM1: Post delivery district </xs:documentation>
+      <xs:documentation> Field POSTL_AREA in E1ADRM3: Post delivery district </xs:documentation>
+      <xs:documentation> Field POSTL_AREA in E1ADRM2: Post delivery district </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_CITY" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_CITY in E1ADRM1: Town or city </xs:documentation>
+      <xs:documentation> Field POSTL_CITY in E1ADRM2: Town or city </xs:documentation>
+      <xs:documentation> Field POSTL_CITY in E1ADRM3: Town or city </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_COD1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_COD1 in E1ADRM1: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD1 in E1ADRM3: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD1 in E1ADRM2: Postal code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_COD2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_COD2 in E1ADRM1: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD2 in E1ADRM2: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD2 in E1ADRM3: Postal code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_COD3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_COD3 in E1ADRM3: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD3 in E1ADRM1: Postal code </xs:documentation>
+      <xs:documentation> Field POSTL_COD3 in E1ADRM2: Postal code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POSTL_PBOX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POSTL_PBOX in E1ADRM1: PO Box </xs:documentation>
+      <xs:documentation> Field POSTL_PBOX in E1ADRM2: PO Box </xs:documentation>
+      <xs:documentation> Field POSTL_PBOX in E1ADRM3: PO Box </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="POTIM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field POTIM in E1EDL20: Confirmation Time </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PREFE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PREFE in E1EDL35: Customs Preference </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PREV_DOC_NO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PREV_DOC_NO in E1EDL33: Previous Document Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PREV_DOC_TYPE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PREV_DOC_TYPE in E1EDL33: Previous Document Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PRODH" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PRODH in E1EDL26: Product hierarchy </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PRODH_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PRODH_BEZ in E1EDL27: Description of product hierarchy </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PSTYV" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PSTYV in E1EDL26: Sales document item category </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="PSTYV_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field PSTYV_BEZ in E1EDL27: Description of item category </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="QUALF" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field QUALF in E1EDL19: IDOC Qualifier: Control (Delivery Item) </xs:documentation>
+      <xs:documentation> Field QUALF in E1EDT13: IDOC Qualifier: Date (Delivery) </xs:documentation>
+      <xs:documentation> Field QUALF in E1EDL39: Qualifier: Control (shipping unit) </xs:documentation>
+      <xs:documentation> Field QUALF in E1EDL18: IDOC Qualifier: Control (Delivery) </xs:documentation>
+      <xs:documentation> Field QUALF in E1EDL43: SD document category </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="QUALI" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field QUALI in E1EDL32: Qualifier for stage point </xs:documentation>
+      <xs:documentation> Field QUALI in E1EDL41: Qualifier for Reference Data of Ordering Party </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVLAD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVLAD in EDI_DC40: Logical Address of Receiver </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVPFC" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVPFC in EDI_DC40: Partner Function of Receiver </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVPOR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVPOR in EDI_DC40: Receiver port </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVPRN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVPRN in EDI_DC40: Partner Number of Receiver </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVPRT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVPRT in EDI_DC40: Partner Type of Receiver </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RCVSAD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RCVSAD in EDI_DC40: Recipient address (SADR) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RECIPIENT_CREATE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RECIPIENT_CREATE in E1EDL20: Created by Receipient </xs:documentation>
+      <xs:documentation> Field RECIPIENT_CREATE in E1EDL24: Created by Receipient </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="REFGRP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field REFGRP in EDI_DC40: Message group (EDI Message Group) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="REFINT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field REFINT in EDI_DC40: Transmission file (EDI Interchange) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="REFMES" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field REFMES in EDI_DC40: Message (EDI Message) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="REGION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field REGION in E1ADRM1: Region, state </xs:documentation>
+      <xs:documentation> Field REGION in E1ADRM3: Region, state </xs:documentation>
+      <xs:documentation> Field REGION in E1ADRM2: Region, state </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="REQ_SEG_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field REQ_SEG_LONG in E1EDL26: Requirement Segment </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RMA_COMPLETE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RMA_COMPLETE in E1EDL24: RMA completion indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RMA_NUMBER" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field RMA_NUMBER in E1EDL24: Return Material Authorization Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ROOM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ROOM in E1ADRM1: Location description: Room </xs:documentation>
+      <xs:documentation> Field ROOM in E1ADRM3: Location description: Room </xs:documentation>
+      <xs:documentation> Field ROOM in E1ADRM2: Location description: Room </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ROUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ROUID in E1EDL28: Route Identification </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ROUTE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ROUTE in E1EDL20: Route </xs:documentation>
+      <xs:documentation> Field ROUTE in E1EDL28: Route </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ROUTE_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ROUTE_BEZ in E1EDL29: Route description </xs:documentation>
+      <xs:documentation> Field ROUTE_BEZ in E1EDL22: Route description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SERIAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SERIAL in EDI_DC40: Serialization </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SERNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SERNR in E1EDL24: BOM explosion number </xs:documentation>
+      <xs:documentation> Field SERNR in E1EDL11: Serial Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SGT_RCAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SGT_RCAT in E1EDL26: Requirement Segment </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SGT_SCAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SGT_SCAT in E1EDL26: Stock Segment </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SHKZG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SHKZG in E1EDL26: Debit/Credit Indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SMGKN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SMGKN in E1EDL37: SMG identification for material tag </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDLAD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDLAD in EDI_DC40: Logical address of sender </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDPFC" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDPFC in EDI_DC40: Partner Function of Sender </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDPOR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDPOR in EDI_DC40: Sender port (SAP System, external subsystem) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDPRN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDPRN in EDI_DC40: Partner Number of Sender </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDPRT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDPRT in EDI_DC40: Partner type of sender </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SNDSAD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SNDSAD in EDI_DC40: Sender address (SADR) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SOBKZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SOBKZ in E1EDL26: Special Stock Indicator </xs:documentation>
+      <xs:documentation> Field SOBKZ in E1EDL44: Special Stock Indicator </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SONUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SONUM in E1EDL44: Special Stock Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SORTL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SORTL in E1EDL37: Sort field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SPART" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SPART in E1EDL24: Division </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SPART_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SPART_BEZ in E1EDL25: Description of division </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STABE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STABE in E1EDL33: Country of Origin of the Means of Transport at Departure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STABE_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STABE_BEZ in E1EDL34: Cntry of affil. of means of transport at departure of goods </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STATUS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STATUS in EDI_DC40: Status of IDoc </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STAWN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STAWN in E1EDL35: Commodity Code </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STD in EDI_DC40: EDI standard, flag </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STDMES" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STDMES in EDI_DC40: EDI message type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STDVRS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STDVRS in EDI_DC40: EDI standard, version and release </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STGBE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STGBE in E1EDL33: Origin of Means of Transport when Crossing the Border </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STGBE_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STGBE_BEZ in E1EDL34: Description of country of affiliation of means of transport </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STK_SEG_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STK_SEG_LONG in E1EDL26: Requirement Segment </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STREET1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STREET1 in E1ADRM1: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET1 in E1ADRM2: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET1 in E1ADRM3: Street and house number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STREET2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STREET2 in E1ADRM1: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET2 in E1ADRM2: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET2 in E1ADRM3: Street and house number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STREET3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STREET3 in E1ADRM1: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET3 in E1ADRM2: Street and house number </xs:documentation>
+      <xs:documentation> Field STREET3 in E1ADRM3: Street and house number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT1 in E1EDL36: Description of commodity code - First line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT2 in E1EDL36: Description of commodity code - Second line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT3 in E1EDL36: Description of commodity code - Third line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT4 in E1EDL36: Description of commodity code - Fourth line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT5" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT5 in E1EDL36: Description of commodity code - Fifth line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT6" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT6 in E1EDL36: Description of commodity code - Sixth line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="STXT7" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field STXT7 in E1EDL36: Description of commodity code - Seventh line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SUDRU" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SUDRU in E1EDL24: Original entry will be printed </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SUGRD" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field SUGRD in E1EDL24: Reason for material substitution </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TABNAM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TABNAM in EDI_DC40: Name of Table Structure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TARAG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TARAG in E1EDL37: Tare Weight of Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TAVOL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TAVOL in E1EDL37: Tare Volume of Handling Unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDFORMAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDFORMAT in E1TXTP0: Tag column </xs:documentation>
+      <xs:documentation> Field TDFORMAT in E1TXTP8: Tag column </xs:documentation>
+      <xs:documentation> Field TDFORMAT in E1TXTP9: Tag column </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDID in E1TXTH0: Text ID </xs:documentation>
+      <xs:documentation> Field TDID in E1TXTH9: Text ID </xs:documentation>
+      <xs:documentation> Field TDID in E1TXTH8: Text ID </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDLINE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDLINE in E1TXTP0: Text Line </xs:documentation>
+      <xs:documentation> Field TDLINE in E1TXTP9: Text Line </xs:documentation>
+      <xs:documentation> Field TDLINE in E1TXTP8: Text Line </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDOBJECT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDOBJECT in E1TXTH0: Texts: application object </xs:documentation>
+      <xs:documentation> Field TDOBJECT in E1TXTH9: Texts: application object </xs:documentation>
+      <xs:documentation> Field TDOBJECT in E1TXTH8: Texts: application object </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDOBNAME" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDOBNAME in E1TXTH0: Name </xs:documentation>
+      <xs:documentation> Field TDOBNAME in E1TXTH9: Name </xs:documentation>
+      <xs:documentation> Field TDOBNAME in E1TXTH8: Name </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDSPRAS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDSPRAS in E1TXTH0: Language </xs:documentation>
+      <xs:documentation> Field TDSPRAS in E1TXTH8: Language </xs:documentation>
+      <xs:documentation> Field TDSPRAS in E1TXTH9: Language </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TDTEXTTYPE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TDTEXTTYPE in E1TXTH0: SAPscript: Format of Text </xs:documentation>
+      <xs:documentation> Field TDTEXTTYPE in E1TXTH9: SAPscript: Format of Text </xs:documentation>
+      <xs:documentation> Field TDTEXTTYPE in E1TXTH8: SAPscript: Format of Text </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TELEFAX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TELEFAX in E1ADRM1: Fax number </xs:documentation>
+      <xs:documentation> Field TELEFAX in E1ADRM3: Fax number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TELEPHONE1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TELEPHONE1 in E1ADRM3: Telephone number </xs:documentation>
+      <xs:documentation> Field TELEPHONE1 in E1ADRM1: Telephone number </xs:documentation>
+      <xs:documentation> Field TELEPHONE1 in E1ADRM2: Telephone number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TELEPHONE2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TELEPHONE2 in E1ADRM1: Telephone number </xs:documentation>
+      <xs:documentation> Field TELEPHONE2 in E1ADRM3: Telephone number </xs:documentation>
+      <xs:documentation> Field TELEPHONE2 in E1ADRM2: Telephone number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TELEX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TELEX in E1ADRM3: Telex number </xs:documentation>
+      <xs:documentation> Field TELEX in E1ADRM1: Telex number </xs:documentation>
+      <xs:documentation> Field TELEX in E1ADRM2: Telex number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TELFAX" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TELFAX in E1ADRM2: Fax number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TEST" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TEST in EDI_DC40: Test flag </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRAGR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRAGR in E1EDL21: Transportation Group </xs:documentation>
+      <xs:documentation> Field TRAGR in E1EDL24: Transportation Group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRAGR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRAGR_BEZ in E1EDL23: Description of transportation group </xs:documentation>
+      <xs:documentation> Field TRAGR_BEZ in E1EDL25: Description of transportation group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRAID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRAID in E1EDL20: Means of Transport ID </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRATY" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRATY in E1EDL20: Means-of-Transport Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRATY_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRATY_BEZ in E1EDL22: Description of shipping material type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRSPG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRSPG in E1EDL21: Shipment Blocking Reason </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TRSPG_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TRSPG_BEZ in E1EDL23: Description of reason for shipment block </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TSTYP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TSTYP in E1EDL30: Stage category </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TZCODE" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TZCODE in E1ADRM2: Location for time zone (SAP code) </xs:documentation>
+      <xs:documentation> Field TZCODE in E1ADRM1: Location for time zone (SAP code) </xs:documentation>
+      <xs:documentation> Field TZCODE in E1ADRM3: Location for time zone (SAP code) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TZDESC" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TZDESC in E1ADRM3: Location for time zone (external code) </xs:documentation>
+      <xs:documentation> Field TZDESC in E1ADRM1: Location for time zone (external code) </xs:documentation>
+      <xs:documentation> Field TZDESC in E1ADRM2: Location for time zone (external code) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TZONE_BEG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TZONE_BEG in E1EDT13: Time Zone </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="TZONE_END" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field TZONE_END in E1EDT13: Time Zone </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UEBTK" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UEBTK in E1EDL26: Indicator: Unlimited Overdelivery Allowed </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UEBTO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UEBTO in E1EDL26: Overdelivery Tolerance Limit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UII" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UII in E1EDL11: Unique Item Identifier </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UMVKN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UMVKN in E1EDL26: Denominator (Divisor) for Conversion of Sales Qty into SKU </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UMVKZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UMVKZ in E1EDL26: Numerator (factor) for conversion of sales quantity into SKU </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="UNTTO" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field UNTTO in E1EDL26: Underdelivery Tolerance Limit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="USR01" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field USR01 in E1EDL24: Additional data field 1 for delivery schedules </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="USR02" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field USR02 in E1EDL24: Additional data field 2 for delivery schedules </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="USR03" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field USR03 in E1EDL24: Additional data field 3 for delivery schedules </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="USR04" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field USR04 in E1EDL24:  Additional data field 4 for delivery schedules </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="USR05" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field USR05 in E1EDL24: Additional data field 5 for delivery schedules </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VBELN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VBELN in E1EDL20: Sales and Distribution Document Number </xs:documentation>
+      <xs:documentation> Field VBELN in E1EDL44: Sales and Distribution Document Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VBRST" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VBRST in E1EDL24: Customer point of consumption </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VBUMG_BME" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VBUMG_BME in E1EDL26: Quantity (GR Posted) in Base Unit of Measure </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEBEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEBEZ in E1EDL38: Description of Packaging Material </xs:documentation>
+      <xs:documentation> Field VEBEZ in E1EDL37: Description of Packaging Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR1 in E1EDL37: Handling Unit Group 1                     (Freely Definable) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR1_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR1_BEZ in E1EDL38: Description of shipping unit 1 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR2 in E1EDL37: Handling Unit Group 2                     (Freely Definable) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR2_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR2_BEZ in E1EDL38: Description of shipping unit 2 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR3 in E1EDL37: Handling Unit Group 3                     (Freely Definable) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR3_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR3_BEZ in E1EDL38: Description of shipping unit 3 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR4 in E1EDL37: Handling Unit Group 4                     (Freely Definable) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR4_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR4_BEZ in E1EDL38: Description of shipping unit 4 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR5" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR5 in E1EDL37: Handling Unit Group 5                     (Freely Definable) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEGR5_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEGR5_BEZ in E1EDL38: Description of shipping unit 5 </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VELIN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VELIN in E1EDL44: Type of Handling-unit Item Content </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VELTP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VELTP in E1EDL37: Packaging Material Category </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEMEH" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEMEH in E1EDL44: Base Unit of Measure of the Quantity to be Packed (VEMNG) </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VEMNG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VEMNG in E1EDL44: Base Quantity Packed in the Handling Unit Item </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VFDAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VFDAT in E1EDL24: Shelf Life Expiration or Best-Before Date </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VGBEL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VGBEL in E1EDL24: Document number of the reference document </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VGPOS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VGPOS in E1EDL24: Item number of the reference item </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHART" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHART in E1EDL37: Packaging Material Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHART_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHART_BEZ in E1EDL38: Description of shipping material type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM in E1EDL37: Packaging Materials </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_EXTERNAL in E1EDL37: Shipping Material </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_GUID in E1EDL37: External GUID for Field VHILM </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_KU" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_KU in E1EDL37: Material belonging to the customer </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_KU_EXTERNAL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_KU_EXTERNAL in E1EDL37: Long Material Number (Future Development) for Field VHILM </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_KU_GUID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_KU_GUID in E1EDL37: External GUID (Future Development) for Field VHILM_KU </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_KU_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_KU_VERSION in E1EDL37: Version Number (Future Development) for Field VHILM_KU </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_LONG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_LONG in E1EDL37: Packaging Materials </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VHILM_VERSION" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VHILM_VERSION in E1EDL37: Version Number for Field VHILM </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKBUR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKBUR in E1EDL24: Sales office </xs:documentation>
+      <xs:documentation> Field VKBUR in E1EDL20: Sales office </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKBUR_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKBUR_BEZ in E1EDL25: Description of sales office </xs:documentation>
+      <xs:documentation> Field VKBUR_BEZ in E1EDL22: Description of sales office </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKGRP" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKGRP in E1EDL24: Sales group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKGRP_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKGRP_BEZ in E1EDL25: Description of Sales Group </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKORG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKORG in E1EDL20: Sales Organization </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VKORG_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VKORG_BEZ in E1EDL22: Description of sales organization </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VOLEH" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VOLEH in E1EDL24: Volume unit </xs:documentation>
+      <xs:documentation> Field VOLEH in E1EDL20: Volume unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VOLEM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VOLEM in E1EDL37: Volume unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VOLET" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VOLET in E1EDL37: Volume Unit Tare </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VOLUM" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VOLUM in E1EDL24: Volume </xs:documentation>
+      <xs:documentation> Field VOLUM in E1EDL20: Volume </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VORNR" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VORNR in E1EDT13: Operation/Activity Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VRKME" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VRKME in E1EDL24: Sales unit </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSANL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSANL in E1EDL28: Shipping type of subsequent leg </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSANL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSANL_BEZ in E1EDL29: Description of shipping type of subsequent leg </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSART" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSART in E1EDL30: Shipping Type </xs:documentation>
+      <xs:documentation> Field VSART in E1EDL28: Shipping Type </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSART_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSART_BEZ in E1EDL31: Shipping Type Description </xs:documentation>
+      <xs:documentation> Field VSART_BEZ in E1EDL29: Shipping Type Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSAVL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSAVL in E1EDL28: Shipping type of preliminary leg </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSAVL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSAVL_BEZ in E1EDL29: Description of shipping type of preliminary leg </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSBED" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSBED in E1EDL20: Shipping Conditions </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSBED_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSBED_BEZ in E1EDL22: Shipping Conditions Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTEL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTEL in E1EDL32: Shipping Point/Receiving Point </xs:documentation>
+      <xs:documentation> Field VSTEL in E1EDL20: Shipping Point/Receiving Point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTEL_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTEL_BEZ in E1EDL45: Description of shipping point </xs:documentation>
+      <xs:documentation> Field VSTEL_BEZ in E1EDL22: Description of shipping point </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTGA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTGA in E1EDT13: Deadline deviation reason </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTGA_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTGA_BEZ in E1EDT13: Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTZW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTZW in E1EDT13: Deadline function </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VSTZW_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VSTZW_BEZ in E1EDT13: Description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VTWEG" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VTWEG in E1EDL24: Distribution Channel </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="VTWEG_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field VTWEG_BEZ in E1EDL25: Description of distribution channel </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WDATU" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field WDATU in E1EDL44: Date of Goods Receipt </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WERKS" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field WERKS in E1EDL44: Plant </xs:documentation>
+      <xs:documentation> Field WERKS in E1EDL32: EDI plant number for shipping unit </xs:documentation>
+      <xs:documentation> Field WERKS in E1EDL24: Plant </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WERKS_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field WERKS_BEZ in E1EDL45: Plant Descript. </xs:documentation>
+      <xs:documentation> Field WERKS_BEZ in E1EDL27: Plant Descript. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="XABLN" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field XABLN in E1EDL20: Goods Receipt/Issue Slip Number </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="XCHBW" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field XCHBW in E1EDL26: Indicator for Batches / Evaluation Types </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL1" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL1 in E1EDL33: Customs office: Customs office 1 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL1_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL1_BEZ in E1EDL34: Customs office 1 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL2" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL2 in E1EDL33: Customs office: Customs office 2 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL2_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL2_BEZ in E1EDL34: Customs office 2 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL3" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL3 in E1EDL33: Customs office: Customs office 3 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL3_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL3_BEZ in E1EDL34: Customs office 3 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL4" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL4 in E1EDL33: Customs office: Customs office 4 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL4_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL4_BEZ in E1EDL34: Customs office 4 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL5" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL5 in E1EDL33: Customs office: Customs office 5 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL5_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL5_BEZ in E1EDL34: Customs office 5 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL6" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL6 in E1EDL33: Customs office: Customs office 6 for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLL6_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLL6_BEZ in E1EDL34: Customs office 6 description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLLA" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLLA in E1EDL33: Customs Office: Office of Exit/Entry for Foreign Trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLLA_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLLA_BEZ in E1EDL34: Customs office description </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLLB" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLLB in E1EDL33: Customs office: Office of destination for foreign trade </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZOLLB_BEZ" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZOLLB_BEZ in E1EDL34: Description of office of destination </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZUDAT" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZUDAT in E1EDL24: Additional Data </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ZUL_AUFL" type="xs:string">
+    <xs:annotation>
+      <xs:documentation> Field ZUL_AUFL in E1EDL37: 17-Char. Field </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

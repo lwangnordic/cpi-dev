@@ -1,0 +1,19 @@
+#Fri Apr 09 22:50:47 UTC 2021
+SFTP_Dir_QAS=/SPS Orders
+SFTP_disconnect=1
+SFTP_auth=user_password
+SFTP_proxy=none
+SPS_Directory=/testout
+Scheduler=<row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>dateType</cell><cell>DAILY</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>toInterval</cell><cell>24</cell></row><row><cell>fromInterval</cell><cell>0</cell></row><row><cell>OnEveryMinute</cell><cell>10</cell></row><row><cell>timeType</cell><cell>TIME_INTERVAL</cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>triggerType</cell><cell>cron</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>0+0/10+0-23+?+*+*+*&amp;trigger.timeZone\=Etc/GMT</cell></row>
+SPS_credentials=SPS_PRD_Login
+SFTP_PRD_credentials=SFTP_cpiprd
+SFTP_Dir_PRD=/PRD/SPS Orders
+SFTP_address=sapftp.nordicnaturals.com\:3396
+SFTP_QAS_credentials=SFTP_SPS_User
+SPS_post_proc=delete
+SPS_proxy=none
+SPS_auth=user_password
+SPS_sorting=sort_by_timestamp
+SFTP_credentials=NN_SFTP_Login
+SPS_disconnect=1
+SPS_address=sftp.spscommerce.com\:10022

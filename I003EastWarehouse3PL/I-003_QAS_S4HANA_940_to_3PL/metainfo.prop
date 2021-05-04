@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:21 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1618431331703
+OriginBundleSymbolicName=I-003_QAS_S4HANA_940_to_3PL
+target=3PL
+OriginBundleName=I-003_QAS_S4HANA_940_to_3PL
+OriginBundleVersion=1.54
+description=\ 

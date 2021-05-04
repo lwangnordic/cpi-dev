@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:29 UTC 2021
+source=Stripe
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1617833489083
+OriginBundleSymbolicName=I-016_Stripe_to_SAP_DPA_copy
+target=DPA
+OriginBundleName=I-016 Stripe_to_SAP_DPA_copy
+OriginBundleVersion=2.2
+description=\ 

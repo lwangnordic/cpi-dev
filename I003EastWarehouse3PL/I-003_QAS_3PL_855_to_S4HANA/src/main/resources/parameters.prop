@@ -1,0 +1,20 @@
+#
+#Tue Feb 23 05:19:45 UTC 2021
+SFTP_USER=qa_3pl_cpi
+SFTP_FAIL_PATH=/Fail/
+email_cc=
+email_host=email.nn.com\:587
+email_from=sapalerts@nordicnaturals.com
+SFTP_PORT=3396
+SFTP_PATH=/855 Records QA
+SFTP_ADDRESS=sapftp.nordicnaturals.com
+email_bcc=
+email_to=erick.rodriguez@accely.com
+SAP_CLIENT=sap-client\=100
+SFTP_PASSWORD_PART2=
+email_credentials=NN_SMTP_Credentials
+SFTP_PASSWORD_PART1=lumpyM3mory94
+SAP_LOGIN=3PLSAP_Login_QA
+SAP_HOST=https\://vhnorqaslb.nor.hec.ondemand.com\:443/sap/bc/soap/rfc
+email_proxy_type=sapcc
+SFTP_PROCESSED_PATH=/Processed/

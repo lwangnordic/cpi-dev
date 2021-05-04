@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="E1EDL20_VBELN" type="xs:string" minOccurs="0"/>
+        <xs:element name="E1EDL20_PODAT" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL21_LFART" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_NAME1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_NAME2" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_STREET1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_POSTL_COD1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_CITY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_TELEPHONE1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_E_MAIL" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_COUNTRY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM1_REGION" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_NAME1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_NAME2" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_NAME_text" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_STREET1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_STREET2" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_CITY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_REGION" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_POSTL_COD1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM2_COUNTRY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_NAME1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_NAME2" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_NAME3" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_NAME_text" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_CITY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_REGION" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_POSTL_COD1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_COUNTRY1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1ADRM3_TELEPHONE1" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDT13_NTEND" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL24_LFIMG" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL24_VRKME" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL24_MFRPN" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL24_ARKTX" type="xs:string"  minOccurs="0"/>
+        <xs:element name="E1EDL41_BSTNR" type="xs:string"  minOccurs="0"/>
+        <xs:element name="aux" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="E1TXTH0_TDOBNAME" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1TXTH1_TDOBNAME" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1TXTH2_TDOBNAME" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1TXTH3_TDOBNAME" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1ADRE1_EXTEND_D" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1TXTP0_TDLINE" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1TXTP1_TDLINE" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1EDL36_STXT1" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1EDL36_STXT2" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1EDL36_STXT3" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1EDL36_STXT4" type="xs:string"  minOccurs="0"/>
+              <xs:element name="E1EDL36_STXT5" type="xs:string"  minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

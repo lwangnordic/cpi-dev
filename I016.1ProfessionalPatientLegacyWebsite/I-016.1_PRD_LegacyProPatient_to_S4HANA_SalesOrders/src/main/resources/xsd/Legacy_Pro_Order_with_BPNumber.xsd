@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PreOrders05">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sapimport">
+          <xs:complexType>
+            <xs:sequence>
+        <xs:element name="customer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customer_number" type="xs:string" />
+              <xs:element name="customer_type" type="xs:string" />
+              <xs:element name="customer_name" type="xs:string" />
+              <xs:element name="sales_rep" type="xs:string" />
+              <xs:element name="under_doctor" type="xs:string" />
+              <xs:element name="ship_via" type="xs:string" />
+              <xs:element name="shipping_charges" type="xs:string" />
+              <xs:element name="preferred_selling_site" type="xs:string" />
+              <xs:element name="default_tax_zone" type="xs:string" />
+              <xs:element name="default_terms" type="xs:string" />
+              <xs:element name="billing_contact_first" type="xs:string" />
+              <xs:element name="billing_contact_last" type="xs:string" />
+              <xs:element name="billing_contact_voice" type="xs:string" />
+              <xs:element name="billing_contact_email" type="xs:string" />
+              <xs:element name="billing_contact_address1" type="xs:string" />
+              <xs:element name="billing_contact_address2" type="xs:string" />
+              <xs:element name="billing_contact_city" type="xs:string" />
+              <xs:element name="billing_contact_state" type="xs:string" />
+              <xs:element name="billing_contact_postalcode" type="xs:string" />
+              <xs:element name="billing_contact_country" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="custshipto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="default_flag" type="xs:string" />
+              <xs:element name="address1" type="xs:string" />
+              <xs:element name="address2" type="xs:string" />
+              <xs:element name="city" type="xs:string" />
+              <xs:element name="state" type="xs:string" />
+              <xs:element name="postal_code" type="xs:string" />
+              <xs:element name="country" type="xs:string" />
+              <xs:element name="first" type="xs:string" />
+              <xs:element name="last" type="xs:string" />
+              <xs:element name="email" type="xs:string" />
+              <xs:element name="shipping_notes" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="salesorder">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sales_type" type="xs:string" />
+              <xs:element name="order_number" type="xs:string" />
+              <xs:element name="cust_po_number" type="xs:string" />
+              <xs:element name="ship_via" type="xs:string" />
+              <xs:element name="shipping_notes" type="xs:string" />
+              <xs:element name="freight" type="xs:string" />
+              <xs:element name="tax" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="salesline">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order_number" type="xs:string" />
+              <xs:element name="item_number" type="xs:string" />
+              <xs:element name="qty_ordered" type="xs:string" /> 
+              <xs:element name="net_unit_price" type="xs:string" />
+              <xs:element name="item_tax" type="xs:string" />
+              <xs:element minOccurs="0" name="discount_pct_from_list" type="xs:string" />
+              <xs:element minOccurs="0" name="notes" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="armemo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="document_date" type="xs:string" />
+              <xs:element name="due_date" type="xs:string" />
+              <xs:element name="document_type" type="xs:string" />
+              <xs:element name="document_number" type="xs:string" />
+              <xs:element name="order_number" type="xs:string" />
+              <xs:element name="journal_number" type="xs:string" />
+              <xs:element name="reason_code" type="xs:string" />
+              <xs:element name="terms" type="xs:string" />
+              <xs:element name="sales_rep" type="xs:string" />
+              <xs:element name="currency" type="xs:string" />
+              <xs:element name="amount" type="xs:string" />
+              <xs:element name="commission_due" type="xs:string" />
+              <xs:element name="commission_paid" type="xs:string" />
+              <xs:element name="alternate_prepaid_account" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="salescredit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cm_number" type="xs:unsignedInt" />
+              <xs:element name="so_number" type="xs:unsignedInt" />
+              <xs:element name="amount" type="xs:decimal" />
+              <xs:element name="currency" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SAPCustomerNumber" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

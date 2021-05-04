@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:21 UTC 2021
+source=FILE
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1599144543316
+OriginBundleSymbolicName=I-003-File_940_to_S4HANA
+target=S4HANA
+OriginBundleName=I-003-File_940_to_S4HANA
+OriginBundleVersion=1.0.3
+description=picks a file format with a 940 ANSI content to sent it to S4Hana

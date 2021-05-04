@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:27 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1613669929133
+OriginBundleSymbolicName=I-001_PRD_Update_Status_On_Magento
+target=Magento
+OriginBundleName=I-001 PRD_Update_Status_On_Magento
+OriginBundleVersion=3.10
+description=\ 

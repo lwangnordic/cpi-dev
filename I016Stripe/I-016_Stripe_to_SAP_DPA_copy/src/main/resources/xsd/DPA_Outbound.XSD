@@ -1,0 +1,23 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="PaymentCardsMigrationID"/>
+        <xs:element type="xs:string" name="PaymentServiceProviderCode"/>
+        <xs:element name="PaymentCards" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="MerchantByPaytServiceProvider"/>
+              <xs:element type="xs:string" name="PaytCardByPaytServiceProvider"/>
+              <xs:element type="xs:string" name="PaymentCardType"/>
+              <xs:element type="xs:byte" name="PaymentCardExpirationMonth"/>
+              <xs:element type="xs:short" name="PaymentCardExpirationYear"/>
+              <xs:element type="xs:string" name="PaymentCardMaskedNumber"/>
+              <xs:element type="xs:string" name="PaymentCardHolderName"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 

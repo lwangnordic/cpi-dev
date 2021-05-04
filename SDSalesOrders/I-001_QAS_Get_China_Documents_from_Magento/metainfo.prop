@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:26 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1609367888570
+OriginBundleSymbolicName=I-001_QAS_Get_China_Documents_from_Magento
+target=Magento
+OriginBundleName=I-001 QAS_Get_China_Documents_from_Magento
+OriginBundleVersion=2.0
+description=\ 

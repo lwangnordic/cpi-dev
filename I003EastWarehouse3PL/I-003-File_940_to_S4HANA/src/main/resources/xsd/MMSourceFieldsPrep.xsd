@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="items">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="BELNR" type="xs:string" />  
+                            <xs:element name="LIFSK" type="xs:string" />
+                            <xs:element name="DATUM" type="xs:string" />
+                            <xs:element name="UPRBS" type="xs:string" />
+                            <xs:element name="BETRG" type="xs:string" />
+                            <xs:element name="PARTN" type="xs:string" />
+                            <xs:element name="E1EDL20_BELNR_incrementID" type="xs:string" />
+                            <xs:element name="E1EDL20_POSNR" type="xs:string" />
+                            <xs:element name="E1EDL20_CREDIT" type="xs:string" />
+                            <xs:element name="E1EDL20_VBELN" type="xs:string" />
+                            <xs:element name="E1EDL20_XABLN" type="xs:string" />
+                            <xs:element name="E1EDL20_PODAT" type="xs:string" />
+                            <xs:element name="E1ADRM1_PARTNER_Q" type="xs:string" />
+                            <xs:element name="E1ADRM1_PARTNER_ID" type="xs:string" />
+                            <xs:element name="E1ADRM1_NAME1" type="xs:string" />
+                            <xs:element name="E1ADRM1_STREET1" type="xs:string" />
+                            <xs:element name="E1ADRM1_COD1" type="xs:string" />
+                            <xs:element name="E1ADRM1_CITY1" type="xs:string" />
+                            <xs:element name="E1ADRM1_TELEPHONE1" type="xs:string" />
+                            <xs:element name="E1ADRM1_TELEPHONE2" type="xs:string" />
+                            <xs:element name="E1ADRM1_EMAIL" type="xs:string" />
+                            <xs:element name="E1ADRM1_REGION" type="xs:string" />
+                            <xs:element name="E1ADRE1_EXTEND_Q" type="xs:string" />
+                            <xs:element name="E1ADRE1_EXTEND_D" type="xs:string" />
+                            <xs:element name="E1EDT13_NTEND" type="xs:string" />
+                            <xs:element name="E1TXTH0_TDOBJECT" type="xs:string" />
+                            <xs:element name="E1TXTH0_ODBNAME" type="xs:string" />
+                            <xs:element name="E1TXTH0_TDID" type="xs:string" />
+                            <xs:element name="E1TXTP0_TDFORMAT" type="xs:string"/>
+                            <xs:element name="E1TXTP0_TDLINE" type="xs:string" />
+                            <xs:element name="E1ADRM3_NAME4" type="xs:string" />
+                            <xs:element name="E1ADRM3_TELEPHONE2" type="xs:string" />
+                            <xs:element name="E1EDL24_ARKTX" type="xs:string" />
+                            <xs:element name="E1EDL24_LFIMG" type="xs:string" />
+                            <xs:element name="E1EDL24_EAN11" type="xs:string" />
+                            <xs:element name="E1EDL24_MFRPN" type="xs:string" />
+                            <xs:element name="E1EDL24_ABRVW" type="xs:string" />
+                            <xs:element name="E1EDL35_STAWN" type="xs:string" />
+                            <xs:element name="E1EDL36_STXT1" type="xs:string" />
+                            <xs:element name="E1EDL43_BELNR" type="xs:string" />
+                            <xs:element name="E1EDL42_BSARK" type="xs:string" /> 
+                          <xs:element maxOccurs="unbounded" name="E1EDKA1" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="PARVWAG" type="xs:string" />
+                                  <xs:element name="PARTNAG" type="xs:string" />
+                                  <xs:element name="PARVWWE" type="xs:string" />
+                                  <xs:element name="PARTNWE" type="xs:string" />								  
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>
+                          <xs:element maxOccurs="unbounded" name="E1EDK02" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="QUALF" type="xs:string" />
+                                  <xs:element name="BELNR" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>
+                          <xs:element maxOccurs="unbounded" name="E1EDP01" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="POSEX" type="xs:string" />
+                                  <xs:element name="MENGE" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>							
+                          <xs:element maxOccurs="unbounded" name="E1EDP20" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="WMENG" type="xs:string" />
+                                  <xs:element name="EDATU" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>
+							
+                          <xs:element maxOccurs="unbounded" name="E1EDL19" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="QUALF" type="xs:string" />
+                                  <xs:element name="IDTNR" type="xs:string" />
+								  <xs:element name="WMENG" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>
+                          <xs:element maxOccurs="unbounded" name="E1EDP02" minOccurs="0">
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="BELNR" type="xs:string" />
+                                </xs:sequence>
+                              </xs:complexType>
+                        </xs:element>						
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+              <xs:element name="SAPCustomerNumber" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

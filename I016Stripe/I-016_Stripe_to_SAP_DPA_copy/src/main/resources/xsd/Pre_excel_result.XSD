@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="line">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Customer_Number" type="xs:string" />
+              <xs:element name="Payment_Card_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Digital_Payment_Token" type="xs:string" minOccurs="0" />
+              <xs:element name="Masked_Payment_Card_Number" type="xs:string" minOccurs="0"/>
+              <xs:element name="Payment_Card_Type" type="xs:string" minOccurs="0"/>
+              <xs:element name="Payment_Card_Holder" type="xs:string"  minOccurs="0"/>
+              <xs:element name="Valid_To" type="xs:string" minOccurs="0"/>
+              <xs:element name="Reason_for_Payment_Card_Block" minOccurs="0"/>
+              <xs:element name="Standard_Payment_Card" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+#Thu Feb 18 17:38:27 UTC 2021
+email_proxy_type=sapcc
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+email_bcc=
+Magento_Path_Update=/consumers/rest/all/V1/orders/
+email_credentials=NN_SMTP_Credentials
+email_cc=
+Magento_Suffix=/comments
+Magento_Server=https\://sandbox-w6wvm5a-hraqe4drzlnyk.us.magentosite.cloud
+email_from=sapalerts@nordicnaturals.com
+email_to=sapalerts@nordicnaturals.com;gphangureh@nordicnaturals.com
+email_host=email.nn.com\:587
+Magento_credentials=PRD_Magento_credentials

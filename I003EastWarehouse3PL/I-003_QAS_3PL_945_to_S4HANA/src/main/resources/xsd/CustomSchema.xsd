@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DOCNUM" type="xs:string" />
+        <xs:element name="NTANF" type="xs:string" />
+        <xs:element name="REFNR" type="xs:string" />
+        <xs:element name="VBELN" type="xs:string" />
+        <xs:element name="EXTZVBELN" type="xs:string" />
+        <xs:element name="WADAT_IST" type="xs:string" /> 
+        <xs:element maxOccurs="unbounded" name="E1EDL24">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POSNR" type="xs:string" />
+              <xs:element name="LFIMG" type="xs:string" />
+              <xs:element name="LGMNG" type="xs:string" />
+              <xs:element name="CHARG" type="xs:string" />
+              <xs:element name="MATNR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

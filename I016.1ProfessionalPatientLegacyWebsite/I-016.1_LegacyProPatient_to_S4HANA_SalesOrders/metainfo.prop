@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:17 UTC 2021
+source=Magento
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1617746746180
+OriginBundleSymbolicName=I-016.1_LegacyProPatient_to_S4HANA_SalesOrders
+target=S4HANA
+OriginBundleName=I-016.1 LegacyProPatient_to_S4HANA_SalesOrders
+OriginBundleVersion=3.0
+description=Create Sales Orders Inbound from Magento to S4HANA

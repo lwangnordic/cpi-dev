@@ -1,0 +1,23 @@
+#Tue Jan 12 22:22:37 UTC 2021
+email_auth=loginPlain
+SFTP_Address=sapftp.nordicnaturals.com\:3396
+email_cc=
+SFTP_Folder=/PRD/StripeFiles
+X-SAP-tenantId=e3814539-2fcc-44c5-877a-b11e36ed4935
+email_host=email.nn.com\:587
+SFTP_Post_proc=move
+email_from=sapalerts@nordicnaturals.com
+Disconnect_param=1
+SFTP_sorting=sort_by_timestamp
+coreUrl=https\://digitalpayments-demo-core.cfapps.eu10.hana.ondemand.com
+SFTP_Credentials=NN_SFTP_Login
+SFTP_Arc_dir=.archive
+subdomain_aux=dp-test-nordicnaturals
+email_bcc=
+email_protection=off
+email_to=sapalerts@nordicnaturals.com; mujahid.mohammed@accely.com
+SFTP_Authentication=user_password
+email_credentials=NN_SMTP_Credentials
+subdomain=dp-test-nordicnaturals
+SFTP_sorting_order=sort_direction_asc
+email_proxy_type=sapcc

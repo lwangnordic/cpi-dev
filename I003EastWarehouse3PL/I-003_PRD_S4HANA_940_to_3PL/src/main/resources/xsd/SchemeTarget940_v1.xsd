@@ -1,0 +1,609 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="header-line1-edi-ISA-line1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position7" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position8" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position9" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position10" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position11" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position12" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position13" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position14" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position15" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position16" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position17" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="header-line2-edi-GS-line2">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position7" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position8" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position9" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="body-loop-from-E1EDL20" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="body-line1-edi-ST-line3" maxOccurs="unbounded"  minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line2-edi-W-line4">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line3-edi-line5-to-n-loop-N1-to-PER-from-E1ADRM1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="N1-line" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N1-line-CN" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N2-line-CN" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N3-line-CN" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N4-line-CN" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					
+					<xs:element name="PER-line-SH" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>										
+                    <xs:element name="N1-line-WH" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="N3-line-WH" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N4-line-WH" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>	
+					
+                    <xs:element name="PER-line" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position8" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position9" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>					
+                    <xs:element name="N1-line-BT" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>		
+                    <xs:element name="N2-line-BT" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>					
+                    <xs:element name="N3-line-BT" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N4-line-BT" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>						
+
+					
+                    <xs:element name="PER-BI-line" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position8" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position9" minOccurs="0"/>						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>						
+                    <xs:element name="N1-line-AO" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>						  
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>								  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>		
+                    <xs:element name="PER-SR-line" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>													
+				 </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line4-edi-n-to-n-loop-N9-from-E1TXTH0" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="N9-lineSeg1" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="N9-lineSeg2" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N9-lineSeg3" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="N9-lineSeg4" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="N9-lineSeg5" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="N9-lineSeg6" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>					
+					<xs:element name="N9-9F" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>					  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>					
+					
+				  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line5-edi-n-to-n-loop-G61-from-E1ADRE1" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="G61-line" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line6-edi-n-to-n-loop-G62-from-E1EDT13" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="G62-line-from-E1EDT13" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line7-edi-n-to-n-loop-G62-from-E1EDL20" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="G62-line-from-E1EDL20" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line8-edi-n-to-n-loop-NTE-from-E1TXTP0" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="NTE-line-NOT" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="NTE-line-TRA" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="NTE-line-ZZZ" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+					<xs:element name="NTE-line-TSD" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>						
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body-line9-edi-n-to-n-loop-LX-to-AMT-from-E1EDL24" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LX-line">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="W01-line">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position4" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position5" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position6" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position7" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position8" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position9" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position10" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position11" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position12" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position13" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position14" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position15" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position16" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="G69-line">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                          <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AMT-from-E1EDL24-E1EDL35-E1EDL36" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="AMT-line" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-OP" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-ZZ" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-D8" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-Y" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-1" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AMT-D" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>  
+                          <xs:element name="AMT-T" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                                <xs:element type="xs:string" name="position3" minOccurs="0"/>								
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>  						  
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+			  
+			  
+              <xs:element name="body-line10-edi-SE-lastLine" maxOccurs="unbounded"  minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="footer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="footer-line1-edi-GE-penultimateLine">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="footer-line2-edi-IEA-lastLine">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="position1" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position2" minOccurs="0"/>
+                    <xs:element type="xs:string" name="position3" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Tue May 04 03:33:29 UTC 2021
+source=Stripe
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1610490164180
+OriginBundleSymbolicName=I-016_PRD_Stripe_to_SAP_DPA
+target=DPA
+OriginBundleName=I-016 PRD_Stripe_to_SAP_DPA
+OriginBundleVersion=2.1
+description=\ 
