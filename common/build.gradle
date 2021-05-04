@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api('org.codehaus.groovy:groovy-all:2.5.7') {
+        exclude group: 'org.codehaus.groovy', module: 'groovy-test'
+    }
+    api('org.apache.camel:camel-core:2.24.1')
+    api('org.junit.jupiter:junit-jupiter-engine:5.5.1')
+    api('org.junit.jupiter:junit-jupiter-api:5.5.1')
+    api('org.junit.jupiter:junit-jupiter-params:5.5.1')
+    api('org.mockito:mockito-core:2.28.2')
+    api('org.mockito:mockito-junit-jupiter:2.28.2')
+    api('org.assertj:assertj-core:3.11.1')
+    api fileTree(dir: '../libs', include: '*.jar')
+}

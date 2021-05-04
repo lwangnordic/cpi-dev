@@ -1,0 +1,102 @@
+// This is a basic configuration which is needed for using Figaf plugins. Please rename or copy this file to build.gradle. 
+// If you already have your build.gradle, please insert this configuration to the appropriate places.
+// This configuration can be extended. Please look https://github.com/figaf/cpi-gradle-plugin and https://github.com/figaf/irt-gradle-plugin for more information.
+
+plugins {
+    id 'com.figaf.cpi-plugin' version '2.6.RELEASE' apply false
+    id 'com.figaf.irt-plugin' version '1.2.RELEASE' apply false
+}
+
+configure(subprojects.findAll()) { sub ->
+
+    apply plugin: 'idea'
+    apply plugin: 'groovy'
+
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+
+    if (sub.name.startsWith("iflow-")) {
+
+        apply plugin: 'com.figaf.cpi-plugin'
+        apply plugin: 'com.figaf.irt-plugin'
+
+        sourceSets {
+            test {
+                groovy {
+                    srcDirs = ['src/test/groovy','src/main/resources/script']
+                }
+            }
+        }
+
+        dependencies {
+            testImplementation project(":common")
+            testImplementation fileTree(dir: 'src/main/resources/lib', include: '*.jar')
+        }
+
+        test {
+            dependsOn ':common:test'
+            useJUnitPlatform()
+        }
+
+        cpiPlugin {
+            url = cpiUrl
+            username = cpiUsername
+            password = cpiPassword
+            platformType = cloudPlatformType
+            waitForStartup = true
+            sourceFilePath = "$project.projectDir".toString()
+            uploadDraftVersion = true
+            artifactType = "CPI_IFLOW"
+            httpClientsFactory = new com.figaf.integration.common.factory.HttpClientsFactory(
+                project.hasProperty('connectionSettings.useProxyForConnections') ? project.property('connectionSettings.useProxyForConnections').toBoolean() : false,
+                project.hasProperty('connectionSettings.connectionRequestTimeout') ? project.property('connectionSettings.connectionRequestTimeout').toInteger() : 300000,
+                project.hasProperty('connectionSettings.connectTimeout') ? project.property('connectionSettings.connectTimeout').toInteger() : 300000,
+                project.hasProperty('connectionSettings.socketTimeout') ? project.property('connectionSettings.socketTimeout').toInteger() : 300000
+            )
+        }
+
+        irtPlugin {
+            if (sub.hasProperty('testSuiteName')) {
+                testSuiteName = "$sub.testSuiteName".toString()
+            }
+            if (sub.hasProperty('testSuiteId')) {
+                testSuiteId = "$sub.testSuiteId".toString()
+            }
+            if (project.hasProperty('irtTestSystemId')) {
+                testSystemId = irtTestSystemId
+            }
+            url = irtUrl
+            clientId = irtClientId
+            clientSecret = irtClientSecret
+            deploymentType = irtDeploymentType
+            synchronizeBeforeRunningTestSuite = false
+        }
+
+        task runFullFlow {
+            dependsOn test
+            dependsOn uploadArtifact
+            dependsOn deployArtifact
+            dependsOn runTestSuite
+            uploadArtifact.mustRunAfter(test)
+            deployArtifact.mustRunAfter(uploadArtifact)
+            runTestSuite.mustRunAfter(deployArtifact)
+        }
+
+    } else if (sub.name.startsWith("vm-")) {
+
+        apply plugin: 'com.figaf.cpi-plugin'
+
+        cpiPlugin {
+            url = cpiUrl
+            username = cpiUsername
+            password = cpiPassword
+            platformType = cloudPlatformType
+            waitForStartup = true
+            sourceFilePath = "$project.projectDir".toString()
+            uploadDraftVersion = true
+            artifactType = "VALUE_MAPPING"
+        }
+    }
+}
