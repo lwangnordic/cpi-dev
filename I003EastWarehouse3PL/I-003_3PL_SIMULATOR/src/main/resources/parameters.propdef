@@ -16,6 +16,14 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
+      <name>MAX_FILES_COUNT</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
       <name>DIRECTORY</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>

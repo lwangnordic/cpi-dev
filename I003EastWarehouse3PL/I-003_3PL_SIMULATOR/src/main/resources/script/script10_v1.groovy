@@ -6,6 +6,7 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
+import java.net.URLDecoder
 import groovy.xml.*
 
 import com.jcraft.jsch.Channel
@@ -23,11 +24,11 @@ Message processData(Message message) {
     
     def messageLog = messageLogFactory.getMessageLog(message)
     def map = message.getProperties()
+    
+    
 
-    String userName =  map.get("SFTP_USER")
-    String passwordPart1 = map.get("SFTP_PASSWORD_PART1")
-    String passwordPart2 = map.get("SFTP_PASSWORD_PART2")
-    String password = "" //passwordPart1 + passwordPart2
+    String userName =  ""
+    String password = ""
     String hostName = map.get("SFTP_ADDRESS")
     String path = map.get("SFTP_PATH")
     String processedPath = map.get("SFTP_PROCESSED_PATH")
@@ -37,7 +38,14 @@ Message processData(Message message) {
     String Files = ""
     String nameFiles = ""
     String finalString = ""
+    def query = map.get("URL_QUERY")
+    def queryParams = query.split('&')
+    def mapParams = queryParams.collectEntries { param -> param.split('=').collect { URLDecoder.decode(it) }}
+    String EmailTo = mapParams.get("EmailTo")
 
+    if (EmailTo == null || EmailTo.indexOf('@')<=0) {
+        EmailTo = ""
+    }
 
     Session session855PRD = null
     Channel channel855PRD = null
@@ -99,7 +107,7 @@ Message processData(Message message) {
             	    finalString = finalString + line
                     }
                 String processedFolder = path + processedPath + "Archive_" + file.getFilename()
-                    Files = Files + "<FILE><EDI><![CDATA["+finalString+"]]></EDI><ProcessFolder>"+processedFolder+"</ProcessFolder></FILE>"
+                    Files = Files + "<FILE><EDI><![CDATA["+finalString+"]]></EDI><ProcessFolder>"+processedFolder+"</ProcessFolder><EmailTo><![CDATA[" + EmailTo + "]]></EmailTo></FILE>"
                     if (maxFilesCount-- <= 0) break
                     //sftpChannel855PRD.rename(filePath, processedFolder);
                 
@@ -143,7 +151,7 @@ Message processData(Message message) {
     }
     
     messageLog.addAttachmentAsString("XML Files Names", XML.trim(), "text/plain")
-    messageLog.addAttachmentAsString("NameFilePath", XmlUtil.serialize("<log><NAMES>"+nameFiles+"</NAMES></log>"), "text/plain")
+    messageLog.addAttachmentAsString("NameFilePath", XmlUtil.serialize("<log><NAMES>"+nameFiles+"</NAMES><EmailTo>" + EmailTo + "</EmailTo></log>"), "text/plain")
 
     message.setBody(XML.trim())
 

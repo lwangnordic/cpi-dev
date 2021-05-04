@@ -11,7 +11,7 @@
             </ifl:property>
             <ifl:property>
                 <key>httpSessionHandling</key>
-                <value>None</value>
+                <value>onExchange</value>
             </ifl:property>
             <ifl:property>
                 <key>ServerTrace</key>
@@ -60,170 +60,6 @@
         <bpmn2:participant id="Participant_Process_3457" ifl:type="IntegrationProcess" name="EDI Process" processRef="Process_3457">
             <bpmn2:extensionElements/>
         </bpmn2:participant>
-        <bpmn2:messageFlow id="MessageFlow_8" name="SOAP" sourceRef="Participant_1" targetRef="StartEvent_2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>Description</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurityType</key>
-                    <value>VerifyMessage</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>PublicKeyAliasResponseEncryption</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentNS</key>
-                    <value>sap</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>maximumAttachmentSize</key>
-                    <value>100</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Name</key>
-                    <value>SOAP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocolVersion</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVName</key>
-                    <value>external</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>useWSAddressing</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapWsdlURL</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapOptions</key>
-                    <value>cxfRobust</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>CheckTimeStamp</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapServiceName</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurity_SignatureAlgorithm_Inbound</key>
-                    <value>SHA1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SigningOrder</key>
-                    <value>SignBeforeEncryption</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocol</key>
-                    <value>SOAP 1.x</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVId</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>direction</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>clientCertificates</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>X509TokenAssertion</key>
-                    <value>WssX509V3Token10</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentType</key>
-                    <value>SOAP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>address</key>
-                    <value>/soap-sftp</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>maximumBodySize</key>
-                    <value>40</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapWsdlPortName</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.8</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>messageExchangePattern</key>
-                    <value>RequestReply</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurity</key>
-                    <value>None</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>PrivateKeyAliasResponseSigning</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>system</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SaveIncomingSignedMessage</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SenderBasicSecurityProfileCompliant</key>
-                    <value>1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>RecipientTokenIncludeStrategy</key>
-                    <value>Never</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>AlgorithmSuiteAssertion</key>
-                    <value>Basic128Rsa15</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>serviceDefinition</key>
-                    <value>Manual</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocol</key>
-                    <value>HTTP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::AdapterVariant/cname::sap:SOAP/tp::HTTP/mp::SOAP 1.x/direction::Sender/version::1.8.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>userRole</key>
-                    <value>ESBMessaging.send</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>InitiatorTokenIncludeStrategy</key>
-                    <value>AlwaysToRecipient</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>senderAuthType</key>
-                    <value>RoleBased</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocolVersion</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:messageFlow>
         <bpmn2:messageFlow id="MessageFlow_25" name="Mail" sourceRef="EndEvent_16" targetRef="Participant_2">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -368,7 +204,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>to</key>
-                    <value>lwang@nordicnaturals.com</value>
+                    <value>lwang@nordicnaturals.com;${property.EmailTo}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>encrypt.smime.keys</key>
@@ -385,6 +221,90 @@
                 <ifl:property>
                     <key>MessageProtocolVersion</key>
                     <value>1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:messageFlow>
+        <bpmn2:messageFlow id="MessageFlow_75016" name="HTTPS" sourceRef="Participant_1" targetRef="StartEvent_2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>ComponentType</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Description</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>maximumBodySize</key>
+                    <value>40</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentNS</key>
+                    <value>sap</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.4</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>urlPath</key>
+                    <value>/soap-sftp</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Name</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocolVersion</key>
+                    <value>1.4.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVName</key>
+                    <value>external</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>system</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>xsrfProtection</key>
+                    <value>1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocol</key>
+                    <value>HTTPS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::AdapterVariant/cname::sap:HTTPS/tp::HTTPS/mp::None/direction::Sender/version::1.4.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>userRole</key>
+                    <value>ESBMessaging.send</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>senderAuthType</key>
+                    <value>RoleBased</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocol</key>
+                    <value>None</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocolVersion</key>
+                    <value>1.4.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVId</key>
+                    <value>1.4.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>direction</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>clientCertificates</key>
+                    <value>&lt;row&gt;&lt;cell id='clientCertificate.subjectDN'&gt;&lt;/cell&gt;&lt;cell id='clientCertificate.issuerDN'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
@@ -408,80 +328,6 @@
                 <value>Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:callActivity id="CallActivity_19" name="SFTP Config">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>bodyType</key>
-                    <value>expression</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;2&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;MAX_FILES_COUNT&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{SFTP_LOGIN}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Credential_Name&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;3PL CPI Job Failure Alert (855 process)&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;subject&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;/Fail/&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_FAIL_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;/Processed/&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PROCESSED_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{SFTP_PORT}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PORT&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{ADDRESS}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_ADDRESS&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;accelyuser@ad.nordicnaturals.com&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_USER&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;aG938s&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PASSWORD_PART1&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;$sF9x64kQ#&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PASSWORD_PART2&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{DIRECTORY}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>headerTable</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>wrapContent</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.5</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Enricher</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.5.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_20</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_75012" name="EDI Process">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>processId</key>
-                    <value>Process_3457</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ProcessCallElement</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>NonLoopingProcess</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_75013</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_75014</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:endEvent id="EndEvent_16" name="End 1">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_75014</bpmn2:incoming>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_26" name="Split EDI Content">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -554,6 +400,80 @@
             <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
             <bpmn2:messageEventDefinition/>
         </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_19" name="SFTP Config">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>expression</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{SFTP_PORT}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PORT&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;${header.CamelHttpQuery}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;URL_QUERY&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{MAX_FILES_COUNT}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;MAX_FILES_COUNT&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{SFTP_LOGIN}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Credential_Name&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;/Fail/&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_FAIL_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;/Processed/&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PROCESSED_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{ADDRESS}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_ADDRESS&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;expression&lt;/cell&gt;&lt;cell id='Value'&gt;{{DIRECTORY}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;SFTP_PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerTable</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>wrapContent</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.5</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.5.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_20</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:endEvent id="EndEvent_16" name="End 1">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_75014</bpmn2:incoming>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:endEvent>
+        <bpmn2:callActivity id="CallActivity_75012" name="EDI Process">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>processId</key>
+                    <value>Process_3457</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>ProcessCallElement</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::NonLoopingProcess/version::1.0.3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>NonLoopingProcess</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_75013</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_75014</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_21" name="Read EDI Folders">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -584,10 +504,10 @@
             <bpmn2:incoming>SequenceFlow_20</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_22</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_20" sourceRef="CallActivity_19" targetRef="CallActivity_21"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_75014" sourceRef="CallActivity_75012" targetRef="EndEvent_16"/>
         <bpmn2:sequenceFlow id="SequenceFlow_75013" sourceRef="CallActivity_26" targetRef="CallActivity_75012"/>
         <bpmn2:sequenceFlow id="SequenceFlow_14" sourceRef="StartEvent_2" targetRef="CallActivity_19"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_20" sourceRef="CallActivity_19" targetRef="CallActivity_21"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_75014" sourceRef="CallActivity_75012" targetRef="EndEvent_16"/>
         <bpmn2:sequenceFlow id="SequenceFlow_22" sourceRef="CallActivity_21" targetRef="CallActivity_26"/>
     </bpmn2:process>
     <bpmn2:process id="Process_3457" name="EDI Process">
@@ -613,6 +533,19 @@
                 <value>From Calling Process</value>
             </ifl:property>
         </bpmn2:extensionElements>
+        <bpmn2:endEvent id="EndEvent_3459" name="End 2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::EndEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>EndEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_75010</bpmn2:incoming>
+        </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_75009" name="Content of 945XML and 855EDI and append to body">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -639,6 +572,9 @@ ${property.EDI945}
 ${body}
 ]]&gt;
 &lt;/EDI855&gt;
+&lt;EmailTo&gt;&lt;![CDATA[
+${property.EmailTo}
+]]&gt;&lt;/EmailTo&gt;
 &lt;/EDIFiles&gt;</value>
                 </ifl:property>
                 <ifl:property>
@@ -699,7 +635,7 @@ ${body}
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;numberRange&lt;/cell&gt;&lt;cell id='Value'&gt;TempExternalInvoiceNumber&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;INVOICE_NUM&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;/FILE/ProcessFolder&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;/FILE/EDI&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;EDI&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;/FILE/EmailTo&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;EmailTo&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;numberRange&lt;/cell&gt;&lt;cell id='Value'&gt;TempExternalInvoiceNumber&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;INVOICE_NUM&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;/FILE/ProcessFolder&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PATH&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;/FILE/EDI&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;EDI&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
@@ -758,6 +694,36 @@ ${body}
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_3448</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_75006</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_3445" name="EDI to XML">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>parseEdi.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_3444</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_3448</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_3450" name="XSLT 940XML to 945EDI">
             <bpmn2:extensionElements>
@@ -864,57 +830,14 @@ ${body}
             </bpmn2:extensionElements>
             <bpmn2:outgoing>SequenceFlow_3460</bpmn2:outgoing>
         </bpmn2:startEvent>
-        <bpmn2:callActivity id="CallActivity_3445" name="EDI to XML">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>scriptFunction</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Script</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>GroovyScript</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>script</key>
-                    <value>parseEdi.groovy</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_3444</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_3448</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:endEvent id="EndEvent_3459" name="End 2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::EndEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>EndEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_75010</bpmn2:incoming>
-        </bpmn2:endEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_75010" sourceRef="CallActivity_75009" targetRef="EndEvent_3459"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3463" sourceRef="CallActivity_3462" targetRef="CallActivity_75007"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3444" sourceRef="CallActivity_3443" targetRef="CallActivity_3445"/>
         <bpmn2:sequenceFlow id="SequenceFlow_75006" sourceRef="CallActivity_75005" targetRef="CallActivity_3450"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_3448" sourceRef="CallActivity_3445" targetRef="CallActivity_75005"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3461" sourceRef="CallActivity_3450" targetRef="CallActivity_3462"/>
         <bpmn2:sequenceFlow id="SequenceFlow_75008" sourceRef="CallActivity_75007" targetRef="CallActivity_75009"/>
         <bpmn2:sequenceFlow id="SequenceFlow_3460" sourceRef="StartEvent_3458" targetRef="CallActivity_3443"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_3448" sourceRef="CallActivity_3445" targetRef="CallActivity_75005"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
@@ -955,7 +878,7 @@ ${body}
                 <dc:Bounds height="140.0" width="100.0" x="1051.0" y="107.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
-                <dc:Bounds height="140.0" width="100.0" x="40.0" y="100.0"/>
+                <dc:Bounds height="140.0" width="100.0" x="31.0" y="107.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_19" id="BPMNShape_CallActivity_19">
                 <dc:Bounds height="60.0" width="100.0" x="292.0" y="140.0"/>
@@ -1027,13 +950,13 @@ ${body}
                 <di:waypoint x="342.0" xsi:type="dc:Point" y="170.0"/>
                 <di:waypoint x="476.0" xsi:type="dc:Point" y="170.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_8" id="BPMNEdge_MessageFlow_8" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
-                <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
-                <di:waypoint x="245.0" xsi:type="dc:Point" y="170.0"/>
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_25" id="BPMNEdge_MessageFlow_25" sourceElement="BPMNShape_EndEvent_16" targetElement="BPMNShape_Participant_2">
                 <di:waypoint x="885.0" xsi:type="dc:Point" y="173.5"/>
                 <di:waypoint x="1101.0" xsi:type="dc:Point" y="173.5"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_75016" id="BPMNEdge_MessageFlow_75016" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
+                <di:waypoint x="81.0" xsi:type="dc:Point" y="173.5"/>
+                <di:waypoint x="245.0" xsi:type="dc:Point" y="173.5"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
