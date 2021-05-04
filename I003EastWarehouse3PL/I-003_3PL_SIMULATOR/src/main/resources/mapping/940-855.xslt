@@ -10,8 +10,8 @@ BAK*00*AD*<xsl:value-of select="./segment[@Id='W05']/element[@Id='W0502']" />*<x
 ACK*IA***201~
 ACK*IA***911~
 ACK*IA***19~
-CTT*<xsl:value-of select="position()" />~
-</xsl:for-each>SE*<xsl:value-of select="count(segment[@Id='LX'])*5+1" />*<xsl:value-of select="format-number(position(), '0000')" />~</xsl:for-each>
+</xsl:for-each>CTT*<xsl:value-of select="count(segment[@Id='LX'])" />~
+SE*<xsl:value-of select="count(segment[@Id='LX'])*5+1" />*<xsl:value-of select="format-number(position(), '0000')" />~</xsl:for-each>
 GE*<xsl:value-of select="count(transaction)" />*<xsl:value-of select="@Control"/><!-- need param-->~</xsl:for-each>
 IEA*<xsl:value-of select="count(/ediroot/interchange/group)" />*<xsl:value-of select="/ediroot/interchange/@Control"/><!-- need param-->~
 </xsl:template>
