@@ -1,0 +1,11 @@
+#Wed May 05 20:15:21 UTC 2021
+Magento_suffix=/stockItems/1
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+CredentialName=SAP_MAG_USER
+Sap_Autentication=Basic
+SAP_SERVER=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Magento_Path_Prod=/consumers/rest/all/V1/products/
+Magento_Server=https\://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud
+SAP_RFC=/sap/bc/soap/rfc
+MANDT=sap-client\=100
+Magento_credentials=Magento_login

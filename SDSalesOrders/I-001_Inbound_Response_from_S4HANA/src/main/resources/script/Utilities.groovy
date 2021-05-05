@@ -40,15 +40,15 @@ def Message DeleteLeftZeros(Message message) {
     def xml = new XmlSlurper().parseText(message.getBody(java.lang.String));
         
         //Looking for the Order
-     for (E1EDL41 in xml.DELVRY07.IDOC.E1EDL20.E1EDL24.E1EDL41) {
+    for (E1EDL41 in xml.E1EDL24.E1EDL41) {
         if(E1EDL41.QUALI == "001"){
             value = E1EDL41.BSTNR; 
             break;
         }
-      }
+    }
       
     String newBody = value.replaceFirst ("^0*", "");
-       
+     
     message.setBody(newBody);
     return message;
 }

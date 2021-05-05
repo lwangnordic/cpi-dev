@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: I-001_QAS_Update_Inventory_S4HANA_to_Magen
  to
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 2.2
+Origin-Bundle-Version: 2.1
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -31,12 +31,12 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ,com.sap.esb.camel.endpoint.configurator.api,com.sap.esb.camel.jdbc.i
  dempotency.reorg,javax.sql,org.apache.camel.processor.idempotent.jdbc
  ,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
-Origin-Bundle-Name: I-001 QAS_Update_Inventory_S4HANA_to_Magento
+Origin-Bundle-Name: I-001_QAS_Update_Inventory_S4HANA_to_Magento
 SAP-RuntimeProfile: iflmap
-Bundle-Name: I-001 QAS_Update_Inventory_S4HANA_to_Magento
-Bundle-Version: 2.2
+Bundle-Name: I-001_QAS_Update_Inventory_S4HANA_to_Magento
+Bundle-Version: 2.1
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1610138584406
+Origin-ModifiedDate: 1620153454190
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

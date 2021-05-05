@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Wed May 05 20:56:55 UTC 2021
+source=Postman
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1619649706716
+OriginBundleSymbolicName=I-001_Send_Url_to_S4HANA
+target=S4HANA
+OriginBundleName=I-001 Send_Url_to_S4HANA
+OriginBundleVersion=4.01
+description=\ 

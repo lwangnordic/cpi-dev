@@ -1,20 +1,16 @@
-#Tue Apr 13 17:11:11 UTC 2021
-Magento_Server=https\://sandbox-w6wvm5a-hraqe4drzlnyk.us.magentosite.cloud
-SFTP_Address=sapftp.nordicnaturals.com\:3396
-email_cc=
-SFTP_Folder=/Deliverr/Deliveries
-email_host=email.nn.com\:587
-email_from=sapalerts@nordicnaturals.com
-SFTP_Proxy=none
-SFTP_Disconnect_param=1
-Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
-path=${property.Path_to_server}
-Magento_credentials=PRD_Magento_credentials
-SFTP_Credentials=SFTP_fbmtest
-Magento_Suffix=/comments
-email_bcc=
-email_to=sapalerts@nordicnaturals.com;gphangureh@nordicnaturals.com
-SFTP_Authentication=user_password
-email_credentials=NN_SMTP_Credentials
-Magento_Path_Update=/consumers/rest/all/V1/orders/
+#Mon May 03 17:19:42 UTC 2021
 email_proxy_type=sapcc
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+email_bcc=
+Magento_Path_Update=/consumers/rest/all/V1/orders/
+email_credentials=NN_SMTP_Credentials
+Upd_Sts_process=/UpdMagento/Status
+email_cc=
+Magento_Suffix=/comments
+Magento_Server=https\://nordicnaturals.com
+SaveDeliverR=/SaveDelivery
+email_from=sapalerts@nordicnaturals.com
+email_to=sapalerts@nordicnaturals.com;gphangureh@nordicnaturals.com
+email_host=email.nn.com\:587
+Magento_credentials=NN_Magento_credentials
+path=${property.Path_to_server}

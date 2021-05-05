@@ -1,0 +1,6 @@
+#Wed Apr 28 22:41:37 UTC 2021
+Mandt=sap-client\=100
+Sap_Credentials=SAP_MAG_USER
+SAP_Server=https\://vhnorprdlb.nor.hec.ondemand.com\:443
+Sap_authentication=Basic
+SAP_Rfc=/sap/bc/soap/rfc

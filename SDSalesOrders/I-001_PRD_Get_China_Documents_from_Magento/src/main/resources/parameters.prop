@@ -1,9 +1,0 @@
-#Mon Mar 15 23:09:00 UTC 2021
-Magento_credentials=PRD_Magento_credentials
-SAP_RFC=/sap/bc/soap/rfc
-Magento_Server=https\://sandbox-w6wvm5a-hraqe4drzlnyk.us.magentosite.cloud
-SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443
-MANDT=sap-client\=100
-Magento_get_info=/consumers/rest/all/V1/sf/data/
-CredentialName=PRD_MAG_USER
-Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token

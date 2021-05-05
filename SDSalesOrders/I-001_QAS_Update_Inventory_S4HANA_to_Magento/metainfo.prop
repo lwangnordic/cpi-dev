@@ -1,11 +1,11 @@
 #Store metainfo properties
-#Tue May 04 23:58:45 UTC 2021
+#Wed May 05 20:56:54 UTC 2021
 source=S4HANA
 productProfile=iflmap
 nodeType=IFLMAP
-OriginModifiedDate=1610138584406
+OriginModifiedDate=1620153454190
 OriginBundleSymbolicName=I-001_QAS_Update_Inventory_S4HANA_to_Magento
 target=Magento
-OriginBundleName=I-001 QAS_Update_Inventory_S4HANA_to_Magento
-OriginBundleVersion=2.2
+OriginBundleName=I-001_QAS_Update_Inventory_S4HANA_to_Magento
+OriginBundleVersion=2.1
 description=\ 

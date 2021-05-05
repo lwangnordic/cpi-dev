@@ -1,11 +1,11 @@
 #Store metainfo properties
-#Tue May 04 23:58:45 UTC 2021
+#Wed May 05 20:56:56 UTC 2021
 source=S4HANA
 productProfile=iflmap
 nodeType=IFLMAP
-OriginModifiedDate=1618333822926
+OriginModifiedDate=1620147442026
 OriginBundleSymbolicName=I-001_Get_China_Documents_from_Magento
 target=Magento
 OriginBundleName=I-001 Get_China_Documents_from_Magento
-OriginBundleVersion=3.1
+OriginBundleVersion=4.3
 description=\ 

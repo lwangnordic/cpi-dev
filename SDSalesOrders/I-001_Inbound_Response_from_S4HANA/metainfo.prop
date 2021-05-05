@@ -1,11 +1,11 @@
 #Store metainfo properties
-#Tue May 04 23:58:46 UTC 2021
+#Wed May 05 20:56:54 UTC 2021
 source=S4HANA
 productProfile=iflmap
 nodeType=IFLMAP
-OriginModifiedDate=1618333894190
+OriginModifiedDate=1620062400203
 OriginBundleSymbolicName=I-001_Inbound_Response_from_S4HANA
 target=Magento
 OriginBundleName=I-001 Inbound_Response_from_S4HANA
-OriginBundleVersion=3.4
+OriginBundleVersion=4.3
 description=\ 

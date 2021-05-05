@@ -36,16 +36,20 @@ def Message GetQuery(Message message) {
     return message;
 }
 
+
 def Message GetCredentials(Message message) {
     
+    map = message.getProperties();
+    String Credentials_name = map.get("Credentials4Magento");
+    
     def body = message.getBody(java.lang.String) as String;
-    def service = ITApiFactory.getApi(SecureStoreService.class, null); 
-    def credential = service.getUserCredential("MagentoCredentials"); 
+    def service = ITApiFactory.getApi(SecureStoreService.class, null);  
+    def credential = service.getUserCredential(Credentials_name);
     if (credential == null){
-        throw new IllegalStateException("No credential found for alias 'MagentoCredentials'"); 
+        throw new IllegalStateException("No credential found for alias '" + Credentials_name + "'"); 
         
     } 
-    String user = credential.getUsername(); 
+    String user     = credential.getUsername(); 
     String password = new String(credential.getPassword());
     
         

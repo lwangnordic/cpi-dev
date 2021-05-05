@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Wed May 05 20:56:54 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1620062177773
+OriginBundleSymbolicName=I-001_Update_Status_On_Magento
+target=Magento
+OriginBundleName=I-001 Update_Status_On_Magento
+OriginBundleVersion=4.2
+description=\ 

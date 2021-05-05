@@ -30,12 +30,12 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ,com.sap.esb.camel.endpoint.configurator.api,com.sap.esb.camel.jdbc.i
  dempotency.reorg,javax.sql,org.apache.camel.processor.idempotent.jdbc
  ,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
-Origin-Bundle-Name: I-001 QAS_Update_Status_On_Magento
+Origin-Bundle-Name: I-001_QAS_Update_Status_On_Magento
 SAP-RuntimeProfile: iflmap
-Bundle-Name: I-001 QAS_Update_Status_On_Magento
+Bundle-Name: I-001_QAS_Update_Status_On_Magento
 Bundle-Version: 2.1
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1609786165100
+Origin-ModifiedDate: 1620153398933
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr
