@@ -32,7 +32,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Origin-Bundle-Name: I-003_PRD_S4HANA_940_to_3PL
 SAP-RuntimeProfile: iflmap
-Bundle-Name: I-003_S4HANA_940_to_3PL
+Bundle-Name: I-003_PRD_S4HANA_940_to_3PL
 Bundle-Version: 1.11
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1614877398890

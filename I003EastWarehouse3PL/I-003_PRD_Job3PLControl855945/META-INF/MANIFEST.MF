@@ -32,7 +32,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Origin-Bundle-Name: I-003_PRD_Job3PLControl855945
 SAP-RuntimeProfile: iflmap
-Bundle-Name: I-003_Job3PLControl855945
+Bundle-Name: I-003_PRD_Job3PLControl855945
 Bundle-Version: 1.0.1
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1612037342763
