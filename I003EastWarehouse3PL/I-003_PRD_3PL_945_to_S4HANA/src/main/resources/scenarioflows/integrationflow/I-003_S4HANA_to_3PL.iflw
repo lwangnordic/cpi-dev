@@ -466,20 +466,21 @@
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_56319" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_77518875</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_56318" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_56320</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_56321" name="Catch">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -521,6 +522,20 @@ Stacktrace: ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56320</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_56322</bpmn2:outgoing>
             </bpmn2:callActivity>
+            <bpmn2:endEvent id="EndEvent_56319" name="End">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_77518875</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_77518874" name="Send Alert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -547,24 +562,9 @@ Stacktrace: ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56322</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_77518875</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_56318" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_56320</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:sequenceFlow id="SequenceFlow_56320" sourceRef="StartEvent_56318" targetRef="CallActivity_56321"/>
             <bpmn2:sequenceFlow id="SequenceFlow_56322" sourceRef="CallActivity_56321" targetRef="CallActivity_77518874"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518875" sourceRef="CallActivity_77518874" targetRef="EndEvent_56319"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56320" sourceRef="StartEvent_56318" targetRef="CallActivity_56321"/>
         </bpmn2:subProcess>
         <bpmn2:endEvent id="EndEvent_56315" name="End">
             <bpmn2:extensionElements>
@@ -613,19 +613,6 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56316</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56337</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:startEvent id="StartEvent_56314" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_56316</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_56326" name="SFTP 3PL Get">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -656,9 +643,22 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56337</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56327</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_56314" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_56316</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_56337" sourceRef="CallActivity_56336" targetRef="CallActivity_56326"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_56316" sourceRef="StartEvent_56314" targetRef="CallActivity_56336"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56327" sourceRef="CallActivity_56326" targetRef="EndEvent_56315"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_56316" sourceRef="StartEvent_56314" targetRef="CallActivity_56336"/>
     </bpmn2:process>
     <bpmn2:process id="Process_56272" name="Request Process">
         <bpmn2:extensionElements>
@@ -698,20 +698,21 @@ Stacktrace: ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_56278" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_77518854</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_56277" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_56279</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_56280" name="Catch">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -758,36 +759,20 @@ Stacktrace:       ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56302</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_56281</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:callActivity id="CallActivity_56301" name="Get Response">
+            <bpmn2:endEvent id="EndEvent_56278" name="End">
                 <bpmn2:extensionElements>
                     <ifl:property>
-                        <key>scriptFunction</key>
-                        <value/>
-                    </ifl:property>
-                    <ifl:property>
                         <key>componentVersion</key>
-                        <value>1.0</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>activityType</key>
-                        <value>Script</value>
+                        <value>1.1</value>
                     </ifl:property>
                     <ifl:property>
                         <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>subActivityType</key>
-                        <value>GroovyScript</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>script</key>
-                        <value>script2.groovy</value>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                     </ifl:property>
                 </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_56279</bpmn2:incoming>
-                <bpmn2:outgoing>SequenceFlow_56302</bpmn2:outgoing>
-            </bpmn2:callActivity>
+                <bpmn2:incoming>SequenceFlow_77518854</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_77518883" name="Send Alert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -840,26 +825,41 @@ Stacktrace:       ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_77518884</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_77518854</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_56277" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_56279</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:callActivity id="CallActivity_56301" name="Get Response">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>scriptFunction</key>
+                        <value/>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.0</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>activityType</key>
+                        <value>Script</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>subActivityType</key>
+                        <value>GroovyScript</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>script</key>
+                        <value>script2.groovy</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_56279</bpmn2:incoming>
+                <bpmn2:outgoing>SequenceFlow_56302</bpmn2:outgoing>
+            </bpmn2:callActivity>
+            <bpmn2:sequenceFlow id="SequenceFlow_56279" sourceRef="StartEvent_56277" targetRef="CallActivity_56301"/>
             <bpmn2:sequenceFlow id="SequenceFlow_56281" sourceRef="CallActivity_56280" targetRef="CallActivity_77518883"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56302" sourceRef="CallActivity_56301" targetRef="CallActivity_56280"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518884" sourceRef="CallActivity_77518883" targetRef="CallActivity_77518853"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518854" sourceRef="CallActivity_77518853" targetRef="EndEvent_56278"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56279" sourceRef="StartEvent_56277" targetRef="CallActivity_56301"/>
+            <bpmn2:sequenceFlow id="SequenceFlow_56302" sourceRef="CallActivity_56301" targetRef="CallActivity_56280"/>
         </bpmn2:subProcess>
         <bpmn2:endEvent id="EndEvent_56274" name="End">
             <bpmn2:extensionElements>
@@ -908,19 +908,6 @@ Stacktrace:       ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56275</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56299</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:startEvent id="StartEvent_56273" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_56275</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_56334" name="Save">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -969,10 +956,23 @@ Stacktrace:       ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56299</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56287</bpmn2:outgoing>
         </bpmn2:serviceTask>
+        <bpmn2:startEvent id="StartEvent_56273" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_56275</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_56299" sourceRef="CallActivity_56298" targetRef="ServiceTask_56286"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_56275" sourceRef="StartEvent_56273" targetRef="CallActivity_56298"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56335" sourceRef="CallActivity_56334" targetRef="EndEvent_56274"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56287" sourceRef="ServiceTask_56286" targetRef="CallActivity_56334"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_56275" sourceRef="StartEvent_56273" targetRef="CallActivity_56298"/>
     </bpmn2:process>
     <bpmn2:process id="Process_1" name="Main Process">
         <bpmn2:extensionElements>
@@ -1008,20 +1008,21 @@ Stacktrace:       ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_56305" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_77518872</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_56304" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_56306</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_56307" name="Catch">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1063,6 +1064,20 @@ Stacktrace:	${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56306</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_56308</bpmn2:outgoing>
             </bpmn2:callActivity>
+            <bpmn2:endEvent id="EndEvent_56305" name="End">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_77518872</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_77518871" name="Send Alert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1089,39 +1104,68 @@ Stacktrace:	${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56308</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_77518872</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_56304" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_56306</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:sequenceFlow id="SequenceFlow_56306" sourceRef="StartEvent_56304" targetRef="CallActivity_56307"/>
             <bpmn2:sequenceFlow id="SequenceFlow_56308" sourceRef="CallActivity_56307" targetRef="CallActivity_77518871"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518872" sourceRef="CallActivity_77518871" targetRef="EndEvent_56305"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56306" sourceRef="StartEvent_56304" targetRef="CallActivity_56307"/>
         </bpmn2:subProcess>
-        <bpmn2:endEvent id="EndEvent_2" name="End">
+        <bpmn2:callActivity id="CallActivity_56331" name="Iterating Splitter">
             <bpmn2:extensionElements>
                 <ifl:property>
+                    <key>exprType</key>
+                    <value>XPath</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Streaming</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>StopOnExecution</key>
+                    <value>false</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>splitExprValue</key>
+                    <value>/SFTP/FILE</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ParallelProcessing</key>
+                    <value>false</value>
+                </ifl:property>
+                <ifl:property>
                     <key>componentVersion</key>
-                    <value>1.1</value>
+                    <value>1.5</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>grouping</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>splitType</key>
+                    <value>IteratingSplitter</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>timeOut</key>
+                    <value>300</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>SplitterThreads</key>
+                    <value>10</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Splitter</value>
                 </ifl:property>
                 <ifl:property>
                     <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    <value>ctype::FlowstepVariant/cname::Camel/version::1.5.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>tokenValue</key>
+                    <value>/SFTP/FILE</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_56297</bpmn2:incoming>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:endEvent>
+            <bpmn2:incoming>SequenceFlow_56332</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_56333</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_77518893" name="Start 945Groovy">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1166,6 +1210,20 @@ Stacktrace:	${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_77518895</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518860</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:endEvent id="EndEvent_2" name="End">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_56297</bpmn2:incoming>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_56328" name="SFTP Process">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1270,71 +1328,13 @@ Stacktrace:	${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56296</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56297</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_56331" name="Iterating Splitter">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>exprType</key>
-                    <value>XPath</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Streaming</key>
-                    <value>true</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>StopOnExecution</key>
-                    <value>false</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>splitExprValue</key>
-                    <value>/SFTP/FILE</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ParallelProcessing</key>
-                    <value>false</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.5</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>grouping</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>splitType</key>
-                    <value>IteratingSplitter</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>timeOut</key>
-                    <value>300</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SplitterThreads</key>
-                    <value>10</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Splitter</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Camel/version::1.5.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>tokenValue</key>
-                    <value>/SFTP/FILE</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_56332</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_56333</bpmn2:outgoing>
-        </bpmn2:callActivity>
+        <bpmn2:sequenceFlow id="SequenceFlow_56333" sourceRef="CallActivity_56331" targetRef="CallActivity_56291"/>
         <bpmn2:sequenceFlow id="SequenceFlow_77518895" sourceRef="StartEvent_77518893" targetRef="CallActivity_77518859"/>
         <bpmn2:sequenceFlow id="SequenceFlow_77518860" sourceRef="CallActivity_77518859" targetRef="CallActivity_56328"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56332" sourceRef="CallActivity_56328" targetRef="CallActivity_56331"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56295" sourceRef="CallActivity_56291" targetRef="CallActivity_56292"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56296" sourceRef="CallActivity_56292" targetRef="CallActivity_56293"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56297" sourceRef="CallActivity_56293" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_56333" sourceRef="CallActivity_56331" targetRef="CallActivity_56291"/>
     </bpmn2:process>
     <bpmn2:process id="Process_56256" name="Parse EDI Process">
         <bpmn2:extensionElements>
@@ -1374,20 +1374,21 @@ Stacktrace:	${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_56264" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_77518849</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_56263" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_56265</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_56266" name="Catch">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1429,6 +1430,20 @@ Stacktrace:	${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56265</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_56267</bpmn2:outgoing>
             </bpmn2:callActivity>
+            <bpmn2:endEvent id="EndEvent_56264" name="End">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_77518849</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_77518877" name="Send Alert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1481,25 +1496,10 @@ Stacktrace:	${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_77518878</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_77518849</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_56263" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_56265</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:sequenceFlow id="SequenceFlow_56265" sourceRef="StartEvent_56263" targetRef="CallActivity_56266"/>
             <bpmn2:sequenceFlow id="SequenceFlow_56267" sourceRef="CallActivity_56266" targetRef="CallActivity_77518877"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518878" sourceRef="CallActivity_77518877" targetRef="CallActivity_77518848"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518849" sourceRef="CallActivity_77518848" targetRef="EndEvent_56264"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56265" sourceRef="StartEvent_56263" targetRef="CallActivity_56266"/>
         </bpmn2:subProcess>
         <bpmn2:endEvent id="EndEvent_56258" name="End">
             <bpmn2:extensionElements>
@@ -1582,19 +1582,6 @@ Stacktrace:	${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56351</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518840</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:startEvent id="StartEvent_56257" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_56260</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_56350" name="Sequence Log">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1655,11 +1642,24 @@ Stacktrace:	${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_77518840</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_56346</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_56257" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_56260</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_56348" sourceRef="CallActivity_56347" targetRef="CallActivity_56350"/>
         <bpmn2:sequenceFlow id="SequenceFlow_77518840" sourceRef="CallActivity_77518839" targetRef="CallActivity_427"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_56260" sourceRef="StartEvent_56257" targetRef="CallActivity_56347"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56351" sourceRef="CallActivity_56350" targetRef="CallActivity_77518839"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56346" sourceRef="CallActivity_427" targetRef="EndEvent_56258"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_56260" sourceRef="StartEvent_56257" targetRef="CallActivity_56347"/>
     </bpmn2:process>
     <bpmn2:process id="Process_56240" name="Message Process ">
         <bpmn2:extensionElements>
@@ -1699,20 +1699,21 @@ Stacktrace:	${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_56248" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_77518851</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_56247" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_56249</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_56250" name="Catch">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1754,6 +1755,20 @@ Stacktrace: ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_56249</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_56251</bpmn2:outgoing>
             </bpmn2:callActivity>
+            <bpmn2:endEvent id="EndEvent_56248" name="End">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_77518851</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_77518880" name="Send Alert">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -1806,26 +1821,45 @@ Stacktrace: ${exception.stacktrace}</value>
                 <bpmn2:incoming>SequenceFlow_77518881</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_77518851</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_56247" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_56249</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:sequenceFlow id="SequenceFlow_56249" sourceRef="StartEvent_56247" targetRef="CallActivity_56250"/>
             <bpmn2:sequenceFlow id="SequenceFlow_56251" sourceRef="CallActivity_56250" targetRef="CallActivity_77518880"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518881" sourceRef="CallActivity_77518880" targetRef="CallActivity_77518850"/>
             <bpmn2:sequenceFlow id="SequenceFlow_77518851" sourceRef="CallActivity_77518850" targetRef="EndEvent_56248"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_56249" sourceRef="StartEvent_56247" targetRef="CallActivity_56250"/>
         </bpmn2:subProcess>
+        <bpmn2:callActivity id="CallActivity_424" name="Message Mapping">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>mappinguri</key>
+                    <value>dir://mmap/src/main/resources/mapping/Canonical.mmap</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>mappingname</key>
+                    <value>Canonical</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>mappingType</key>
+                    <value>MessageMapping</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>mappingpath</key>
+                    <value>src/main/resources/mapping/Canonical</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Mapping</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageMapping/version::1.0.1</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_56243</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_56244</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:endEvent id="EndEvent_56242" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1839,19 +1873,6 @@ Stacktrace: ${exception.stacktrace}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_77518858</bpmn2:incoming>
         </bpmn2:endEvent>
-        <bpmn2:startEvent id="StartEvent_56241" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_56243</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_56342" name="Log">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1912,44 +1933,23 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_56344</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518858</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_424" name="Message Mapping">
+        <bpmn2:startEvent id="StartEvent_56241" name="Start">
             <bpmn2:extensionElements>
                 <ifl:property>
-                    <key>mappinguri</key>
-                    <value>dir://mmap/src/main/resources/mapping/Canonical.mmap</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>mappingname</key>
-                    <value>Canonical</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>mappingType</key>
-                    <value>MessageMapping</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>mappingpath</key>
-                    <value>src/main/resources/mapping/Canonical</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
                 </ifl:property>
                 <ifl:property>
                     <key>activityType</key>
-                    <value>Mapping</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageMapping/version::1.0.1</value>
+                    <value>StartEvent</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_56243</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_56244</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:sequenceFlow id="SequenceFlow_56243" sourceRef="StartEvent_56241" targetRef="CallActivity_424"/>
+            <bpmn2:outgoing>SequenceFlow_56243</bpmn2:outgoing>
+        </bpmn2:startEvent>
+        <bpmn2:sequenceFlow id="SequenceFlow_56244" sourceRef="CallActivity_424" targetRef="CallActivity_56342"/>
         <bpmn2:sequenceFlow id="SequenceFlow_56344" sourceRef="CallActivity_56342" targetRef="CallActivity_77518857"/>
         <bpmn2:sequenceFlow id="SequenceFlow_77518858" sourceRef="CallActivity_77518857" targetRef="EndEvent_56242"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_56244" sourceRef="CallActivity_424" targetRef="CallActivity_56342"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_56243" sourceRef="StartEvent_56241" targetRef="CallActivity_424"/>
     </bpmn2:process>
     <bpmn2:process id="Process_77518862" name="Send_Alert">
         <bpmn2:extensionElements>
@@ -1987,19 +1987,6 @@ Stacktrace: ${exception.stacktrace}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_77518867</bpmn2:incoming>
         </bpmn2:endEvent>
-        <bpmn2:startEvent id="StartEvent_77518863" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_77518865</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:serviceTask id="ServiceTask_77518866" name="Email alert">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -2018,8 +2005,21 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_77518865</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518867</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:sequenceFlow id="SequenceFlow_77518865" sourceRef="StartEvent_77518863" targetRef="ServiceTask_77518866"/>
+        <bpmn2:startEvent id="StartEvent_77518863" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_77518865</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_77518867" sourceRef="ServiceTask_77518866" targetRef="EndEvent_77518864"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_77518865" sourceRef="StartEvent_77518863" targetRef="ServiceTask_77518866"/>
     </bpmn2:process>
     <bpmn2:process id="Process_77518842" name="Move file from processed folder to fail folder">
         <bpmn2:extensionElements>
@@ -2091,19 +2091,6 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_77518847</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518856</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:startEvent id="StartEvent_77518843" name="Start">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>StartEvent</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_77518845</bpmn2:outgoing>
-        </bpmn2:startEvent>
         <bpmn2:callActivity id="CallActivity_77518846" name=" Move File">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -2134,9 +2121,22 @@ Stacktrace: ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_77518845</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_77518847</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_77518843" name="Start">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::StartEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>StartEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>SequenceFlow_77518845</bpmn2:outgoing>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_77518856" sourceRef="CallActivity_77518855" targetRef="EndEvent_77518844"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_77518845" sourceRef="StartEvent_77518843" targetRef="CallActivity_77518846"/>
         <bpmn2:sequenceFlow id="SequenceFlow_77518847" sourceRef="CallActivity_77518846" targetRef="CallActivity_77518855"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_77518845" sourceRef="StartEvent_77518843" targetRef="CallActivity_77518846"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
