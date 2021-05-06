@@ -1,9 +1,7 @@
 #Store metainfo properties
 #Thu May 06 04:14:05 UTC 2021
 nodeType=IFLMAP
-OriginBundleName=explorer
-OriginBundleSymbolicName=explorer
+OriginBundleName=test iflow
+OriginBundleSymbolicName=test_iflow
 productProfile=iflmap
 description=\ 
-source=
-target=
