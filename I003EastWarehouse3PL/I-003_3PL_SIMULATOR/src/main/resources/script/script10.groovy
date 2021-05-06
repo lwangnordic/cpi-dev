@@ -1,9 +1,4 @@
 import com.sap.gateway.ip.core.customdev.util.Message;
-import java.util.HashMap;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import groovy.xml.*
 
 import com.jcraft.jsch.Channel;
@@ -12,9 +7,6 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
-import com.sap.it.api.securestore.SecureStoreService;
-import com.sap.it.api.securestore.UserCredential;
-import com.sap.it.api.ITApiFactory;
 
 
 def Message processData(Message message) {
@@ -32,7 +24,7 @@ def Message processData(Message message) {
     String port = map.get("SFTP_PORT");
     String Files = "";
     String nameFiles = "";
-    String finalString = "";
+    String finalString = "test";
     
    
         Session session855PRD = null;

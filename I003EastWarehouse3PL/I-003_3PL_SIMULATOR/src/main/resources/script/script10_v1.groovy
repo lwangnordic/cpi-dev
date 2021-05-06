@@ -39,9 +39,9 @@ Message processData(Message message) {
     String nameFiles = ""
     String finalString = ""
     def query = map.get("URL_QUERY")
-    def queryParams = query.split('&')
-    def mapParams = queryParams.collectEntries { param -> param.split('=').collect { URLDecoder.decode(it) }}
-    String EmailTo = mapParams.get("EmailTo")
+    def queryParams = query?query.split('&'):null;
+    def mapParams = !queryParams?null:queryParams.collectEntries { param -> param.split('=').collect { URLDecoder.decode(it) }}
+    String EmailTo = mapParams?mapParams.get("EmailTo"):null
 
     if (EmailTo == null || EmailTo.indexOf('@')<=0) {
         EmailTo = ""
