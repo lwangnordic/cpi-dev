@@ -67,8 +67,7 @@ def Message processData(Message message) {
 public class IgnoreSyntaxExceptions implements EDISyntaxExceptionHandler
 {
     public boolean process(RecoverableSyntaxException syntaxException) {
-        //System.out.println("Syntax Exception. class: " + syntaxException.getClass().getName() + "  message:" + syntaxException.getMessage());
-        // Return true to indicate that you want parsing to continue.
+
         return true;
     }
 }
