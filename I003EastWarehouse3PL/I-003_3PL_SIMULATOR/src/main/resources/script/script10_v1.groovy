@@ -50,12 +50,13 @@ Message processData(Message message) {
     Session session855PRD = null
     Channel channel855PRD = null
     ChannelSftp sftpChannel855PRD = null
+    
 /*
     userName = "accelyuser@ad.nordicnaturals.com";
     hostName = "sapftp.nordicnaturals.com"
     port = "3396"
     password = "aG938s\$sF9x64kQ#"
-    path = "/940 Records QA"
+    path = "/940 Records QAaaaaaaaaa"
 */
     //Credential specific code
     SecureStoreService secureStoreService = ITApiFactory.getService(SecureStoreService.class, null)
