@@ -1,0 +1,12 @@
+#Thu May 20 05:24:47 UTC 2021
+ALERT_EMAIL_CRED=Mailgun
+SFTP_TARGET_ADDRESS=sapftpqas.nordicnaturals.com\:3398
+ALERT_EMAIL_ADDRESS=smtp.mailgun.org\:587
+SFTP_855_PATH=/855 Records QA
+SFTP_SOURCE_DIR=/940 Records QA
+SFTP_SERVER_ADDRESS=sapftp.nordicnaturals.com\:3396
+SFTP_USER=SFTP_SPS_User
+SFTP_TARGET_USER=SFTP_QAS
+SFTP_945_PATH=/945 Records QA
+SMTP_ADDRESS=smtp.mailgun.org\:587
+EMAIL_CRED=Mailgun

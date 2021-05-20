@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-018 Move_DeliveryFile_2SFTP
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-018 Move_DeliveryFile_2SFTP
-Bundle-Version: 2.6
+Bundle-Version: 1.0
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1617051767996
 SAP-BundleType: IntegrationFlow

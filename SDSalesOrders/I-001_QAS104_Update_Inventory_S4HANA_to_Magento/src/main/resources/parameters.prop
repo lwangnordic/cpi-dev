@@ -1,0 +1,13 @@
+#Fri May 07 14:37:28 UTC 2021
+Store_name=QAS104_MAG_Token
+Magento_suffix=/stockItems/1
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+CredentialName=SAP_MAG_USER
+Sap_Autentication=Basic
+SAP_SERVER=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Magento_Path_Prod=/consumers/rest/all/V1/products/
+Magento_Server=https\://staging.nordicnaturals.com
+Entry_ID=ID_QAS104_MAG_Token
+SAP_RFC=/sap/bc/soap/rfc
+MANDT=sap-client\=104
+Magento_credentials=Magento_login104

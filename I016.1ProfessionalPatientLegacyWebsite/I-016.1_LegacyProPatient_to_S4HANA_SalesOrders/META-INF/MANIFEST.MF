@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: I-016.1_LegacyProPatient_to_S4HANA_SalesOr
  ders
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 3.0
+Origin-Bundle-Version: 4.4
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -34,9 +34,9 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-016.1 LegacyProPatient_to_S4HANA_SalesOrders
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-016.1 LegacyProPatient_to_S4HANA_SalesOrders
-Bundle-Version: 3.0
+Bundle-Version: 1.5
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1617746746180
+Origin-ModifiedDate: 1620148423916
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

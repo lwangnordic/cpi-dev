@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: I-001_QAS_Update_Inventory_S4HANA_to_Magen
  to
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 2.1
+Origin-Bundle-Version: 2.6
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -34,9 +34,9 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001_QAS_Update_Inventory_S4HANA_to_Magento
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001_QAS_Update_Inventory_S4HANA_to_Magento
-Bundle-Version: 2.1
+Bundle-Version: 2.6
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1620153454190
+Origin-ModifiedDate: 1620335605813
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

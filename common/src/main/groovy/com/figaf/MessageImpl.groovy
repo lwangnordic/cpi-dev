@@ -2,7 +2,6 @@ package com.figaf
 
 import com.sap.gateway.ip.core.customdev.util.AttachmentWrapper
 import com.sap.gateway.ip.core.customdev.util.Message
-import com.sap.gateway.ip.core.customdev.util.SoapHeader
 import org.apache.camel.Attachment
 
 import javax.activation.DataHandler
@@ -174,18 +173,5 @@ class MessageImpl implements Message {
     @Override
     void setProperty(String propertyName, Object newValue) {
         this.properties.put(propertyName, newValue)
-    }
-
-    @Override
-    List<SoapHeader> getSoapHeaders() {
-        return null
-    }
-    @Override
-    void setSoapHeaders(List<SoapHeader> var1) {
-
-    }
-    @Override
-    void clearSoapHeaders() {
-
     }
 }

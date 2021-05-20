@@ -1,8 +1,8 @@
-#Tue Apr 06 22:05:28 UTC 2021
+#Wed May 19 15:06:36 UTC 2021
 Post_processing=move
 SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443
 Sorting=sort_by_timestamp
-SFTP_Address=104.130.154.141\:22
+SFTP_Address=23.253.235.30\:22
 email_cc=
 SFTP_Folder=/nordicnaturals.com/sap_orders
 email_host=email.nn.com\:587
@@ -11,13 +11,13 @@ email_from=sapalerts@nordicnaturals.com
 SFTP_Disconnect_param=1
 SFTP_Proxy=none
 RFC_inbound=/sap/bc/soap/rfc
-SFTP_Credentials=Pro_Legacy_SFTP
+SFTP_Credentials=SFTP_Legacy
 Sorting_order=sort_direction_asc
 MANDT=sap-client\=100
 email_bcc=
 Archive_directory=Sap_Orders_Processed
-email_to=gphangureh@nordicnaturals.com, jaime.rivera@accely.com
-Login2SAP=PRD_LEGACY_USER
+email_to=gphangureh@nordicnaturals.com
+Login2SAP=SAP_LEGACY_USER
 SFTP_Authentication=user_password
 email_credentials=NN_SMTP_Credentials
 Authentication=Basic

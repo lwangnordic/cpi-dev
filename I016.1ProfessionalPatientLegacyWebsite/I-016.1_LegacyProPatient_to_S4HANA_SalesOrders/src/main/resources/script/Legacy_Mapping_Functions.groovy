@@ -1,6 +1,18 @@
 import com.sap.it.api.mapping.*;
 
 
+def String GetProperty(String Property, MappingContext context) {
+         String value = context.getHeader(Property); 
+         return value;
+}
+
+def String ValidatePostCode(String PostCode){
+    
+    String Response = PostCode.replaceAll("-","");
+     
+    return Response;
+}
+
 def String DeliveryBlock_validation(String BillingAddress, String ShippingAddress){
     
     String Response = "";

@@ -46,14 +46,6 @@
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:participant>
-        <bpmn2:participant id="Participant_2" ifl:type="EndpointRecevier" name="R_Token_Magento">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>ifl:type</key>
-                    <value>EndpointRecevier</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:participant>
         <bpmn2:participant id="Participant_37804497" ifl:type="EndpointRecevier" name="R_Magento">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -112,7 +104,7 @@
         <bpmn2:participant id="Participant_Process_37804825" ifl:type="IntegrationProcess" name="Update_StatusMagento" processRef="Process_37804825">
             <bpmn2:extensionElements/>
         </bpmn2:participant>
-        <bpmn2:participant id="Participant_Process_37804468" ifl:type="IntegrationProcess" name="LIP_Send_to_Magento" processRef="Process_37804468">
+        <bpmn2:participant id="Participant_Process_37804468" ifl:type="IntegrationProcess" name="Send to Magento" processRef="Process_37804468">
             <bpmn2:extensionElements/>
         </bpmn2:participant>
         <bpmn2:participant id="Participant_Process_37804581" ifl:type="IntegrationProcess" name="LIP_Magento_ZEDI" processRef="Process_37804581">
@@ -267,118 +259,6 @@
                 <ifl:property>
                     <key>direction</key>
                     <value>Receiver</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:messageFlow>
-        <bpmn2:messageFlow id="MessageFlow_37804496" name="HTTP" sourceRef="ServiceTask_37804478" targetRef="Participant_2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>Description</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>methodSourceExpression</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentNS</key>
-                    <value>sap</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>privateKeyAlias</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>httpMethod</key>
-                    <value>POST</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Name</key>
-                    <value>HTTP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocolVersion</key>
-                    <value>1.7.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVName</key>
-                    <value>external</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>proxyPort</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>httpAddressQuery</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>httpRequestTimeout</key>
-                    <value>60000</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocol</key>
-                    <value>None</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVId</key>
-                    <value>1.7.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>direction</key>
-                    <value>Receiver</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentType</key>
-                    <value>HTTP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>httpShouldSendBody</key>
-                    <value>false</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>proxyType</key>
-                    <value>default</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.7</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>proxyHost</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>system</key>
-                    <value>R_Token_Magento</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>authenticationMethod</key>
-                    <value>None</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>locationID</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocol</key>
-                    <value>HTTP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::AdapterVariant/cname::sap:HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.7.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>credentialName</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocolVersion</key>
-                    <value>1.7.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>httpAddressWithoutQuery</key>
-                    <value>{{Magento_Server}}{{Magento_Path_Token}}</value>
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
@@ -1471,7 +1351,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804708_1620151350897" xsi:type="bpmn2:tFormalExpression">/ZAC_STS/IDOC/ZAC_STS/POTYPE = 'MAGE' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804708_1620339101401" xsi:type="bpmn2:tFormalExpression">/ZAC_STS/IDOC/ZAC_STS/POTYPE = 'MAGE' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804710" name="Unexpected IDoc" sourceRef="ExclusiveGateway_37804704" targetRef="EndEvent_37804731">
             <bpmn2:extensionElements>
@@ -1869,7 +1749,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804823_1620151350904" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'FBM'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804823_1620339101408" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'FBM'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804797" name="856 Magento" sourceRef="ExclusiveGateway_37804789" targetRef="CallActivity_37804608">
             <bpmn2:extensionElements>
@@ -1886,7 +1766,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804797_1620151350904" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'MAGE' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804797_1620339101409" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'MAGE' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804796" name="NoIDoc" sourceRef="ExclusiveGateway_37804789" targetRef="EndEvent_37804787">
             <bpmn2:extensionElements>
@@ -1919,7 +1799,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804793_1620151350905" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'DLVR'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804793_1620339101409" xsi:type="bpmn2:tFormalExpression">/DELVRY07/IDOC/E1EDL20/E1EDL24/E1EDL41/BSARK = 'DLVR'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804670" name="R_ZAC_STS" sourceRef="ExclusiveGateway_37804517" targetRef="CallActivity_37804669">
             <bpmn2:extensionElements>
@@ -1936,7 +1816,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804670_1620151350905" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP= 'ZAC_STS' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804670_1620339101410" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP= 'ZAC_STS' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804521" name="R_856_Magento" sourceRef="ExclusiveGateway_37804517" targetRef="ExclusiveGateway_37804789">
             <bpmn2:extensionElements>
@@ -1953,7 +1833,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804521_1620151350905" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP = 'DELVRY07'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804521_1620339101410" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP = 'DELVRY07'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804788" name="NoIDOC" sourceRef="ExclusiveGateway_37804517" targetRef="EndEvent_37804787">
             <bpmn2:extensionElements>
@@ -1986,7 +1866,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804586_1620151350906" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP = 'ORDERS05' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804586_1620339101411" xsi:type="bpmn2:tFormalExpression">//EDI_DC40/IDOCTYP = 'ORDERS05' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804697" sourceRef="CallActivity_37804669" targetRef="EndEvent_2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_37804824" sourceRef="CallActivity_37804822" targetRef="EndEvent_2"/>
@@ -2774,7 +2654,7 @@ Stacktrace:   ${exception.stacktrace}</value>
         <bpmn2:sequenceFlow id="SequenceFlow_37804837" sourceRef="CallActivity_37804836" targetRef="CallActivity_37804829"/>
         <bpmn2:sequenceFlow id="SequenceFlow_37804828" sourceRef="StartEvent_37804826" targetRef="CallActivity_37804831"/>
     </bpmn2:process>
-    <bpmn2:process id="Process_37804468" name="LIP_Send_to_Magento">
+    <bpmn2:process id="Process_37804468" name="Send to Magento">
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>transactionTimeout</key>
@@ -2880,8 +2760,38 @@ Stacktrace:   ${exception.stacktrace}</value>
                         <value>NonLoopingProcess</value>
                     </ifl:property>
                 </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_37804658</bpmn2:incoming>
+                <bpmn2:incoming>SequenceFlow_37804869</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_37804785</bpmn2:outgoing>
+            </bpmn2:callActivity>
+            <bpmn2:callActivity id="CallActivity_37804868" name="Save Log">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>scriptFunction</key>
+                        <value>ErrorOnSendMagento</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.0</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>activityType</key>
+                        <value>Script</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>subActivityType</key>
+                        <value>GroovyScript</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>script</key>
+                        <value>SaveLogErrorMain.groovy</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_37804658</bpmn2:incoming>
+                <bpmn2:outgoing>SequenceFlow_37804869</bpmn2:outgoing>
             </bpmn2:callActivity>
             <bpmn2:endEvent id="EndEvent_37804784" name="Error End">
                 <bpmn2:incoming>SequenceFlow_37804785</bpmn2:incoming>
@@ -2913,8 +2823,9 @@ Stacktrace:   ${exception.stacktrace}</value>
                     </bpmn2:extensionElements>
                 </bpmn2:errorEventDefinition>
             </bpmn2:startEvent>
-            <bpmn2:sequenceFlow id="SequenceFlow_37804658" sourceRef="CallActivity_37804657" targetRef="CallActivity_37804747"/>
+            <bpmn2:sequenceFlow id="SequenceFlow_37804658" sourceRef="CallActivity_37804657" targetRef="CallActivity_37804868"/>
             <bpmn2:sequenceFlow id="SequenceFlow_37804785" sourceRef="CallActivity_37804747" targetRef="EndEvent_37804784"/>
+            <bpmn2:sequenceFlow id="SequenceFlow_37804869" sourceRef="CallActivity_37804868" targetRef="CallActivity_37804747"/>
             <bpmn2:sequenceFlow id="SequenceFlow_37804656" sourceRef="StartEvent_37804654" targetRef="CallActivity_37804657"/>
         </bpmn2:subProcess>
         <bpmn2:callActivity id="CallActivity_37804493" name="CM_Receipt_Response">
@@ -2951,74 +2862,6 @@ Stacktrace:   ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_37804491</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_37804494</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_37804475" name="Set Headers">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>bodyType</key>
-                    <value>expression</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{Magento_credentials}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Credentials4Magento&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>headerTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;application/json&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;Content-Type&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>wrapContent</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.4</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Enricher</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.4.2</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804471</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_37804476</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_37804481" name="CM_Token_Requested">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>bodyType</key>
-                    <value>expression</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>propertyTable</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>headerTable</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>wrapContent</key>
-                    <value>${body}</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.4</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Enricher</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.4.2</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804479</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_37804482</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_37804487" name="CM_Set_Token">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -3050,68 +2893,8 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::Enricher/version::1.4.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804485</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_37804867</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_37804488</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_37804774" name="Get Credentials">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>scriptFunction</key>
-                    <value>GetCredentials</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Script</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>GroovyScript</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>script</key>
-                    <value>Functions4Magento.groovy</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804476</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_37804775</bpmn2:outgoing>
-        </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_37804484" name="GS_Assemble_Token">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>scriptFunction</key>
-                    <value>SetMagentoToken</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Script</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.0.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>GroovyScript</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>script</key>
-                    <value>Utilities.groovy</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804482</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_37804485</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:endEvent id="EndEvent_37804470" name="End">
             <bpmn2:extensionElements>
@@ -3126,6 +2909,48 @@ Stacktrace:   ${exception.stacktrace}</value>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_37804494</bpmn2:incoming>
         </bpmn2:endEvent>
+        <bpmn2:callActivity id="CallActivity_37804865" name="Get Token">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>visibility</key>
+                    <value>global</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>dataStoreId</key>
+                    <value>{{Entry_ID}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.5</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>DBstorage</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::get/version::1.5.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>operation</key>
+                    <value>get</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>delete</key>
+                    <value>false</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>stopOnMissingEntry</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>storageName</key>
+                    <value>{{Store_name}}</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_37804866</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_37804867</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:serviceTask id="ServiceTask_37804490" name="RR_Send_Confirmation_To_Magento">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -3144,24 +2969,6 @@ Stacktrace:   ${exception.stacktrace}</value>
             <bpmn2:incoming>SequenceFlow_37804488</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_37804491</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:serviceTask id="ServiceTask_37804478" name="RR_Get_token">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>ExternalCall</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::ExternalCall/version::1.0.4</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_37804775</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_37804479</bpmn2:outgoing>
-        </bpmn2:serviceTask>
         <bpmn2:startEvent id="StartEvent_37804469" name="Start">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -3173,17 +2980,13 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>StartEvent</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:outgoing>SequenceFlow_37804471</bpmn2:outgoing>
+            <bpmn2:outgoing>SequenceFlow_37804866</bpmn2:outgoing>
         </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_37804494" sourceRef="CallActivity_37804493" targetRef="EndEvent_37804470"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804476" sourceRef="CallActivity_37804475" targetRef="CallActivity_37804774"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804482" sourceRef="CallActivity_37804481" targetRef="CallActivity_37804484"/>
         <bpmn2:sequenceFlow id="SequenceFlow_37804488" sourceRef="CallActivity_37804487" targetRef="ServiceTask_37804490"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804775" sourceRef="CallActivity_37804774" targetRef="ServiceTask_37804478"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804485" sourceRef="CallActivity_37804484" targetRef="CallActivity_37804487"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_37804867" sourceRef="CallActivity_37804865" targetRef="CallActivity_37804487"/>
         <bpmn2:sequenceFlow id="SequenceFlow_37804491" sourceRef="ServiceTask_37804490" targetRef="CallActivity_37804493"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804479" sourceRef="ServiceTask_37804478" targetRef="CallActivity_37804481"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_37804471" sourceRef="StartEvent_37804469" targetRef="CallActivity_37804475"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_37804866" sourceRef="StartEvent_37804469" targetRef="CallActivity_37804865"/>
     </bpmn2:process>
     <bpmn2:process id="Process_37804581" name="LIP_Magento_ZEDI">
         <bpmn2:extensionElements>
@@ -3704,7 +3507,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804633_1620151350932" xsi:type="bpmn2:tFormalExpression">//E1EDK14/ORGID= 'MAGE' </bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_37804633_1620339101454" xsi:type="bpmn2:tFormalExpression">//E1EDK14/ORGID= 'MAGE' </bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_37804699" sourceRef="CallActivity_37804698" targetRef="CallActivity_37804848"/>
         <bpmn2:sequenceFlow id="SequenceFlow_37804849" sourceRef="CallActivity_37804848" targetRef="EndEvent_37804583"/>
@@ -3806,7 +3609,10 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <dc:Bounds height="60.0" width="100.0" x="2087.0" y="680.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804747" id="BPMNShape_CallActivity_37804747">
-                <dc:Bounds height="60.0" width="100.0" x="2078.0" y="277.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="1980.0" y="287.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_37804868" id="BPMNShape_CallActivity_37804868">
+                <dc:Bounds height="60.0" width="100.0" x="1835.0" y="287.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_37804604" id="BPMNShape_Participant_Process_37804604">
                 <dc:Bounds height="417.0" width="1879.0" x="-420.0" y="1041.0"/>
@@ -3850,6 +3656,9 @@ Stacktrace:   ${exception.stacktrace}</value>
             <bpmndi:BPMNShape bpmnElement="EndEvent_37804720" id="BPMNShape_EndEvent_37804720">
                 <dc:Bounds height="32.0" width="32.0" x="-111.0" y="896.0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_37804865" id="BPMNShape_CallActivity_37804865">
+                <dc:Bounds height="60.0" width="100.0" x="1612.0" y="149.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_37804742" id="BPMNShape_Participant_37804742">
                 <dc:Bounds height="140.0" width="100.0" x="3440.0" y="-127.0"/>
             </bpmndi:BPMNShape>
@@ -3870,9 +3679,6 @@ Stacktrace:   ${exception.stacktrace}</value>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804590" id="BPMNShape_CallActivity_37804590">
                 <dc:Bounds height="60.0" width="100.0" x="307.0" y="747.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_37804475" id="BPMNShape_CallActivity_37804475">
-                <dc:Bounds height="60.0" width="100.0" x="1613.0" y="149.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804596" id="BPMNShape_CallActivity_37804596">
                 <dc:Bounds height="60.0" width="100.0" x="473.0" y="747.0"/>
@@ -3944,7 +3750,7 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <dc:Bounds height="32.0" width="32.0" x="1104.0" y="761.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="ServiceTask_37804490" id="BPMNShape_ServiceTask_37804490">
-                <dc:Bounds height="60.0" width="100.0" x="2541.0" y="149.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="1941.0" y="149.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_37804469" id="BPMNShape_StartEvent_37804469">
                 <dc:Bounds height="32.0" width="32.0" x="1536.0" y="163.0"/>
@@ -3965,31 +3771,19 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <dc:Bounds height="60.0" width="134.0" x="20.0" y="298.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_37804468" id="BPMNShape_Participant_Process_37804468">
-                <dc:Bounds height="390.0" width="1546.0" x="1484.0" y="62.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_37804774" id="BPMNShape_CallActivity_37804774">
-                <dc:Bounds height="60.0" width="100.0" x="1771.0" y="149.0"/>
+                <dc:Bounds height="390.0" width="939.0" x="1484.0" y="62.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804487" id="BPMNShape_CallActivity_37804487">
-                <dc:Bounds height="60.0" width="100.0" x="2366.0" y="149.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="1766.0" y="149.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="SubProcess_37804653" id="BPMNShape_SubProcess_37804653">
-                <dc:Bounds height="140.0" width="589.0" x="1783.0" y="247.0"/>
+                <dc:Bounds height="140.0" width="653.0" x="1581.0" y="257.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804493" id="BPMNShape_CallActivity_37804493">
-                <dc:Bounds height="60.0" width="100.0" x="2707.0" y="149.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="ServiceTask_37804478" id="BPMNShape_ServiceTask_37804478">
-                <dc:Bounds height="60.0" width="100.0" x="1912.0" y="149.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_37804481" id="BPMNShape_CallActivity_37804481">
-                <dc:Bounds height="60.0" width="100.0" x="2061.0" y="149.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="2107.0" y="149.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_37804470" id="BPMNShape_EndEvent_37804470">
-                <dc:Bounds height="32.0" width="32.0" x="2893.0" y="163.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_37804484" id="BPMNShape_CallActivity_37804484">
-                <dc:Bounds height="60.0" width="100.0" x="2217.0" y="149.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="2293.0" y="163.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_37804712" id="BPMNShape_StartEvent_37804712">
                 <dc:Bounds height="32.0" width="32.0" x="153.0" y="880.0"/>
@@ -3998,16 +3792,16 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <dc:Bounds height="32.0" width="32.0" x="2232.0" y="694.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_37804784" id="BPMNShape_EndEvent_37804784">
-                <dc:Bounds height="32.0" width="32.0" x="2241.0" y="293.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="2133.0" y="303.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_37804811" id="BPMNShape_Participant_37804811">
                 <dc:Bounds height="140.0" width="100.0" x="389.0" y="2211.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_37804657" id="BPMNShape_CallActivity_37804657">
-                <dc:Bounds height="60.0" width="100.0" x="1934.0" y="277.0"/>
+                <dc:Bounds height="60.0" width="100.0" x="1685.0" y="287.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_37804497" id="BPMNShape_Participant_37804497">
-                <dc:Bounds height="140.0" width="100.0" x="2541.0" y="-146.0"/>
+                <dc:Bounds height="140.0" width="100.0" x="1941.0" y="-154.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
                 <dc:Bounds height="32.0" width="32.0" x="-366.0" y="228.0"/>
@@ -4043,13 +3837,10 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <dc:Bounds height="32.0" width="32.0" x="1536.0" y="694.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_37804654" id="BPMNShape_StartEvent_37804654">
-                <dc:Bounds height="32.0" width="32.0" x="1816.0" y="293.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="1614.0" y="303.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_37804825" id="BPMNShape_Participant_Process_37804825">
                 <dc:Bounds height="165.0" width="807.0" x="1484.0" y="621.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Participant_2" id="BPMNShape_Participant_2">
-                <dc:Bounds height="140.0" width="100.0" x="1912.0" y="-146.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
                 <dc:Bounds height="140.0" width="100.0" x="-628.0" y="177.0"/>
@@ -4246,41 +4037,25 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <di:waypoint x="523.0" xsi:type="dc:Point" y="777.0"/>
                 <di:waypoint x="681.0" xsi:type="dc:Point" y="777.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804485" id="BPMNEdge_SequenceFlow_37804485" sourceElement="BPMNShape_CallActivity_37804484" targetElement="BPMNShape_CallActivity_37804487">
-                <di:waypoint x="2267.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2416.0" xsi:type="dc:Point" y="179.0"/>
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804494" id="BPMNEdge_SequenceFlow_37804494" sourceElement="BPMNShape_CallActivity_37804493" targetElement="BPMNShape_EndEvent_37804470">
-                <di:waypoint x="2757.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2909.0" xsi:type="dc:Point" y="179.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804471" id="BPMNEdge_SequenceFlow_37804471" sourceElement="BPMNShape_StartEvent_37804469" targetElement="BPMNShape_CallActivity_37804475">
-                <di:waypoint x="1552.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="1663.0" xsi:type="dc:Point" y="179.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804482" id="BPMNEdge_SequenceFlow_37804482" sourceElement="BPMNShape_CallActivity_37804481" targetElement="BPMNShape_CallActivity_37804484">
-                <di:waypoint x="2111.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2267.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="2157.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="2309.0" xsi:type="dc:Point" y="179.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804491" id="BPMNEdge_SequenceFlow_37804491" sourceElement="BPMNShape_ServiceTask_37804490" targetElement="BPMNShape_CallActivity_37804493">
-                <di:waypoint x="2591.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2757.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1991.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="2157.0" xsi:type="dc:Point" y="179.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804479" id="BPMNEdge_SequenceFlow_37804479" sourceElement="BPMNShape_ServiceTask_37804478" targetElement="BPMNShape_CallActivity_37804481">
-                <di:waypoint x="1962.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2111.0" xsi:type="dc:Point" y="179.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804867" id="BPMNEdge_SequenceFlow_37804867" sourceElement="BPMNShape_CallActivity_37804865" targetElement="BPMNShape_CallActivity_37804487">
+                <di:waypoint x="1662.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1816.0" xsi:type="dc:Point" y="179.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804775" id="BPMNEdge_SequenceFlow_37804775" sourceElement="BPMNShape_CallActivity_37804774" targetElement="BPMNShape_ServiceTask_37804478">
-                <di:waypoint x="1821.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="1962.0" xsi:type="dc:Point" y="179.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804866" id="BPMNEdge_SequenceFlow_37804866" sourceElement="BPMNShape_StartEvent_37804469" targetElement="BPMNShape_CallActivity_37804865">
+                <di:waypoint x="1552.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1662.0" xsi:type="dc:Point" y="179.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804488" id="BPMNEdge_SequenceFlow_37804488" sourceElement="BPMNShape_CallActivity_37804487" targetElement="BPMNShape_ServiceTask_37804490">
-                <di:waypoint x="2416.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2591.0" xsi:type="dc:Point" y="179.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804476" id="BPMNEdge_SequenceFlow_37804476" sourceElement="BPMNShape_CallActivity_37804475" targetElement="BPMNShape_CallActivity_37804774">
-                <di:waypoint x="1663.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="1821.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1816.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1991.0" xsi:type="dc:Point" y="179.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804716" id="BPMNEdge_SequenceFlow_37804716" sourceElement="BPMNShape_CallActivity_37804715" targetElement="BPMNShape_CallActivity_37804749">
                 <di:waypoint x="299.0" xsi:type="dc:Point" y="896.0"/>
@@ -4382,17 +4157,21 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <di:waypoint x="449.0" xsi:type="dc:Point" y="420.0"/>
                 <di:waypoint x="579.0" xsi:type="dc:Point" y="420.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804658" id="BPMNEdge_SequenceFlow_37804658" sourceElement="BPMNShape_CallActivity_37804657" targetElement="BPMNShape_CallActivity_37804747">
-                <di:waypoint x="1984.0" xsi:type="dc:Point" y="307.0"/>
-                <di:waypoint x="2128.0" xsi:type="dc:Point" y="307.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804869" id="BPMNEdge_SequenceFlow_37804869" sourceElement="BPMNShape_CallActivity_37804868" targetElement="BPMNShape_CallActivity_37804747">
+                <di:waypoint x="1885.0" xsi:type="dc:Point" y="317.0"/>
+                <di:waypoint x="2030.0" xsi:type="dc:Point" y="317.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804658" id="BPMNEdge_SequenceFlow_37804658" sourceElement="BPMNShape_CallActivity_37804657" targetElement="BPMNShape_CallActivity_37804868">
+                <di:waypoint x="1735.0" xsi:type="dc:Point" y="317.0"/>
+                <di:waypoint x="1885.0" xsi:type="dc:Point" y="317.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804656" id="BPMNEdge_SequenceFlow_37804656" sourceElement="BPMNShape_StartEvent_37804654" targetElement="BPMNShape_CallActivity_37804657">
-                <di:waypoint x="1832.0" xsi:type="dc:Point" y="308.0"/>
-                <di:waypoint x="1984.0" xsi:type="dc:Point" y="308.0"/>
+                <di:waypoint x="1630.0" xsi:type="dc:Point" y="318.0"/>
+                <di:waypoint x="1735.0" xsi:type="dc:Point" y="318.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804785" id="BPMNEdge_SequenceFlow_37804785" sourceElement="BPMNShape_CallActivity_37804747" targetElement="BPMNShape_EndEvent_37804784">
-                <di:waypoint x="2128.0" xsi:type="dc:Point" y="308.0"/>
-                <di:waypoint x="2257.0" xsi:type="dc:Point" y="308.0"/>
+                <di:waypoint x="2030.0" xsi:type="dc:Point" y="318.0"/>
+                <di:waypoint x="2149.0" xsi:type="dc:Point" y="318.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_37804828" id="BPMNEdge_SequenceFlow_37804828" sourceElement="BPMNShape_StartEvent_37804826" targetElement="BPMNShape_CallActivity_37804831">
                 <di:waypoint x="1552.0" xsi:type="dc:Point" y="710.0"/>
@@ -4422,13 +4201,9 @@ Stacktrace:   ${exception.stacktrace}</value>
                 <di:waypoint x="2137.0" xsi:type="dc:Point" y="710.0"/>
                 <di:waypoint x="2137.0" xsi:type="dc:Point" y="900.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_37804496" id="BPMNEdge_MessageFlow_37804496" sourceElement="BPMNShape_ServiceTask_37804478" targetElement="BPMNShape_Participant_2">
-                <di:waypoint x="1962.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="1962.0" xsi:type="dc:Point" y="-76.0"/>
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_37804498" id="BPMNEdge_MessageFlow_37804498" sourceElement="BPMNShape_ServiceTask_37804490" targetElement="BPMNShape_Participant_37804497">
-                <di:waypoint x="2591.0" xsi:type="dc:Point" y="179.0"/>
-                <di:waypoint x="2591.0" xsi:type="dc:Point" y="-76.0"/>
+                <di:waypoint x="1991.0" xsi:type="dc:Point" y="179.0"/>
+                <di:waypoint x="1991.0" xsi:type="dc:Point" y="-84.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="MessageFlow_37804855" id="BPMNEdge_MessageFlow_37804855" sourceElement="BPMNShape_ServiceTask_37804851" targetElement="BPMNShape_Participant_37804853">
                 <di:waypoint x="89.0" xsi:type="dc:Point" y="2027.0"/>

@@ -8,22 +8,6 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>DLVR_SFTP_DIR</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
-      <name>DLVR_SFTP_Archive</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
       <name>email_bcc</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>

@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: I-001_QAS_Magento_to_S4Hana_SalesOrders_cr
  eation
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 2.3
+Origin-Bundle-Version: 2.7
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -34,9 +34,9 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001_QAS_Magento_to S4Hana_SalesOrders_creation
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001_QAS_Magento_to S4Hana_SalesOrders_creation
-Bundle-Version: 2.3
+Bundle-Version: 2.7
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1620153663030
+Origin-ModifiedDate: 1620334080333
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr
