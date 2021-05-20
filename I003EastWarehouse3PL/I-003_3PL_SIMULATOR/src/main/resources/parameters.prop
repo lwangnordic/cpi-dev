@@ -1,7 +1,0 @@
-#
-#Thu May 20 05:32:54 UTC 2021
-SFTP_PORT=3396
-SFTP_LOGIN=SFTP_SPS_User
-MAX_FILES_COUNT=2
-ADDRESS=sapftp.nordicnaturals.com
-DIRECTORY=/940 Records QA/
