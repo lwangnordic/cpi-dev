@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Mon May 24 18:56:03 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1621607098873
+OriginBundleSymbolicName=I-001_Update_Inventory_on_Magento
+target=Magento
+OriginBundleName=I-001 Update_Inventory_on_Magento
+OriginBundleVersion=2.10
+description=\ 

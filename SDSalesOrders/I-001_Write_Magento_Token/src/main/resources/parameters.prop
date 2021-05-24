@@ -1,0 +1,12 @@
+#Fri May 21 23:24:53 UTC 2021
+Magento_suffix=/stockItems/1
+CredentialName=SAP_MAG_USER
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+Sap_Autentication=Basic
+SAP_SERVER=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Magento_Path_Prod=/consumers/rest/all/V1/products/
+Magento_Server=https\://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud
+SAP_RFC=/sap/bc/soap/rfc
+Mag_timeout=99000
+MANDT=sap-client\=100
+Magento_credentials=Magento_login

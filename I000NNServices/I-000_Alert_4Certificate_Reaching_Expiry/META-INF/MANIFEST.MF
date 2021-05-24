@@ -34,7 +34,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-000 Alert_4Certificate_Reaching_Expiry
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-000 Alert_4Certificate_Reaching_Expiry
-Bundle-Version: 2.2
+Bundle-Version: 1.0
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1610981835950
 SAP-BundleType: IntegrationFlow

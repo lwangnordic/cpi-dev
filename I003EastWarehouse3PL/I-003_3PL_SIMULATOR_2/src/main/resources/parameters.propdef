@@ -56,14 +56,6 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>SMTP_ADDRESS</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
       <name>SFTP_TARGET_USER</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
@@ -81,14 +73,6 @@
    </parameter><parameter>
       <key/>
       <name>SFTP_USER</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
-      <name>EMAIL_CRED</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>

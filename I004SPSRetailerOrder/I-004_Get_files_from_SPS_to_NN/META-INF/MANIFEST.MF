@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-004 Get_files_from_SPS_to_NN
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-004 Get_files_from_SPS_to_NN
-Bundle-Version: 1.0
+Bundle-Version: 2.0
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1610569450596
 SAP-BundleType: IntegrationFlow

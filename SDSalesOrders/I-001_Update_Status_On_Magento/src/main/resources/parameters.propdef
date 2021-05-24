@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><parameters><parameter>
       <key/>
-      <name>Magento_Path_Update</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
       <name>email_to</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
@@ -16,7 +8,7 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>Magento_Server</name>
+      <name>syst_Id</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>
@@ -24,23 +16,7 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>Magento_credentials</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
-      <name>Magento_Path_Token</name>
-      <type>xsd:string</type>
-      <isRequired>false</isRequired>
-      <constraint/>
-      <description/>
-      <additionalMetadata/>
-   </parameter><parameter>
-      <key/>
-      <name>email_bcc</name>
+      <name>Entry_ID</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>
@@ -58,7 +34,47 @@
       </additionalMetadata>
    </parameter><parameter>
       <key/>
+      <name>Store_name</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
       <name>Magento_Suffix</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
+      <name>Magento_Path_Update</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
+      <name>Mag_timeout</name>
+      <type>xsd:integer</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
+      <name>Magento_Server</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
+      <name>email_bcc</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>
@@ -96,4 +112,4 @@
       <constraint/>
       <description/>
       <additionalMetadata/>
-   </parameter><param_references><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::cc" attribute_uilabel="Cc" param_key="email_cc"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::server" attribute_uilabel="Address" param_key="email_host"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::bcc" attribute_uilabel="Bcc" param_key="email_bcc"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::proxyType" attribute_uilabel="Proxy Type" param_key="email_proxy_type"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::from" attribute_uilabel="From" param_key="email_from"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::to" attribute_uilabel="To" param_key="email_to"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::user" attribute_uilabel="Credential Name" param_key="email_credentials"/><reference attribute_category="Token_Magento" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.7.2/attrId::httpAddressWithoutQuery" attribute_uilabel="Magento_Server" param_key="Magento_Server"/><reference attribute_category="Token_Magento" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.7.2/attrId::httpAddressWithoutQuery" attribute_uilabel="Magento_Path_Token" param_key="Magento_Path_Token"/></param_references></parameters>
+   </parameter><param_references><reference attribute_category="Magento" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.7.3/attrId::httpRequestTimeout" attribute_uilabel="Timeout (in ms)" param_key="Mag_timeout"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::cc" attribute_uilabel="Cc" param_key="email_cc"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::server" attribute_uilabel="Address" param_key="email_host"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::bcc" attribute_uilabel="Bcc" param_key="email_bcc"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::subject" attribute_uilabel="Subject" param_key="syst_Id"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::proxyType" attribute_uilabel="Proxy Type" param_key="email_proxy_type"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::from" attribute_uilabel="From" param_key="email_from"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::to" attribute_uilabel="To" param_key="email_to"/><reference attribute_category="PRD_NN_Email" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.9.0/attrId::user" attribute_uilabel="Credential Name" param_key="email_credentials"/></param_references></parameters>

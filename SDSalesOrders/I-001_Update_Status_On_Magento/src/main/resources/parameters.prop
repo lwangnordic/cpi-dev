@@ -1,13 +1,15 @@
-#Thu May 06 18:01:03 UTC 2021
+#Fri May 21 18:47:45 UTC 2021
+Store_name=QAS_MAG_Token
 email_proxy_type=sapcc
-Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
 email_bcc=
 Magento_Path_Update=/consumers/rest/all/V1/orders/
 email_credentials=NN_SMTP_Credentials
+syst_Id=QAS
 email_cc=
 Magento_Suffix=/comments
-Magento_Server=https\://nordicnaturals.com
-email_from=sapalerts@nordicnaturals.com
-email_to=sapalerts@nordicnaturals.com;gphangureh@nordicnaturals.com
-email_host=email.nn.com\:587
-Magento_credentials=NN_Magento_credentials
+Magento_Server=https\://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud
+Entry_ID=ID_QAS_MAG_Token
+email_from=sapalertsqa@nordicnaturals.com
+Mag_timeout=99000
+email_to=sapalertsqa@nordicnaturals.com;gphangureh@nordicnaturals.com
+email_host=nnemail.nordicnaturals.com\:587

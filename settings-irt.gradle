@@ -12,35 +12,50 @@ pluginManagement {
 include "common"
 project (":common").projectDir = file("common")
 
+include "SDSalesOrders"
+project (":SDSalesOrders").projectDir = file("SDSalesOrders")
+
+include "I000NNServices"
+project (":I000NNServices").projectDir = file("I000NNServices")
+
+include "I016Stripe"
+project (":I016Stripe").projectDir = file("I016Stripe")
+
+include "I016.1ProfessionalPatientLegacyWebsite"
+project (":I016.1ProfessionalPatientLegacyWebsite").projectDir = file("I016.1ProfessionalPatientLegacyWebsite")
+
 include "I018DeliverR"
 project (":I018DeliverR").projectDir = file("I018DeliverR")
 
 include "test"
 project (":test").projectDir = file("test")
 
-include "SDSalesOrders"
-project (":SDSalesOrders").projectDir = file("SDSalesOrders")
-
 include "I004SPSRetailerOrder"
 project (":I004SPSRetailerOrder").projectDir = file("I004SPSRetailerOrder")
-
-include "I016Stripe"
-project (":I016Stripe").projectDir = file("I016Stripe")
-
-include "I000NNServices"
-project (":I000NNServices").projectDir = file("I000NNServices")
-
-include "I016.1ProfessionalPatientLegacyWebsite"
-project (":I016.1ProfessionalPatientLegacyWebsite").projectDir = file("I016.1ProfessionalPatientLegacyWebsite")
 
 include "I003EastWarehouse3PL"
 project (":I003EastWarehouse3PL").projectDir = file("I003EastWarehouse3PL")
 
+include "I018DeliverR:iflow-I-018_Move_DeliveryFile_2SFTP"
+project (":I018DeliverR:iflow-I-018_Move_DeliveryFile_2SFTP").projectDir = file("I018DeliverR/I-018_Move_DeliveryFile_2SFTP")
+
+include "I018DeliverR:iflow-I-018_PRD_Move_DeliveryFile_2SFTP"
+project (":I018DeliverR:iflow-I-018_PRD_Move_DeliveryFile_2SFTP").projectDir = file("I018DeliverR/I-018_PRD_Move_DeliveryFile_2SFTP")
+
 include "I004SPSRetailerOrder:iflow-I-004_Get_files_from_SPS_to_NN"
 project (":I004SPSRetailerOrder:iflow-I-004_Get_files_from_SPS_to_NN").projectDir = file("I004SPSRetailerOrder/I-004_Get_files_from_SPS_to_NN")
 
-include "SDSalesOrders:iflow-I-001_QAS_Write_Magento_Token"
-project (":SDSalesOrders:iflow-I-001_QAS_Write_Magento_Token").projectDir = file("SDSalesOrders/I-001_QAS_Write_Magento_Token")
+include "SDSalesOrders:iflow-I-001_Update_Status_On_Magento"
+project (":SDSalesOrders:iflow-I-001_Update_Status_On_Magento").projectDir = file("SDSalesOrders/I-001_Update_Status_On_Magento")
+
+include "I018DeliverR:iflow-I-018_DeliverR_Create_SalesOrder"
+project (":I018DeliverR:iflow-I-018_DeliverR_Create_SalesOrder").projectDir = file("I018DeliverR/I-018_DeliverR_Create_SalesOrder")
+
+include "SDSalesOrders:iflow-I-001_Write_Magento_Token"
+project (":SDSalesOrders:iflow-I-001_Write_Magento_Token").projectDir = file("SDSalesOrders/I-001_Write_Magento_Token")
+
+include "I018DeliverR:iflow-I-018_PRD_DeliverR_Create_SalesOrder"
+project (":I018DeliverR:iflow-I-018_PRD_DeliverR_Create_SalesOrder").projectDir = file("I018DeliverR/I-018_PRD_DeliverR_Create_SalesOrder")
 
 include "I000NNServices:iflow-I-000_Alert_4Certificate_Reaching_Expiry"
 project (":I000NNServices:iflow-I-000_Alert_4Certificate_Reaching_Expiry").projectDir = file("I000NNServices/I-000_Alert_4Certificate_Reaching_Expiry")
@@ -48,98 +63,53 @@ project (":I000NNServices:iflow-I-000_Alert_4Certificate_Reaching_Expiry").proje
 include "I004SPSRetailerOrder:iflow-I-004_CreateOrders_from_SPS_to_S4HANA"
 project (":I004SPSRetailerOrder:iflow-I-004_CreateOrders_from_SPS_to_S4HANA").projectDir = file("I004SPSRetailerOrder/I-004_CreateOrders_from_SPS_to_S4HANA")
 
-include "SDSalesOrders:iflow-I-001_QAS104_Magento_to_S4Hana_SalesOrders_creation"
-project (":SDSalesOrders:iflow-I-001_QAS104_Magento_to_S4Hana_SalesOrders_creation").projectDir = file("SDSalesOrders/I-001_QAS104_Magento_to_S4Hana_SalesOrders_creation")
-
-include "SDSalesOrders:iflow-I-001_Inbound_Response_from_S4HANA"
-project (":SDSalesOrders:iflow-I-001_Inbound_Response_from_S4HANA").projectDir = file("SDSalesOrders/I-001_Inbound_Response_from_S4HANA")
+include "SDSalesOrders:iflow-I-001_Update_Inventory_on_Magento"
+project (":SDSalesOrders:iflow-I-001_Update_Inventory_on_Magento").projectDir = file("SDSalesOrders/I-001_Update_Inventory_on_Magento")
 
 include "SDSalesOrders:iflow-I-001_QAS104_Update_Status_On_Magento"
 project (":SDSalesOrders:iflow-I-001_QAS104_Update_Status_On_Magento").projectDir = file("SDSalesOrders/I-001_QAS104_Update_Status_On_Magento")
 
-include "SDSalesOrders:iflow-I-001_QAS_Magento_to_S4Hana_SalesOrders_creation"
-project (":SDSalesOrders:iflow-I-001_QAS_Magento_to_S4Hana_SalesOrders_creation").projectDir = file("SDSalesOrders/I-001_QAS_Magento_to_S4Hana_SalesOrders_creation")
-
-include "SDSalesOrders:iflow-I-001_Magento_CreateSO_Manual"
-project (":SDSalesOrders:iflow-I-001_Magento_CreateSO_Manual").projectDir = file("SDSalesOrders/I-001_Magento_CreateSO_Manual")
-
-include "SDSalesOrders:iflow-I-001_QAS104_Inbound_Response_from_S4HANA"
-project (":SDSalesOrders:iflow-I-001_QAS104_Inbound_Response_from_S4HANA").projectDir = file("SDSalesOrders/I-001_QAS104_Inbound_Response_from_S4HANA")
-
-include "SDSalesOrders:iflow-I-001_QAS_Update_Status_On_Magento_bk"
-project (":SDSalesOrders:iflow-I-001_QAS_Update_Status_On_Magento_bk").projectDir = file("SDSalesOrders/I-001_QAS_Update_Status_On_Magento_bk")
+include "SDSalesOrders:iflow-I-001_Inbound_Response_from_S4HANA"
+project (":SDSalesOrders:iflow-I-001_Inbound_Response_from_S4HANA").projectDir = file("SDSalesOrders/I-001_Inbound_Response_from_S4HANA")
 
 include "SDSalesOrders:iflow-I-001_QAS104_Write_Magento_Token"
 project (":SDSalesOrders:iflow-I-001_QAS104_Write_Magento_Token").projectDir = file("SDSalesOrders/I-001_QAS104_Write_Magento_Token")
 
-include "SDSalesOrders:iflow-I-001_QAS104_Update_Inventory_S4HANA_to_Magento"
-project (":SDSalesOrders:iflow-I-001_QAS104_Update_Inventory_S4HANA_to_Magento").projectDir = file("SDSalesOrders/I-001_QAS104_Update_Inventory_S4HANA_to_Magento")
+include "SDSalesOrders:iflow-I-001_Magento_Create_SalesOrders"
+project (":SDSalesOrders:iflow-I-001_Magento_Create_SalesOrders").projectDir = file("SDSalesOrders/I-001_Magento_Create_SalesOrders")
 
-include "SDSalesOrders:iflow-I-001_QAS104_Get_China_Documents_from_Magento"
-project (":SDSalesOrders:iflow-I-001_QAS104_Get_China_Documents_from_Magento").projectDir = file("SDSalesOrders/I-001_QAS104_Get_China_Documents_from_Magento")
-
-include "SDSalesOrders:iflow-I-001_QAS_Update_Status_On_Magento"
-project (":SDSalesOrders:iflow-I-001_QAS_Update_Status_On_Magento").projectDir = file("SDSalesOrders/I-001_QAS_Update_Status_On_Magento")
-
-include "SDSalesOrders:iflow-I-001_QAS104_Send_Url_to_S4HANA"
-project (":SDSalesOrders:iflow-I-001_QAS104_Send_Url_to_S4HANA").projectDir = file("SDSalesOrders/I-001_QAS104_Send_Url_to_S4HANA")
-
-include "SDSalesOrders:iflow-I-001_Update_Inventory_S4HANA_to_Magento"
-project (":SDSalesOrders:iflow-I-001_Update_Inventory_S4HANA_to_Magento").projectDir = file("SDSalesOrders/I-001_Update_Inventory_S4HANA_to_Magento")
-
-include "SDSalesOrders:iflow-I-001_Update_Status_On_Magento"
-project (":SDSalesOrders:iflow-I-001_Update_Status_On_Magento").projectDir = file("SDSalesOrders/I-001_Update_Status_On_Magento")
-
-include "SDSalesOrders:iflow-I-001_QAS_Update_Inventory_S4HANA_to_Magento"
-project (":SDSalesOrders:iflow-I-001_QAS_Update_Inventory_S4HANA_to_Magento").projectDir = file("SDSalesOrders/I-001_QAS_Update_Inventory_S4HANA_to_Magento")
-
-include "SDSalesOrders:iflow-I-001_QAS_Get_China_Documents_from_Magento"
-project (":SDSalesOrders:iflow-I-001_QAS_Get_China_Documents_from_Magento").projectDir = file("SDSalesOrders/I-001_QAS_Get_China_Documents_from_Magento")
+include "SDSalesOrders:iflow-I-001_Magento_synchronize_jobs"
+project (":SDSalesOrders:iflow-I-001_Magento_synchronize_jobs").projectDir = file("SDSalesOrders/I-001_Magento_synchronize_jobs")
 
 include "SDSalesOrders:iflow-I-001_Send_Url_to_S4HANA"
 project (":SDSalesOrders:iflow-I-001_Send_Url_to_S4HANA").projectDir = file("SDSalesOrders/I-001_Send_Url_to_S4HANA")
 
-include "SDSalesOrders:iflow-I-001_Get_China_Documents_from_Magento"
-project (":SDSalesOrders:iflow-I-001_Get_China_Documents_from_Magento").projectDir = file("SDSalesOrders/I-001_Get_China_Documents_from_Magento")
-
-include "SDSalesOrders:iflow-I-001_QAS_Send_Url_to_S4HANA"
-project (":SDSalesOrders:iflow-I-001_QAS_Send_Url_to_S4HANA").projectDir = file("SDSalesOrders/I-001_QAS_Send_Url_to_S4HANA")
-
-include "SDSalesOrders:iflow-I-001_QAS_Inbound_Response_from_S4HANA"
-project (":SDSalesOrders:iflow-I-001_QAS_Inbound_Response_from_S4HANA").projectDir = file("SDSalesOrders/I-001_QAS_Inbound_Response_from_S4HANA")
-
-include "SDSalesOrders:iflow-I-001_Magento_to_S4Hana_SalesOrders_creation"
-project (":SDSalesOrders:iflow-I-001_Magento_to_S4Hana_SalesOrders_creation").projectDir = file("SDSalesOrders/I-001_Magento_to_S4Hana_SalesOrders_creation")
-
-include "I018DeliverR:iflow-I-018_Move_DeliveryFile_2SFTP"
-project (":I018DeliverR:iflow-I-018_Move_DeliveryFile_2SFTP").projectDir = file("I018DeliverR/I-018_Move_DeliveryFile_2SFTP")
-
-include "I018DeliverR:iflow-I-018_PRD_DeliverR_Create_SalesOrder"
-project (":I018DeliverR:iflow-I-018_PRD_DeliverR_Create_SalesOrder").projectDir = file("I018DeliverR/I-018_PRD_DeliverR_Create_SalesOrder")
-
-include "I018DeliverR:iflow-I-018_DeliverR_Create_SalesOrder"
-project (":I018DeliverR:iflow-I-018_DeliverR_Create_SalesOrder").projectDir = file("I018DeliverR/I-018_DeliverR_Create_SalesOrder")
-
-include "I018DeliverR:iflow-I-018_PRD_Move_DeliveryFile_2SFTP"
-project (":I018DeliverR:iflow-I-018_PRD_Move_DeliveryFile_2SFTP").projectDir = file("I018DeliverR/I-018_PRD_Move_DeliveryFile_2SFTP")
-
-include "I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL"
-project (":I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL").projectDir = file("I003EastWarehouse3PL/I-003_QAS_S4HANA_940_to_3PL")
+include "SDSalesOrders:iflow-I-001_Get_China_Docs_from_Magento"
+project (":SDSalesOrders:iflow-I-001_Get_China_Docs_from_Magento").projectDir = file("SDSalesOrders/I-001_Get_China_Docs_from_Magento")
 
 include "I003EastWarehouse3PL:iflow-I-003_PRD_3PL_855_to_S4HANA"
 project (":I003EastWarehouse3PL:iflow-I-003_PRD_3PL_855_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003_PRD_3PL_855_to_S4HANA")
 
+include "I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL"
+project (":I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL").projectDir = file("I003EastWarehouse3PL/I-003_QAS_S4HANA_940_to_3PL")
+
+include "I003EastWarehouse3PL:iflow-I-003_PRD_S4HANA_940_to_3PL"
+project (":I003EastWarehouse3PL:iflow-I-003_PRD_S4HANA_940_to_3PL").projectDir = file("I003EastWarehouse3PL/I-003_PRD_S4HANA_940_to_3PL")
+
 include "I003EastWarehouse3PL:iflow-I-003_PRD_Job3PLControl855945"
 project (":I003EastWarehouse3PL:iflow-I-003_PRD_Job3PLControl855945").projectDir = file("I003EastWarehouse3PL/I-003_PRD_Job3PLControl855945")
-
-include "I003EastWarehouse3PL:iflow-I-003_QAS_3PL_945_to_S4HANA"
-project (":I003EastWarehouse3PL:iflow-I-003_QAS_3PL_945_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003_QAS_3PL_945_to_S4HANA")
 
 include "I003EastWarehouse3PL:iflow-I-003_S4HANA_940_to_3PL_QA"
 project (":I003EastWarehouse3PL:iflow-I-003_S4HANA_940_to_3PL_QA").projectDir = file("I003EastWarehouse3PL/I-003_S4HANA_940_to_3PL_QA")
 
+include "I003EastWarehouse3PL:iflow-I-003_QAS_3PL_945_to_S4HANA"
+project (":I003EastWarehouse3PL:iflow-I-003_QAS_3PL_945_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003_QAS_3PL_945_to_S4HANA")
+
 include "I003EastWarehouse3PL:iflow-I-003-File_940_to_S4HANA"
 project (":I003EastWarehouse3PL:iflow-I-003-File_940_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003-File_940_to_S4HANA")
+
+include "I003EastWarehouse3PL:iflow-I-003_QAS_Job3PLControl855945"
+project (":I003EastWarehouse3PL:iflow-I-003_QAS_Job3PLControl855945").projectDir = file("I003EastWarehouse3PL/I-003_QAS_Job3PLControl855945")
 
 include "I003EastWarehouse3PL:iflow-I-003_PRD_3PL_945_to_S4HANA"
 project (":I003EastWarehouse3PL:iflow-I-003_PRD_3PL_945_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003_PRD_3PL_945_to_S4HANA")
@@ -147,11 +117,8 @@ project (":I003EastWarehouse3PL:iflow-I-003_PRD_3PL_945_to_S4HANA").projectDir =
 include "I003EastWarehouse3PL:iflow-I-003_QAS_3PL_855_to_S4HANA"
 project (":I003EastWarehouse3PL:iflow-I-003_QAS_3PL_855_to_S4HANA").projectDir = file("I003EastWarehouse3PL/I-003_QAS_3PL_855_to_S4HANA")
 
-include "I003EastWarehouse3PL:iflow-I-003_QAS_Job3PLControl855945"
-project (":I003EastWarehouse3PL:iflow-I-003_QAS_Job3PLControl855945").projectDir = file("I003EastWarehouse3PL/I-003_QAS_Job3PLControl855945")
-
-include "I003EastWarehouse3PL:iflow-I-003_PRD_S4HANA_940_to_3PL"
-project (":I003EastWarehouse3PL:iflow-I-003_PRD_S4HANA_940_to_3PL").projectDir = file("I003EastWarehouse3PL/I-003_PRD_S4HANA_940_to_3PL")
+include "I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD"
+project (":I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD").projectDir = file("I003EastWarehouse3PL/I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD")
 
 include "test:iflow-explorer"
 project (":test:iflow-explorer").projectDir = file("test/explorer")
@@ -159,17 +126,14 @@ project (":test:iflow-explorer").projectDir = file("test/explorer")
 include "test:iflow-test_iflow"
 project (":test:iflow-test_iflow").projectDir = file("test/test_iflow")
 
-include "I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD"
-project (":I003EastWarehouse3PL:iflow-I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD").projectDir = file("I003EastWarehouse3PL/I-003_QAS_S4HANA_940_to_3PL_bk_beforecopyPRD")
-
-include "I016.1ProfessionalPatientLegacyWebsite:iflow-I-016.1_LegacyProPatient_to_S4HANA_SalesOrders"
-project (":I016.1ProfessionalPatientLegacyWebsite:iflow-I-016.1_LegacyProPatient_to_S4HANA_SalesOrders").projectDir = file("I016.1ProfessionalPatientLegacyWebsite/I-016.1_LegacyProPatient_to_S4HANA_SalesOrders")
+include "I016Stripe:iflow-I-016_Stripe_to_SAP_DPA"
+project (":I016Stripe:iflow-I-016_Stripe_to_SAP_DPA").projectDir = file("I016Stripe/I-016_Stripe_to_SAP_DPA")
 
 include "I016Stripe:iflow-I-016_PRD_Stripe_to_SAP_DPA"
 project (":I016Stripe:iflow-I-016_PRD_Stripe_to_SAP_DPA").projectDir = file("I016Stripe/I-016_PRD_Stripe_to_SAP_DPA")
 
-include "I016Stripe:iflow-I-016_Stripe_to_SAP_DPA"
-project (":I016Stripe:iflow-I-016_Stripe_to_SAP_DPA").projectDir = file("I016Stripe/I-016_Stripe_to_SAP_DPA")
+include "I016.1ProfessionalPatientLegacyWebsite:iflow-I-016.1_LegacyProPatient_to_S4HANA_SalesOrders"
+project (":I016.1ProfessionalPatientLegacyWebsite:iflow-I-016.1_LegacyProPatient_to_S4HANA_SalesOrders").projectDir = file("I016.1ProfessionalPatientLegacyWebsite/I-016.1_LegacyProPatient_to_S4HANA_SalesOrders")
 
 include "I016Stripe:iflow-I-016_Stripe_to_SAP_DPA_copy"
 project (":I016Stripe:iflow-I-016_Stripe_to_SAP_DPA_copy").projectDir = file("I016Stripe/I-016_Stripe_to_SAP_DPA_copy")

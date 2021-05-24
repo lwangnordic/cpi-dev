@@ -173,7 +173,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>system</key>
-                    <value>QAS_NN_SFTP</value>
+                    <value>NN_SFTP</value>
                 </ifl:property>
                 <ifl:property>
                     <key>tempFileName</key>
@@ -209,7 +209,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>fileName</key>
-                    <value/>
+                    <value>PO*</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Description</key>
@@ -404,20 +404,21 @@
                     <value>ctype::FlowstepVariant/cname::ErrorEventSubProcessTemplate/version::1.0.2</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:endEvent id="EndEvent_16" name="End">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-                <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
-                <bpmn2:messageEventDefinition/>
-            </bpmn2:endEvent>
+            <bpmn2:startEvent id="StartEvent_15" name="Error Start">
+                <bpmn2:outgoing>SequenceFlow_17</bpmn2:outgoing>
+                <bpmn2:errorEventDefinition>
+                    <bpmn2:extensionElements>
+                        <ifl:property>
+                            <key>cmdVariantUri</key>
+                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
+                        </ifl:property>
+                        <ifl:property>
+                            <key>activityType</key>
+                            <value>StartErrorEvent</value>
+                        </ifl:property>
+                    </bpmn2:extensionElements>
+                </bpmn2:errorEventDefinition>
+            </bpmn2:startEvent>
             <bpmn2:callActivity id="CallActivity_21" name="Error Handler">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -457,6 +458,20 @@
                 <bpmn2:incoming>SequenceFlow_19</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_22</bpmn2:outgoing>
             </bpmn2:callActivity>
+            <bpmn2:endEvent id="EndEvent_16" name="End">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+                <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
+                <bpmn2:messageEventDefinition/>
+            </bpmn2:endEvent>
             <bpmn2:callActivity id="CallActivity_18" name="Save payload">
                 <bpmn2:extensionElements>
                     <ifl:property>
@@ -517,40 +532,11 @@
                 <bpmn2:incoming>SequenceFlow_22</bpmn2:incoming>
                 <bpmn2:outgoing>SequenceFlow_25</bpmn2:outgoing>
             </bpmn2:callActivity>
-            <bpmn2:startEvent id="StartEvent_15" name="Error Start">
-                <bpmn2:outgoing>SequenceFlow_17</bpmn2:outgoing>
-                <bpmn2:errorEventDefinition>
-                    <bpmn2:extensionElements>
-                        <ifl:property>
-                            <key>cmdVariantUri</key>
-                            <value>ctype::FlowstepVariant/cname::ErrorStartEvent</value>
-                        </ifl:property>
-                        <ifl:property>
-                            <key>activityType</key>
-                            <value>StartErrorEvent</value>
-                        </ifl:property>
-                    </bpmn2:extensionElements>
-                </bpmn2:errorEventDefinition>
-            </bpmn2:startEvent>
+            <bpmn2:sequenceFlow id="SequenceFlow_17" sourceRef="StartEvent_15" targetRef="CallActivity_18"/>
             <bpmn2:sequenceFlow id="SequenceFlow_22" sourceRef="CallActivity_21" targetRef="CallActivity_24"/>
             <bpmn2:sequenceFlow id="SequenceFlow_19" sourceRef="CallActivity_18" targetRef="CallActivity_21"/>
             <bpmn2:sequenceFlow id="SequenceFlow_25" sourceRef="CallActivity_24" targetRef="EndEvent_16"/>
-            <bpmn2:sequenceFlow id="SequenceFlow_17" sourceRef="StartEvent_15" targetRef="CallActivity_18"/>
         </bpmn2:subProcess>
-        <bpmn2:endEvent id="EndEvent_2" name="End">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_27</bpmn2:incoming>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_12" name="CM Prepare_file">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -585,6 +571,20 @@
             <bpmn2:incoming>SequenceFlow_10</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_13</bpmn2:outgoing>
         </bpmn2:callActivity>
+        <bpmn2:endEvent id="EndEvent_2" name="End">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_27</bpmn2:incoming>
+            <bpmn2:messageEventDefinition/>
+        </bpmn2:endEvent>
         <bpmn2:startEvent id="StartEvent_2" name="Start">
             <bpmn2:extensionElements>
                 <ifl:property>

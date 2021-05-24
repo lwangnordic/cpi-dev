@@ -35,7 +35,7 @@ SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001_QAS104_Write_Magento_Token
 Bundle-Version: 1.0
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1620245735050
+Origin-ModifiedDate: 1620756709570
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

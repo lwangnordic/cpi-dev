@@ -82,14 +82,6 @@
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:participant>
-        <bpmn2:participant id="Participant_2" ifl:type="EndpointRecevier" name="MailGun">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>ifl:type</key>
-                    <value>EndpointRecevier</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:participant>
         <bpmn2:participant id="Participant_109" ifl:type="EndpointRecevier" name="SFTP_Server">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1624,7 +1616,7 @@ ${header.CamelFileName}
                     <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_86</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_90</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
         <bpmn2:startEvent id="StartEvent_2" name="Start">
@@ -1765,44 +1757,6 @@ ${header.CamelFileName}
             <bpmn2:outgoing>SequenceFlow_166134</bpmn2:outgoing>
             <bpmn2:outgoing>SequenceFlow_166136</bpmn2:outgoing>
         </bpmn2:exclusiveGateway>
-        <bpmn2:callActivity id="CallActivity_85" name="Gather">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>targetXPath</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>sourceXPath</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>messageType</key>
-                    <value>PlainText</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>aggregationAlgorithm</key>
-                    <value>concatenate-strategy</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Gather</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::Gather/version::1.2.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>gatherFileNames</key>
-                    <value/>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_90</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_86</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_29" name="EDI to XML">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -1895,11 +1849,10 @@ ${header.CamelFileName}
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_166136_1621543644512" xsi:type="bpmn2:tFormalExpression">${property.EDI940_Control} = null or ${property.EDI940_Control.trim().length()} = '0' or ${property.EDI940_Control.trim()} = '""'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_166136_1621619967154" xsi:type="bpmn2:tFormalExpression">${property.EDI940_Control} = null or ${property.EDI940_Control.trim().length()} = '0' or ${property.EDI940_Control.trim()} = '""'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
-        <bpmn2:sequenceFlow id="SequenceFlow_86" sourceRef="CallActivity_85" targetRef="EndEvent_2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_30" sourceRef="CallActivity_29" targetRef="CallActivity_166131"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_90" sourceRef="ParallelGateway_89" targetRef="CallActivity_85"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_90" sourceRef="ParallelGateway_89" targetRef="EndEvent_2"/>
     </bpmn2:process>
     <bpmn2:process id="Process_912" name="Send Alert">
         <bpmn2:extensionElements>
@@ -2596,16 +2549,13 @@ ${header.CamelFileName}
                 <dc:Bounds height="60.0" width="100.0" x="529.0" y="107.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="803.0" y="307.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="779.0" y="151.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_166133" id="BPMNShape_ExclusiveGateway_166133">
                 <dc:Bounds height="40.0" width="40.0" x="291.0" y="175.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_166135" id="BPMNShape_CallActivity_166135">
                 <dc:Bounds height="60.0" width="100.0" x="261.0" y="77.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_85" id="BPMNShape_CallActivity_85">
-                <dc:Bounds height="60.0" width="100.0" x="773.0" y="137.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_166131" id="BPMNShape_CallActivity_166131">
                 <dc:Bounds height="60.0" width="100.0" x="261.0" y="345.0"/>
@@ -2651,9 +2601,6 @@ ${header.CamelFileName}
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_32" id="BPMNShape_Participant_Process_32">
                 <dc:Bounds height="311.0" width="587.0" x="1047.0" y="52.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Participant_2" id="BPMNShape_Participant_2">
-                <dc:Bounds height="140.0" width="100.0" x="931.0" y="252.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_970" id="BPMNShape_Participant_970">
                 <dc:Bounds height="140.0" width="100.0" x="802.0" y="-128.0"/>
@@ -2737,13 +2684,9 @@ ${header.CamelFileName}
                 <di:waypoint x="475.5" xsi:type="dc:Point" y="209.0"/>
                 <di:waypoint x="579.0" xsi:type="dc:Point" y="209.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_86" id="BPMNEdge_SequenceFlow_86" sourceElement="BPMNShape_CallActivity_85" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="821.0" xsi:type="dc:Point" y="167.0"/>
-                <di:waypoint x="821.0" xsi:type="dc:Point" y="323.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_90" id="BPMNEdge_SequenceFlow_90" sourceElement="BPMNShape_ParallelGateway_89" targetElement="BPMNShape_CallActivity_85">
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_90" id="BPMNEdge_SequenceFlow_90" sourceElement="BPMNShape_ParallelGateway_89" targetElement="BPMNShape_EndEvent_2">
                 <di:waypoint x="696.0" xsi:type="dc:Point" y="166.5"/>
-                <di:waypoint x="823.0" xsi:type="dc:Point" y="166.5"/>
+                <di:waypoint x="795.0" xsi:type="dc:Point" y="166.5"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_92" id="BPMNEdge_SequenceFlow_92" sourceElement="BPMNShape_CallActivity_91" targetElement="BPMNShape_ParallelGateway_89">
                 <di:waypoint x="579.0" xsi:type="dc:Point" y="209.0"/>

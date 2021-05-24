@@ -3,7 +3,7 @@ Bundle-SymbolicName: I-001_Send_Url_to_S4HANA
 Bundle-ManifestVersion: 2
 Origin-Bundle-SymbolicName: I-001_Send_Url_to_S4HANA
 SAP-ArtifactTrait: 
-Origin-Bundle-Version: 4.01
+Origin-Bundle-Version: 2.2
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
  ap.esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector
  .camel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,java
@@ -33,9 +33,9 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001 Send_Url_to_S4HANA
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001 Send_Url_to_S4HANA
-Bundle-Version: 4.01
+Bundle-Version: 1.0
 SAP-NodeType: IFLMAP
-Origin-ModifiedDate: 1619649706716
+Origin-ModifiedDate: 1620252312573
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
  sb.security.KeyManagerFactory;multiple:=false,com.sap.esb.security.Tr

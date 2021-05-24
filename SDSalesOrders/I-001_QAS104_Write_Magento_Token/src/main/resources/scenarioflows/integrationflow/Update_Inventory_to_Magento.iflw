@@ -342,29 +342,60 @@
             <bpmn2:incoming>SequenceFlow_52366114</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
-        <bpmn2:startEvent id="StartEvent_52366116" name="Start_Job">
-            <bpmn2:outgoing>SequenceFlow_52366117</bpmn2:outgoing>
-            <bpmn2:timerEventDefinition id="TimerEventDefinition_443347">
-                <bpmn2:extensionElements>
-                    <ifl:property>
-                        <key>scheduleKey</key>
-                        <value>&lt;row&gt;&lt;cell&gt;dayValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;monthValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;yearValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;dateType&lt;/cell&gt;&lt;cell&gt;DAILY&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;secondValue&lt;/cell&gt;&lt;cell&gt;0&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;minutesValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;hourValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;toInterval&lt;/cell&gt;&lt;cell&gt;24&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;fromInterval&lt;/cell&gt;&lt;cell&gt;0&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;OnEveryHour&lt;/cell&gt;&lt;cell&gt;3&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeType&lt;/cell&gt;&lt;cell&gt;TIME_HOUR_INTERVAL&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeZone&lt;/cell&gt;&lt;cell&gt;( UTC 0:00 ) Greenwich Mean Time(Etc/GMT)&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;triggerType&lt;/cell&gt;&lt;cell&gt;cron&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;noOfSchedules&lt;/cell&gt;&lt;cell&gt;1&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;schedule1&lt;/cell&gt;&lt;cell&gt;0+0+0,3,6,9,12,15,18,21+?+*+*+*&amp;amp;trigger.timeZone=Etc/GMT&lt;/cell&gt;&lt;/row&gt;</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>componentVersion</key>
-                        <value>1.0</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>cmdVariantUri</key>
-                        <value>ctype::FlowstepVariant/cname::intermediatetimer/version::1.0.1</value>
-                    </ifl:property>
-                    <ifl:property>
-                        <key>activityType</key>
-                        <value>StartTimerEvent</value>
-                    </ifl:property>
-                </bpmn2:extensionElements>
-            </bpmn2:timerEventDefinition>
-        </bpmn2:startEvent>
+        <bpmn2:callActivity id="CallActivity_52366113" name="Write Token">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>visibility</key>
+                    <value>global</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>alert</key>
+                    <value>2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>encrypt</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>expire</key>
+                    <value>3</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>messageId</key>
+                    <value>{{Mag_entry_id}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.5</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>override</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>DBstorage</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::put/version::1.5.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>operation</key>
+                    <value>put</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>storageName</key>
+                    <value>{{Mag_data_store}}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>includeMessageHeaders</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_52366115</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_52366114</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_52366021" name="Set Token">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -443,66 +474,35 @@
             <bpmn2:incoming>SequenceFlow_52366102</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_52366010</bpmn2:outgoing>
         </bpmn2:serviceTask>
-        <bpmn2:callActivity id="CallActivity_52366113" name="Write Token">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>visibility</key>
-                    <value>global</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>alert</key>
-                    <value>2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>encrypt</key>
-                    <value>true</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>expire</key>
-                    <value>3</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>messageId</key>
-                    <value>{{Mag_entry_id}}</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.5</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>override</key>
-                    <value>true</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>DBstorage</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::put/version::1.5.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>operation</key>
-                    <value>put</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>storageName</key>
-                    <value>{{Mag_data_store}}</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>includeMessageHeaders</key>
-                    <value>false</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_52366115</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_52366114</bpmn2:outgoing>
-        </bpmn2:callActivity>
+        <bpmn2:startEvent id="StartEvent_52366116" name="Start_Job">
+            <bpmn2:outgoing>SequenceFlow_52366117</bpmn2:outgoing>
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_151968">
+                <bpmn2:extensionElements>
+                    <ifl:property>
+                        <key>scheduleKey</key>
+                        <value>&lt;row&gt;&lt;cell&gt;dayValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;monthValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;yearValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;dateType&lt;/cell&gt;&lt;cell&gt;DAILY&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;secondValue&lt;/cell&gt;&lt;cell&gt;0&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;minutesValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;hourValue&lt;/cell&gt;&lt;cell&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;toInterval&lt;/cell&gt;&lt;cell&gt;24&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;fromInterval&lt;/cell&gt;&lt;cell&gt;0&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;OnEveryHour&lt;/cell&gt;&lt;cell&gt;3&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeType&lt;/cell&gt;&lt;cell&gt;TIME_HOUR_INTERVAL&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;timeZone&lt;/cell&gt;&lt;cell&gt;( UTC 0:00 ) Greenwich Mean Time(Etc/GMT)&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;triggerType&lt;/cell&gt;&lt;cell&gt;cron&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;noOfSchedules&lt;/cell&gt;&lt;cell&gt;1&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell&gt;schedule1&lt;/cell&gt;&lt;cell&gt;0+0+0,3,6,9,12,15,18,21+?+*+*+*&amp;amp;trigger.timeZone=Etc/GMT&lt;/cell&gt;&lt;/row&gt;</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>componentVersion</key>
+                        <value>1.0</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>cmdVariantUri</key>
+                        <value>ctype::FlowstepVariant/cname::intermediatetimer/version::1.0.1</value>
+                    </ifl:property>
+                    <ifl:property>
+                        <key>activityType</key>
+                        <value>StartTimerEvent</value>
+                    </ifl:property>
+                </bpmn2:extensionElements>
+            </bpmn2:timerEventDefinition>
+        </bpmn2:startEvent>
         <bpmn2:sequenceFlow id="SequenceFlow_7584259" sourceRef="CallActivity_7584258" targetRef="CallActivity_52366101"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_52366117" sourceRef="StartEvent_52366116" targetRef="CallActivity_7584258"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_52366114" sourceRef="CallActivity_52366113" targetRef="EndEvent_2"/>
         <bpmn2:sequenceFlow id="SequenceFlow_52366115" sourceRef="CallActivity_52366021" targetRef="CallActivity_52366113"/>
         <bpmn2:sequenceFlow id="SequenceFlow_52366102" sourceRef="CallActivity_52366101" targetRef="ServiceTask_52366009"/>
         <bpmn2:sequenceFlow id="SequenceFlow_52366010" sourceRef="ServiceTask_52366009" targetRef="CallActivity_52366021"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_52366114" sourceRef="CallActivity_52366113" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_52366117" sourceRef="StartEvent_52366116" targetRef="CallActivity_7584258"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">

@@ -1,13 +1,13 @@
-#Mon Apr 05 21:54:23 UTC 2021
+#Fri May 21 22:58:34 UTC 2021
 CPI_Auth=Basic
 email_proxy_type=sapcc
 email_bcc=
 email_credentials=NN_SMTP_Credentials
 email_subject=CPI Notification of certificate Reaching Expiry
-CPI_KeystoreEntries_API=https\://l250596-tmn.hci.us3.hana.ondemand.com/api/v1/KeystoreEntries
+CPI_KeystoreEntries_API=https\://l250597-tmn.hci.us3.hana.ondemand.com/api/v1/KeystoreEntries
 email_auth=loginPlain
 email_cc=
-CPI_Credentials=CPI_User
+CPI_Credentials=SAP_CPI_USER
 CPI_auth=Basic
 email_protection=off
 email_from=sapalerts@nordicnaturals.com

@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Mon May 24 18:56:03 UTC 2021
+source=S4HANA
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1620245735050
+OriginBundleSymbolicName=I-001_Write_Magento_Token
+target=Magento
+OriginBundleName=I-001 Write_Magento_Token
+OriginBundleVersion=1.2
+description=\ 

@@ -1,6 +1,42 @@
 import com.sap.gateway.ip.core.customdev.util.Message;
 import java.util.HashMap;
 
+
+def Message SelectMagServer(Message message) {
+       
+    String value   = "";
+    String rServer = "";
+    String RUpdObject = "";
+    String DSName = "";
+    String EntryId = "";
+   
+    def body = message.getBody(java.lang.String); 
+    
+    switch(body) {  
+        case "104": 
+            rServer    = "https://staging.nordicnaturals.com";
+            RUpdObject = "/104/UpdMagento/Status";
+            DSName     = "QAS104_MAG_Token";
+            EntryId    = "ID_QAS104_MAG_Token";
+            break;    
+        default:   
+            rServer    = "https://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud"; 
+            RUpdObject = "/UpdMagento/Status"; 
+            DSName     = "QAS_MAG_Token";
+            EntryId    = "ID_QAS_MAG_Token";
+            break;
+    }
+    
+    //Properties 
+    map = message.getProperties(); 
+    message.setProperty("rServer", rServer);
+    message.setProperty("RUpdObject", RUpdObject);
+    message.setProperty("DSName", DSName);
+    message.setProperty("EntryId", EntryId);
+    return message;
+}
+
+
 def Message SetMagentoToken(Message message) {
     //Body 
     def body = message.getBody(java.lang.String); 
@@ -46,9 +82,16 @@ def Message DeleteLeftZeros(Message message) {
             break;
         }
     }
-      
+    
+    String BOLNR = xml.BOLNR;   
+    //Properties 
+    map = message.getProperties(); 
+    message.setProperty("BOLNR", BOLNR);
+    
     String newBody = value.replaceFirst ("^0*", "");
      
     message.setBody(newBody);
+    
+    
     return message;
 }
