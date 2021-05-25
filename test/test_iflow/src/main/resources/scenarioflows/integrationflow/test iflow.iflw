@@ -77,7 +77,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>auth</key>
-                    <value>loginEncrypted</value>
+                    <value>loginPlain</value>
                 </ifl:property>
                 <ifl:property>
                     <key>subject</key>
