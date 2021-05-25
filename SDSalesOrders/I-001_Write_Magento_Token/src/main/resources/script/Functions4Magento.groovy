@@ -42,8 +42,7 @@ def Message GetCredentials(Message message) {
     String Credentials_name = map.get("Credentials4Magento");
     
     def body = message.getBody(java.lang.String) as String;
-    def service = ITApiFactory.getApi(SecureStoreService.class, null); 
-   // def credential = service.getUserCredential("PRD_MagentoCredentials"); 
+    def service = ITApiFactory.getApi(SecureStoreService.class, null);  
     def credential = service.getUserCredential(Credentials_name);
     if (credential == null){
         throw new IllegalStateException("No credential found for alias '" + Credentials_name + "'"); 
