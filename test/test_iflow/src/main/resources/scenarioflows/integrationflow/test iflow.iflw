@@ -57,170 +57,6 @@
         <bpmn2:participant id="Participant_Process_1" ifl:type="IntegrationProcess" name="Integration Process" processRef="Process_1">
             <bpmn2:extensionElements/>
         </bpmn2:participant>
-        <bpmn2:messageFlow id="MessageFlow_96624540" name="SOAP" sourceRef="Participant_1" targetRef="StartEvent_2">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>Description</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurityType</key>
-                    <value>VerifyMessage</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>PublicKeyAliasResponseEncryption</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentNS</key>
-                    <value>sap</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>maximumAttachmentSize</key>
-                    <value>100</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>Name</key>
-                    <value>SOAP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocolVersion</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVName</key>
-                    <value>external</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>useWSAddressing</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapWsdlURL</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapOptions</key>
-                    <value>cxfRobust</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>CheckTimeStamp</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapServiceName</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurity_SignatureAlgorithm_Inbound</key>
-                    <value>SHA1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SigningOrder</key>
-                    <value>SignBeforeEncryption</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocol</key>
-                    <value>SOAP 1.x</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentSWCVId</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>direction</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>clientCertificates</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>X509TokenAssertion</key>
-                    <value>WssX509V3Token10</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>ComponentType</key>
-                    <value>SOAP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>address</key>
-                    <value>/testcase2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>maximumBodySize</key>
-                    <value>40</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>soapWsdlPortName</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.8</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>messageExchangePattern</key>
-                    <value>RequestReply</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>WSSecurity</key>
-                    <value>None</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>PrivateKeyAliasResponseSigning</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>system</key>
-                    <value>Sender</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SaveIncomingSignedMessage</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>SenderBasicSecurityProfileCompliant</key>
-                    <value>1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>RecipientTokenIncludeStrategy</key>
-                    <value>Never</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>AlgorithmSuiteAssertion</key>
-                    <value>Basic128Rsa15</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>serviceDefinition</key>
-                    <value>Manual</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>TransportProtocol</key>
-                    <value>HTTP</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::AdapterVariant/cname::sap:SOAP/tp::HTTP/mp::SOAP 1.x/direction::Sender/version::1.8.0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>userRole</key>
-                    <value>ESBMessaging.send</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>InitiatorTokenIncludeStrategy</key>
-                    <value>AlwaysToRecipient</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>senderAuthType</key>
-                    <value>RoleBased</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>MessageProtocolVersion</key>
-                    <value>1.10.0</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-        </bpmn2:messageFlow>
         <bpmn2:messageFlow id="MessageFlow_96624541" name="Mail" sourceRef="EndEvent_2" targetRef="Participant_2">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -385,6 +221,170 @@
                 </ifl:property>
             </bpmn2:extensionElements>
         </bpmn2:messageFlow>
+        <bpmn2:messageFlow id="MessageFlow_96624540" name="SOAP" sourceRef="Participant_1" targetRef="StartEvent_2">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>Description</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>WSSecurityType</key>
+                    <value>VerifyMessage</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>PublicKeyAliasResponseEncryption</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentNS</key>
+                    <value>sap</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>maximumAttachmentSize</key>
+                    <value>100</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>Name</key>
+                    <value>SOAP</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocolVersion</key>
+                    <value>1.10.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVName</key>
+                    <value>external</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>useWSAddressing</key>
+                    <value>0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>soapWsdlURL</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>soapOptions</key>
+                    <value>cxfRobust</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>CheckTimeStamp</key>
+                    <value>0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>soapServiceName</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>WSSecurity_SignatureAlgorithm_Inbound</key>
+                    <value>SHA1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>SigningOrder</key>
+                    <value>SignBeforeEncryption</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocol</key>
+                    <value>SOAP 1.x</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentSWCVId</key>
+                    <value>1.10.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>direction</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>clientCertificates</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>X509TokenAssertion</key>
+                    <value>WssX509V3Token10</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>ComponentType</key>
+                    <value>SOAP</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>address</key>
+                    <value>/testcase2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>maximumBodySize</key>
+                    <value>40</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>soapWsdlPortName</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.8</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>messageExchangePattern</key>
+                    <value>RequestReply</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>WSSecurity</key>
+                    <value>None</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>PrivateKeyAliasResponseSigning</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>system</key>
+                    <value>Sender</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>SaveIncomingSignedMessage</key>
+                    <value>0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>SenderBasicSecurityProfileCompliant</key>
+                    <value>1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>RecipientTokenIncludeStrategy</key>
+                    <value>Never</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>AlgorithmSuiteAssertion</key>
+                    <value>Basic128Rsa15</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>serviceDefinition</key>
+                    <value>Manual</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>TransportProtocol</key>
+                    <value>HTTP</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::AdapterVariant/cname::sap:SOAP/tp::HTTP/mp::SOAP 1.x/direction::Sender/version::1.8.0</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>userRole</key>
+                    <value>ESBMessaging.send</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>InitiatorTokenIncludeStrategy</key>
+                    <value>AlwaysToRecipient</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>senderAuthType</key>
+                    <value>RoleBased</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>MessageProtocolVersion</key>
+                    <value>1.10.0</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+        </bpmn2:messageFlow>
     </bpmn2:collaboration>
     <bpmn2:process id="Process_1" name="Integration Process">
         <bpmn2:extensionElements>
@@ -413,7 +413,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;abcdsfsf&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PRO1&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;jjjjjj&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;jhgff&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;abcdsfsf&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;PRO1&lt;/cell&gt;&lt;cell id='Datatype'&gt;&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
@@ -496,19 +496,19 @@
                 <di:waypoint x="392.25" xsi:type="dc:Point" y="150.0"/>
                 <di:waypoint x="510.0" xsi:type="dc:Point" y="150.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_96624540" id="BPMNEdge_MessageFlow_96624540" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
-                <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
-                <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
-            </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_96624541" id="BPMNEdge_MessageFlow_96624541" sourceElement="BPMNShape_EndEvent_2" targetElement="BPMNShape_Participant_2">
-                <di:waypoint x="719.0" xsi:type="dc:Point" y="158.0"/>
-                <di:waypoint x="950.0" xsi:type="dc:Point" y="170.0"/>
-            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_96624543" id="BPMNEdge_SequenceFlow_96624543" sourceElement="BPMNShape_CallActivity_96624542" targetElement="BPMNShape_EndEvent_2">
                 <di:waypoint x="510.0" xsi:type="dc:Point" y="150.0"/>
                 <di:waypoint x="631.5" xsi:type="dc:Point" y="150.0"/>
                 <di:waypoint x="631.5" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="719.0" xsi:type="dc:Point" y="158.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_96624541" id="BPMNEdge_MessageFlow_96624541" sourceElement="BPMNShape_EndEvent_2" targetElement="BPMNShape_Participant_2">
+                <di:waypoint x="719.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="950.0" xsi:type="dc:Point" y="170.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_96624540" id="BPMNEdge_MessageFlow_96624540" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
+                <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
+                <di:waypoint x="308.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
