@@ -32,7 +32,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: test iflow
 SAP-RuntimeProfile: iflmap
 Bundle-Name: test iflow
-Bundle-Version: 1.0.1
+Bundle-Version: 1.0.3
 SAP-NodeType: IFLMAP
 SAP-BundleType: IntegrationFlow
 Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.e
