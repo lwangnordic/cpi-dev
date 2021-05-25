@@ -1849,7 +1849,7 @@ ${header.CamelFileName}
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_166136_1621619967154" xsi:type="bpmn2:tFormalExpression">${property.EDI940_Control} = null or ${property.EDI940_Control.trim().length()} = '0' or ${property.EDI940_Control.trim()} = '""'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_166136_1621935449955" xsi:type="bpmn2:tFormalExpression">${property.EDI940_Control} = null or ${property.EDI940_Control.trim().length()} = '0' or ${property.EDI940_Control.trim()} = '""'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_30" sourceRef="CallActivity_29" targetRef="CallActivity_166131"/>
         <bpmn2:sequenceFlow id="SequenceFlow_90" sourceRef="ParallelGateway_89" targetRef="EndEvent_2"/>

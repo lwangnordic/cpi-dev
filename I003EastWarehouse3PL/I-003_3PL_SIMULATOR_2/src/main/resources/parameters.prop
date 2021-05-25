@@ -1,5 +1,5 @@
 #
-#Mon May 24 18:59:38 UTC 2021
+#Tue May 25 09:37:53 UTC 2021
 ALERT_EMAIL_CRED=Mailgun
 SFTP_TARGET_ADDRESS=sapftpqas.nordicnaturals.com\:3398
 ALERT_EMAIL_ADDRESS=smtp.mailgun.org\:587
