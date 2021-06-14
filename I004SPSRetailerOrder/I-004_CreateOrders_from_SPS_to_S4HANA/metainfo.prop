@@ -1,6 +1,7 @@
 #Store metainfo properties
-#Tue May 25 21:23:47 UTC 2021
+#Mon Jun 14 21:58:19 UTC 2021
 source=
+BundleSymbolicName=I-004_CreateOrders_from_SPS_to_S4HANA
 productProfile=iflmap
 nodeType=IFLMAP
 OriginModifiedDate=1615850467800
@@ -8,4 +9,5 @@ OriginBundleSymbolicName=I-004_CreateOrders_from_SPS_to_S4HANA
 target=
 OriginBundleName=I-004 CreateOrders_from_SPS_to_S4HANA
 OriginBundleVersion=2.6
+BundleVersion=2.0.2
 description=\ 

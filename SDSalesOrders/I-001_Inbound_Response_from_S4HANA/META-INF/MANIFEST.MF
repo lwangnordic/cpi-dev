@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001 Inbound_Response_from_S4HANA
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001 Inbound_Response_from_S4HANA
-Bundle-Version: 1.0
+Bundle-Version: 1.6
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1621607159606
 SAP-BundleType: IntegrationFlow

@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001 Magento_synchronize_jobs
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001 Magento_synchronize_jobs
-Bundle-Version: 1.0
+Bundle-Version: 1.1
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1621288164003
 SAP-BundleType: IntegrationFlow

@@ -1,0 +1,11 @@
+#Store metainfo properties
+#Mon Jun 14 21:58:23 UTC 2021
+source=Magento
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1620926015803
+OriginBundleSymbolicName=I-001_Magento_Create_SalesOrders_manual
+target=S4HANA
+OriginBundleName=I-001 Magento_Create_SalesOrders_manual
+OriginBundleVersion=2.10
+description=Create Sales Orders Inbound from Magento to S4HANA

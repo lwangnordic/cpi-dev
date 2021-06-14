@@ -1,0 +1,28 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="BP_NUMBER" minOccurs="0"/>
+        <xs:element type="xs:string" name="BPNAME"/>
+        <xs:element type="xs:string" name="BP_IDBYEXTSYSTEM"/>
+        <xs:element type="xs:string" name="CITYNAME"/>
+        <xs:element type="xs:string" name="COUNTRY"/>
+        <xs:element type="xs:string" name="ADDRESSTIMEZONE" minOccurs="0"/>
+        <xs:element type="xs:string" name="POSTALCODE"/>  
+        <xs:element type="xs:string" name="REGION"/>
+        <xs:element type="xs:string" name="STREET"/>
+        <xs:element type="xs:string" name="EMAIL"/> 
+        <xs:element type="xs:string" name="FAX"  minOccurs="0"/> 
+        <xs:element type="xs:string" name="MOBILE"  minOccurs="0"/>
+        <xs:element type="xs:string" name="PHONE"/>
+        <xs:element type="xs:string" name="PHONE_EXT"  minOccurs="0"/> 
+        <xs:element type="xs:string" name="SHIPPINGCONDITION"/>
+        <xs:element type="xs:string" name="PRICINGPROCEDURE"/>
+        <xs:element type="xs:string" name="CUSTOMERGROUP1"/>
+        <xs:element type="xs:string" name="STORE_ID"/> 
+        <xs:element type="xs:string" name="SALES_GRP"/> 
+        <xs:element type="xs:string" name="BILLING_ADDRESS_ID"/> 
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+</xs:schema>

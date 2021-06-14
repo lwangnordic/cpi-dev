@@ -5,22 +5,24 @@ import java.util.HashMap;
 def Message SaveLogAttachment(Message message) {
      
     //Body 
-       def body = message.getBody(java.lang.String);  
-       //Properties 
-       map = message.getProperties();
-       value = map.get("Urls_not_found"); 
-       String newValue = value + body;
+    //def body = message.getBody(java.lang.String); 
+    def body = message.getBody(java.io.Reader); 
+    
+    //Properties 
+    map = message.getProperties();
+    value = map.get("Urls_not_found"); 
+    String newValue = value + body;
+        
        
-       
-       
-       
-       message.setProperty("Urls_not_found", newValue);
-       return message;
+    message.setProperty("Urls_not_found", newValue);
+    return message;
 }
+
 
 def Message Payload_Before_Mapping(Message message) {
     
-    def body = message.getBody(java.lang.String) as String;
+    //def body = message.getBody(java.lang.String) as String;
+    def body = message.getBody(java.io.Reader); 
     def messageLog = messageLogFactory.getMessageLog(message);
     if(messageLog != null)
     {                              
@@ -32,7 +34,8 @@ def Message Payload_Before_Mapping(Message message) {
  
 def Message LogCreateUrl(Message message) { //SaveLogErrorOnManagementBP.groovy
                 
-	def body = message.getBody(java.lang.String) as String;
+	//def body = message.getBody(java.lang.String) as String;
+    def body = message.getBody(java.io.Reader); 
     def messageLog = messageLogFactory.getMessageLog(message);
     if(messageLog != null) 
 	{                              
@@ -46,7 +49,8 @@ def Message LogCreateUrl(Message message) { //SaveLogErrorOnManagementBP.groovy
 
 def Message ErrorOnMainProcess(Message message) { //SaveLogErrorMain.groovy
                 
-	def body = message.getBody(java.lang.String) as String;
+	//def body = message.getBody(java.lang.String) as String;
+    def body = message.getBody(java.io.Reader); 
     def messageLog = messageLogFactory.getMessageLog(message);
     if(messageLog != null) 
 	{                              
@@ -58,7 +62,8 @@ def Message ErrorOnMainProcess(Message message) { //SaveLogErrorMain.groovy
 
 def Message ErrorOnSendToMagento(Message message) {  //SaveLogErrOnMagento.groovy
                 
-	def body = message.getBody(java.lang.String) as String;
+	//def body = message.getBody(java.lang.String) as String;
+    def body = message.getBody(java.io.Reader); 
     def messageLog = messageLogFactory.getMessageLog(message);
     if(messageLog != null) 
 	{                              
@@ -70,7 +75,8 @@ def Message ErrorOnSendToMagento(Message message) {  //SaveLogErrOnMagento.groov
 
 def Message PrintUrlNotFound(Message message) {  //SaveLogErrOnMagento.groovy
                 
-	def body = message.getBody(java.lang.String) as String;
+	//def body = message.getBody(java.lang.String) as String;
+    def body = message.getBody(java.io.Reader); 
     def messageLog = messageLogFactory.getMessageLog(message);
     if(messageLog != null) 
 	{                              
@@ -79,3 +85,4 @@ def Message PrintUrlNotFound(Message message) {  //SaveLogErrOnMagento.groovy
                 
     return message;
 }
+

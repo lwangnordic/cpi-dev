@@ -34,7 +34,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-016.1 LegacyProPatient_to_S4HANA_SalesOrders
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-016.1 LegacyProPatient_to_S4HANA_SalesOrders
-Bundle-Version: 1.5
+Bundle-Version: 1.6
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1620148423916
 SAP-BundleType: IntegrationFlow

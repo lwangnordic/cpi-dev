@@ -1,0 +1,14 @@
+#Thu Jun 03 17:47:29 UTC 2021
+Store_name=QAS_MAG_Token
+Magento_pathtoQuery=/consumers/rest/all/V1/orders
+IDOC_inbound=/sap/bc/zinterface/zin_idoc_xml
+RFC_inbound=/sap/bc/soap/rfc
+Upd_Sts_process=/UpdMagento/Status
+Authentication=Basic
+Login2SAP=SAP_MAG_USER
+Magento_Server=https\://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud
+Search_Criteria=${property.Query}
+Entry_ID=ID_QAS_MAG_Token
+Mag_timeout=99000
+MANDT=sap-client\=100
+SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443

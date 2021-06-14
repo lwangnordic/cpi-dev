@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001_QAS104_Write_Magento_Token
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001_QAS104_Write_Magento_Token
-Bundle-Version: 1.0
+Bundle-Version: 1.0.3
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1620756709570
 SAP-BundleType: IntegrationFlow

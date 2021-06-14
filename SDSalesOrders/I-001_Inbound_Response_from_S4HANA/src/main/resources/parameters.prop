@@ -1,14 +1,18 @@
-#Fri May 21 18:57:36 UTC 2021
+#Mon Jun 07 21:10:48 UTC 2021
 email_proxy_type=sapcc
 email_bcc=
 Magento_Path_Update=/consumers/rest/all/V1/orders/
 email_credentials=NN_SMTP_Credentials
+Token_EntryId=ID_QAS_MAG_Token
 syst_Id=QAS 
 email_cc=
 Magento_Suffix=/comments
+Send2Sap_Status=/UpdMagento/Status
+Token_DSName=QAS_MAG_Token
 SaveDeliverR=/SaveDelivery
 email_from=sapalertsqa@nordicnaturals.com
 Mag_timeout=99000
 email_to=sapalertsqa@nordicnaturals.com;gphangureh@nordicnaturals.com
 email_host=nnemail.nordicnaturals.com\:587
 path=${property.Path_to_server}
+SAP_Server=https\://integration-5ojmyuq-hraqe4drzlnyk.us.magentosite.cloud

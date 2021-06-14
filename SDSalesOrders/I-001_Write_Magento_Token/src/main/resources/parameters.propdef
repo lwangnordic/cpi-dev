@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><parameters><parameter>
       <key/>
+      <name>CredentialName</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
+      <name>Magento_suffix</name>
+      <type>xsd:string</type>
+      <isRequired>false</isRequired>
+      <constraint/>
+      <description/>
+      <additionalMetadata/>
+   </parameter><parameter>
+      <key/>
       <name>Mag_timeout</name>
       <type>xsd:integer</type>
       <isRequired>false</isRequired>
@@ -64,7 +80,7 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>CredentialName</name>
+      <name>TokenEntryId</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>
@@ -72,7 +88,7 @@
       <additionalMetadata/>
    </parameter><parameter>
       <key/>
-      <name>Magento_suffix</name>
+      <name>TokenName</name>
       <type>xsd:string</type>
       <isRequired>false</isRequired>
       <constraint/>

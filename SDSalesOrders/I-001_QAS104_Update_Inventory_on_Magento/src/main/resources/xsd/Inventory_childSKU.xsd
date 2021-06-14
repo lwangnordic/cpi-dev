@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element  maxOccurs="unbounded" name="items">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="attribute_set_id" type="xs:unsignedByte" />
+                            <xs:element name="created_at" type="xs:string" />
+                            <xs:element name="custom_attributes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="element">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="attribute_code" type="xs:string" />
+                                                    <xs:element name="value">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:sequence minOccurs="0">
+                                                                <xs:element maxOccurs="unbounded" name="element" type="xs:unsignedByte" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="extension_attributes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="category_links">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element maxOccurs="unbounded" name="element">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="category_id" type="xs:unsignedByte" />
+                                                                <xs:element name="position" type="xs:unsignedByte" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="website_ids">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element maxOccurs="unbounded" name="element" type="xs:unsignedByte" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="id" type="xs:unsignedShort" />
+                            <xs:element name="media_gallery_entries" />
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="options" />
+                            <xs:element name="price" type="xs:decimal" />
+                            <xs:element name="product_links" />
+                            <xs:element name="sku" type="xs:string" />
+                            <xs:element name="status" type="xs:unsignedByte" />
+                            <xs:element name="tier_prices">
+                                <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                        <xs:element name="element">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="customer_group_id" type="xs:unsignedByte" />
+                                                    <xs:element name="extension_attributes">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="website_id" type="xs:unsignedByte" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="qty" type="xs:unsignedByte" />
+                                                    <xs:element name="value" type="xs:decimal" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="type_id" type="xs:string" />
+                            <xs:element name="updated_at" type="xs:string" />
+                            <xs:element name="visibility" type="xs:unsignedByte" />
+                            <xs:element minOccurs="0" name="weight" type="xs:unsignedByte" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="search_criteria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="filter_groups">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="element">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="filters">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="element">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="condition_type" type="xs:string" />
+                                                                <xs:element name="field" type="xs:string" />
+                                                                <xs:element name="value" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="page_size" type="xs:unsignedByte" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="total_count" type="xs:unsignedByte" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,7 @@
+#Mon Jun 07 21:31:55 UTC 2021
+Mandt=sap-client\=104
+Sap_Credentials=SAP_MAG_USER
+SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Mag_timeout=99000
+Sap_authentication=Basic
+SAP_Rfc=/sap/bc/soap/rfc

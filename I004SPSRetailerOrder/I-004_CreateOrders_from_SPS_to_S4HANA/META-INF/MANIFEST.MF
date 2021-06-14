@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-004 CreateOrders_from_SPS_to_S4HANA
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-004 CreateOrders_from_SPS_to_S4HANA
-Bundle-Version: 2.0
+Bundle-Version: 2.0.2
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1615850467800
 SAP-BundleType: IntegrationFlow

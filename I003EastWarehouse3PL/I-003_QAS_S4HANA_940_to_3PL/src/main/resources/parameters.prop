@@ -1,17 +1,17 @@
-#Wed Apr 14 20:15:24 UTC 2021
+#Fri Jun 11 21:28:14 UTC 2021
 email_bcc=
-ADDRESS=sapftp.nordicnaturals.com
-SFTP_PORT=3396
+ADDRESS=sapftpqas.nordicnaturals.com
+SFTP_PORT=3398
 FILE_NAME=940_
 email_credentials=NN_SMTP_Credentials
 FILE_NAME_945=945_
 DIRECTORY_855=/855 Records QA
 email_cc=
-SFTP_LOGIN=SFTP_qa_3pl
+SFTP_LOGIN=SFTP_QAS
 email_proxy_tyoe=sapcc
 FILE_NAME_855=855_
 email_from=sapalerts@nordicnaturals.com
 DIRECTORY=/940 Records QA
 DIRECTORY_945=/945 Records QA
-email_to=sapalerts@nordicnaturals.com
+email_to=sapalerts+qa@nordicnaturals.com
 email_host=email.nn.com\:587

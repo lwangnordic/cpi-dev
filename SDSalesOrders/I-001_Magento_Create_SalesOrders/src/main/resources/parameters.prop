@@ -1,4 +1,4 @@
-#Fri May 21 19:22:01 UTC 2021
+#Thu May 27 21:55:36 UTC 2021
 Store_name=QAS_MAG_Token
 Magento_pathtoQuery=/consumers/rest/all/V1/orders
 IDOC_inbound=/sap/bc/zinterface/zin_idoc_xml

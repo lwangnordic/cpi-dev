@@ -1,0 +1,13 @@
+#Store metainfo properties
+#Mon Jun 14 21:58:23 UTC 2021
+source=Magento
+BundleSymbolicName=I-001_QAS104_Magento_Create_SalesOrders
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1620926015803
+OriginBundleSymbolicName=I-001_QAS104_Magento_Create_SalesOrders
+target=S4HANA
+OriginBundleName=I-001_QAS104_Magento_Create_SalesOrders
+OriginBundleVersion=2.10
+BundleVersion=1.3
+description=Create Sales Orders Inbound from Magento to S4HANA

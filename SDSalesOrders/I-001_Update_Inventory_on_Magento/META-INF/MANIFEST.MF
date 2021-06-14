@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001 Update_Inventory_on_Magento
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001 Update_Inventory_on_Magento
-Bundle-Version: 1.0
+Bundle-Version: 1.0.3
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1621607098873
 SAP-BundleType: IntegrationFlow

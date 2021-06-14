@@ -1,14 +1,15 @@
-#Fri May 21 18:39:30 UTC 2021
+#Mon Jun 07 21:21:58 UTC 2021
 Store_name=QAS104_MAG_Token
 email_proxy_type=sapcc
 email_bcc=
 Magento_Path_Update=/consumers/rest/all/V1/orders/
 email_credentials=NN_SMTP_Credentials
-syst_Id=QAS104 
+syst_Id=QAS 104
 email_cc=
 Magento_Suffix=/comments
 Magento_Server=https\://staging.nordicnaturals.com
 Entry_ID=ID_QAS104_MAG_Token
 email_from=sapalertsqa@nordicnaturals.com
+Mag_timeout=99000
 email_to=sapalertsqa@nordicnaturals.com;gphangureh@nordicnaturals.com
 email_host=nnemail.nordicnaturals.com\:587

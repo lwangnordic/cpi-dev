@@ -1,0 +1,13 @@
+#Store metainfo properties
+#Mon Jun 14 21:58:26 UTC 2021
+source=S4HANA
+BundleSymbolicName=I-001_QAS104_Update_Inventory_on_Magento
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1621607098873
+OriginBundleSymbolicName=I-001_QAS104_Update_Inventory_on_Magento
+target=Magento
+OriginBundleName=I-001_QAS104_Update_Inventory_on_Magento
+OriginBundleVersion=2.10
+BundleVersion=1.3
+description=\ 

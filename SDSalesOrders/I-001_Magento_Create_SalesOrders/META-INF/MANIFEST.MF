@@ -33,7 +33,7 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.s
 Origin-Bundle-Name: I-001 Magento_Create_SalesOrders
 SAP-RuntimeProfile: iflmap
 Bundle-Name: I-001 Magento_Create_SalesOrders
-Bundle-Version: 1.0
+Bundle-Version: 1.02
 SAP-NodeType: IFLMAP
 Origin-ModifiedDate: 1620926015803
 SAP-BundleType: IntegrationFlow

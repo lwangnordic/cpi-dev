@@ -1,6 +1,7 @@
 #Store metainfo properties
-#Tue May 25 21:23:48 UTC 2021
+#Mon Jun 14 21:58:24 UTC 2021
 source=S4HANA
+BundleSymbolicName=I-001_QAS104_Write_Magento_Token
 productProfile=iflmap
 nodeType=IFLMAP
 OriginModifiedDate=1620756709570
@@ -8,4 +9,5 @@ OriginBundleSymbolicName=I-001_QAS104_Write_Magento_Token
 target=Magento
 OriginBundleName=I-001_QAS104_Write_Magento_Token
 OriginBundleVersion=1.2
+BundleVersion=1.0.3
 description=\ 

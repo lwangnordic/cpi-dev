@@ -1,0 +1,13 @@
+#Store metainfo properties
+#Mon Jun 14 21:58:22 UTC 2021
+source=S4HANA
+BundleSymbolicName=I-001_QAS104_Get_China_Docs_from_Magento
+productProfile=iflmap
+nodeType=IFLMAP
+OriginModifiedDate=1620863224190
+OriginBundleSymbolicName=I-001_QAS104_Get_China_Docs_from_Magento
+target=Magento
+OriginBundleName=I-001_QAS104_Get_China_Docs_from_Magento
+OriginBundleVersion=4.4
+BundleVersion=1.1
+description=\ 

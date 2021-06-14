@@ -1,0 +1,13 @@
+#Thu Jun 10 14:34:27 UTC 2021
+Magento_getProd=/consumers/rest/all/V1/products
+Magento_suffix=/stockItems/1
+CredentialName=SAP_MAG_USER
+Magento_Path_Token=/consumers/rest/all/V1/integration/admin/token
+Magento_GP_query=searchCriteria%5BfilterGroups%5D%5B0%5D%5Bfilters%5D%5B0%5D%5Bfield%5D\=type_id&searchCriteria%5BfilterGroups%5D%5B0%5D%5Bfilters%5D%5B0%5D%5Bvalue%5D\=simple&searchCriteria%5BfilterGroups%5D%5B0%5D%5Bfilters%5D%5B0%5D%5BconditionType%5D\=eq&searchCriteria%5BpageSize%5D\=0
+Sap_Autentication=Basic
+SAP_SERVER=https\://vhnorqaslb.nor.hec.ondemand.com\:443
+Magento_Path_Prod=/consumers/rest/all/V1/products/
+Magento_Server=https\://staging.nordicnaturals.com
+SAP_RFC=/sap/bc/soap/rfc
+MANDT=sap-client\=104
+Magento_credentials=Magento_login104

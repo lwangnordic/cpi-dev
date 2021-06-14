@@ -1,9 +1,9 @@
-#Thu May 20 23:23:21 UTC 2021
-Err_Directory=/SPS Orders/errorFiles
+#Wed Jun 09 20:02:48 UTC 2021
+Err_Directory=/errorFiles
 RFC_Url=/sap/bc/soap/rfc
 Authentication=user_password
 SAP_Idoc=/sap/bc/zinterface/zin_idoc_xml
-Err_File_name=${property.Error_filename}
+Err_File_name=${property.CamelFileExchangeFile}
 LogintoSAP=SAP_SPS_USER
 Credentials=SFTP_SPS_User
 SFTP_Address=sapftpqas.nordicnaturals.com\:3398
@@ -11,6 +11,6 @@ SFTP_Folder=
 Sorting_order=sort_direction_asc
 Disconnect_param=1
 Sorting=sort_by_timestamp
-Archive_directory=/.archive
+Archive_directory=ProcessedFiles
 MANDT=sap-client\=100
 SAP_Server=https\://vhnorqaslb.nor.hec.ondemand.com\:443

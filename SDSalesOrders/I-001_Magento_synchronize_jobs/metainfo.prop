@@ -1,9 +1,11 @@
 #Store metainfo properties
-#Tue May 25 21:23:48 UTC 2021
-OriginModifiedDate=1621288164003
-nodeType=IFLMAP
-OriginBundleName=I-001 Magento_synchronize_jobs
-OriginBundleSymbolicName=I-001_Magento_synchronize_jobs
+#Mon Jun 14 21:58:24 UTC 2021
+BundleSymbolicName=I-001_Magento_synchronize_jobs
 productProfile=iflmap
-description=\ 
+nodeType=IFLMAP
+OriginModifiedDate=1621288164003
+OriginBundleSymbolicName=I-001_Magento_synchronize_jobs
+OriginBundleName=I-001 Magento_synchronize_jobs
 OriginBundleVersion=2.6
+BundleVersion=1.1
+description=\ 

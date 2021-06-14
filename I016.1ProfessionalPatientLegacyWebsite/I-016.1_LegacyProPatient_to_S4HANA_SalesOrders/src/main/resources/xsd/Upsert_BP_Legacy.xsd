@@ -23,6 +23,7 @@
         <xs:element name="STORE_ID" type="xs:string" minOccurs="0"/>
         <xs:element name="SALES_GRP" type="xs:string" minOccurs="0"/>
         <xs:element name="PRAC_TYPE_NPD" type="xs:string" minOccurs="0"/>
+        <xs:element name="SALES_REP" type="xs:string" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
